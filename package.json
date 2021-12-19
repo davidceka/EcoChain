@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "name": "ecochain",
+  "description": "Cybersecurity Project, Gruppo 1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidceka/EcoChain.git"
+  },
+  "author": "Gruppo 1 UNIVPM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidceka/EcoChain/issues"
+  },
+  "homepage": "https://github.com/davidceka/EcoChain#readme"
+}
