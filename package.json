@@ -2,7 +2,8 @@
   "dependencies": {
     "express": "^4.17.2",
     "hbs": "^4.2.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "web3": "^1.6.1"
   },
   "name": "ecochain",
   "description": "Cybersecurity Project, Gruppo 1",
