@@ -1,13 +1,17 @@
 const express=require('express')
-var port=5000;
-
 const app=express()
 
 
-app.get('/',(req,res)=>{
-    res.render("<h1>EcoChain</h1>")
-})
+
+app.set('view engine','hbs');
+
+app.use(express.urlencoded({
+    extended:false
+}))
+
+
+app.use('/',require('./routes/pages'))
 
 app.listen(5000, ()=>{
-    console.log('Server is listening on port '+port)
+    console.log('Server is listening on port 5000')
 })
