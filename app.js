@@ -1,15 +1,18 @@
-const express=require('express')
-const app=express()
-var hbs=require('hbs')
+var path = require('path');
+var express = require('express');
+var app = express();
+var http = require('http').Server(app);
 
-hbs.registerPartials(__dirname + '/views/partials', function (err) {});
+var handlebars = require('express-handlebars').create({
+  layoutsDir: path.join(__dirname, "views/layouts"),
+  partialsDir: path.join(__dirname, "views/partials"),
+  defaultLayout: 'layout',
+  extname: 'hbs'
+});
 
-app.set('view engine','hbs');
-
-app.use(express.urlencoded({
-    extended:false
-}))
-
+app.engine('hbs', handlebars.engine);
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, "views"));
 
 app.use('/', require("./routes/pages"));
 
