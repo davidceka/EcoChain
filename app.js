@@ -11,10 +11,7 @@ app.use(express.urlencoded({
 }))
 
 
-app.get('/',(req,res)=>{
-    res.render('home')
-})
-
+app.use('/', require("./routes/pages"));
 
 app.listen(5000, ()=>{
     console.log('Server is listening on port 5000')
