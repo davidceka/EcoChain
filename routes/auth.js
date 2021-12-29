@@ -1,11 +1,14 @@
 const express = require("express");
-const authController = require("../controllers/auth");
+const res = require("express/lib/response");
+//const authController = require("../controllers/auth");
 const router = express.Router();
 
-/*
-Definizioni rotte per le procedure di POST relative agli accessi o alla gestione degli account
-*/
-router.post('/signup', authController.register);
-router.post('/login', authController.login);
+
+
+router.get('/login',(req,res)=>{
+    res.render('login',{
+        layout:'index'
+    })
+})
 
 module.exports = router;

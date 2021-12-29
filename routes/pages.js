@@ -7,7 +7,12 @@ router.get('/',(req,res)=>{
         layout:'index'
     })
 })
-router.get('/chisiamo')
+router.get('/chisiamo',(req,res)=>{
+    res.render('chisiamo',{
+        layout:'index'
+    })
+})
+
 
 
 module.exports=router;
