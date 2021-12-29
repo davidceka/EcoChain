@@ -1,7 +1,8 @@
 const express=require('express')
 const app=express()
+var hbs=require('hbs')
 
-
+hbs.registerPartials(__dirname + '/views/partials', function (err) {});
 
 app.set('view engine','hbs');
 
@@ -10,7 +11,10 @@ app.use(express.urlencoded({
 }))
 
 
-app.use('/',require('./routes/pages'))
+app.get('/',(req,res)=>{
+    res.render('home')
+})
+
 
 app.listen(5000, ()=>{
     console.log('Server is listening on port 5000')

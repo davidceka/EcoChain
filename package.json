@@ -10,8 +10,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js",
-    "start": "nodemon index.js"
+    "test": "nodemon app.js -e js,hbs,json",
+    "start": "nodemon app.js -e js,hbs,json"
   },
   "repository": {
     "type": "git",
