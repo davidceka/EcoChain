@@ -372,3 +372,19 @@ DEBUG[01-02|15:27:43.457] Recalculated downloader QoS values       rtt=20s confi
 DEBUG[01-02|15:28:03.406] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
 DEBUG[01-02|15:28:03.457] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
 DEBUG[01-02|15:28:23.459] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:28:43.459] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:29:03.407] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:29:03.460] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:29:23.460] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:29:43.461] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:30:03.407] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:30:03.461] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:30:23.461] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:30:43.462] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:31:03.408] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:31:03.462] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:31:23.462] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:31:43.462] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:32:03.408] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:32:03.463] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:32:23.463] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
