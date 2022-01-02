@@ -4891,3 +4891,68 @@ DEBUG[01-02|15:28:22.444] Enrich call context with token from security context c
 DEBUG[01-02|15:28:22.444] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2237 t="102.384µs"
 DEBUG[01-02|15:28:22.445] Enrich call context with token from security context conn=127.0.0.1:45678
 DEBUG[01-02|15:28:22.445] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2238 t="109.93µs"
+DEBUG[01-02|15:28:23.514] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:28:24.446] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:24.446] Served admin_peers                       conn=127.0.0.1:45678 reqid=2239 t="222.724µs"
+DEBUG[01-02|15:28:24.447] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:24.447] Served raft_leader                       conn=127.0.0.1:45678 reqid=2240 t="86.722µs"
+DEBUG[01-02|15:28:24.447] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:24.447] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2241 t="73.581µs"
+DEBUG[01-02|15:28:24.448] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:24.448] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2242 t="95.569µs"
+DEBUG[01-02|15:28:26.449] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:26.449] Served admin_peers                       conn=127.0.0.1:45678 reqid=2243 t="267.932µs"
+DEBUG[01-02|15:28:26.450] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:26.450] Served raft_leader                       conn=127.0.0.1:45678 reqid=2244 t="69.717µs"
+DEBUG[01-02|15:28:26.451] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:26.451] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2245 t="94.247µs"
+DEBUG[01-02|15:28:26.452] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:26.452] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2246 t="140.99µs"
+DEBUG[01-02|15:28:28.454] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:28.454] Served admin_peers                       conn=127.0.0.1:45678 reqid=2247 t="465.534µs"
+DEBUG[01-02|15:28:28.455] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:28.455] Served raft_leader                       conn=127.0.0.1:45678 reqid=2248 t="66.981µs"
+DEBUG[01-02|15:28:28.456] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:28.456] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2249 t="149.933µs"
+DEBUG[01-02|15:28:28.457] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:28.457] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2250 t="221.404µs"
+DEBUG[01-02|15:28:30.458] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:30.459] Served admin_peers                       conn=127.0.0.1:45678 reqid=2251 t="252.468µs"
+DEBUG[01-02|15:28:30.460] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:30.460] Served raft_leader                       conn=127.0.0.1:45678 reqid=2252 t="50.666µs"
+DEBUG[01-02|15:28:30.460] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:30.460] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2253 t="120.667µs"
+DEBUG[01-02|15:28:30.461] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:30.461] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2254 t="140.483µs"
+DEBUG[01-02|15:28:32.462] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:32.462] Served admin_peers                       conn=127.0.0.1:45678 reqid=2255 t="324.273µs"
+DEBUG[01-02|15:28:32.463] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:32.463] Served raft_leader                       conn=127.0.0.1:45678 reqid=2256 t="53.212µs"
+DEBUG[01-02|15:28:32.464] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:32.464] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2257 t="159.573µs"
+DEBUG[01-02|15:28:32.465] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:32.465] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2258 t="112.463µs"
+DEBUG[01-02|15:28:34.466] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:34.467] Served admin_peers                       conn=127.0.0.1:45678 reqid=2259 t="292.373µs"
+DEBUG[01-02|15:28:34.467] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:34.467] Served raft_leader                       conn=127.0.0.1:45678 reqid=2260 t="49.79µs"
+DEBUG[01-02|15:28:34.468] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:34.468] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2261 t="53.615µs"
+DEBUG[01-02|15:28:34.469] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:34.469] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2262 t="146.231µs"
+DEBUG[01-02|15:28:36.470] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:36.470] Served admin_peers                       conn=127.0.0.1:45678 reqid=2263 t="276.328µs"
+DEBUG[01-02|15:28:36.471] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:36.471] Served raft_leader                       conn=127.0.0.1:45678 reqid=2264 t="53.147µs"
+DEBUG[01-02|15:28:36.472] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:36.472] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2265 t="77.28µs"
+DEBUG[01-02|15:28:36.472] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:36.472] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2266 t="91.93µs"
+DEBUG[01-02|15:28:38.473] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:38.473] Served admin_peers                       conn=127.0.0.1:45678 reqid=2267 t="216.961µs"
+DEBUG[01-02|15:28:38.474] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:38.474] Served raft_leader                       conn=127.0.0.1:45678 reqid=2268 t="96.421µs"
+DEBUG[01-02|15:28:38.475] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:38.475] Served raft_cluster                      conn=127.0.0.1:45678 reqid=2269 t="67.108µs"
+DEBUG[01-02|15:28:38.476] Enrich call context with token from security context conn=127.0.0.1:45678
+DEBUG[01-02|15:28:38.476] Served eth_getBlockByNumber              conn=127.0.0.1:45678 reqid=2270 t="137.215µs"

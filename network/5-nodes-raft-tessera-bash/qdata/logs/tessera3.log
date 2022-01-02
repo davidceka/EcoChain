@@ -709,3 +709,11 @@
 2022-01-02 15:28:15.107 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
 2022-01-02 15:28:20.108 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
 2022-01-02 15:28:20.109 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-02 15:28:25.110 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-02 15:28:25.111 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-02 15:28:30.111 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-02 15:28:30.112 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-02 15:28:35.113 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-02 15:28:35.114 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-02 15:28:40.115 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-02 15:28:40.116 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round

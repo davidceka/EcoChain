@@ -360,3 +360,4 @@ DEBUG[01-02|15:27:23.439] Recalculated downloader QoS values       rtt=20s confi
 DEBUG[01-02|15:27:43.440] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
 DEBUG[01-02|15:28:03.393] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
 DEBUG[01-02|15:28:03.440] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:28:23.441] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
