@@ -1,0 +1,777 @@
+15:17:05.563 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - cakeshop.config.dir=qdata/cakeshop
+15:17:05.566 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Adding data/local/ and qdata/cakeshop/local to config file search locations for backwards compatibility: file:./data/local/,file:./qdata/cakeshop/local/
+Extracting binaries to /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin
+15:17:05.600 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-to-regexp
+15:17:05.600 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-to-regexp/index.js
+15:17:05.604 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-to-regexp/History.md
+15:17:05.605 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-to-regexp/package.json
+15:17:05.605 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-to-regexp/Readme.md
+15:17:05.605 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-to-regexp/LICENSE
+15:17:05.605 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects
+15:17:05.605 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects/index.js
+15:17:05.606 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects/debug.js
+15:17:05.606 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects/package.json
+15:17:05.606 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects/README.md
+15:17:05.606 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects/https.js
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects/http.js
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/follow-redirects/LICENSE
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inherits
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inherits/inherits.js
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inherits/package.json
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inherits/README.md
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inherits/inherits_browser.js
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inherits/LICENSE
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/encodeurl
+15:17:05.607 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/encodeurl/index.js
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/encodeurl/package.json
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/encodeurl/README.md
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/encodeurl/HISTORY.md
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/encodeurl/LICENSE
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bytes
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bytes/index.js
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bytes/History.md
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bytes/package.json
+15:17:05.608 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bytes/Readme.md
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bytes/LICENSE
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/Makefile
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/.eslintrc
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/karma.conf.js
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/src
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/src/browser.js
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/src/index.js
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/src/debug.js
+15:17:05.609 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/src/inspector-log.js
+15:17:05.610 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/src/node.js
+15:17:05.610 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/package.json
+15:17:05.610 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/CHANGELOG.md
+15:17:05.610 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/README.md
+15:17:05.610 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/.npmignore
+15:17:05.610 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/node.js
+15:17:05.611 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/.travis.yml
+15:17:05.611 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/component.json
+15:17:05.611 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/LICENSE
+15:17:05.611 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/debug/.coveralls.yml
+15:17:05.611 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/test
+15:17:05.611 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/test/map.js
+15:17:05.611 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/index.js
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/README.markdown
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/package.json
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/.travis.yml
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/example
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/example/map.js
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/concat-map/LICENSE
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-is-absolute
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-is-absolute/index.js
+15:17:05.612 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-is-absolute/readme.md
+15:17:05.613 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-is-absolute/package.json
+15:17:05.613 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/path-is-absolute/license
+15:17:05.613 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie
+15:17:05.613 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie/index.js
+15:17:05.613 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie/package.json
+15:17:05.613 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie/README.md
+15:17:05.613 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie/HISTORY.md
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie/LICENSE
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/proxy-addr
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/proxy-addr/index.js
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/proxy-addr/package.json
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/proxy-addr/README.md
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/proxy-addr/HISTORY.md
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/proxy-addr/LICENSE
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/http-errors
+15:17:05.614 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/http-errors/index.js
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/http-errors/package.json
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/http-errors/README.md
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/http-errors/HISTORY.md
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/http-errors/LICENSE
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/brace-expansion
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/brace-expansion/index.js
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/brace-expansion/package.json
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/brace-expansion/README.md
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/brace-expansion/LICENSE
+15:17:05.615 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/destroy
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/destroy/index.js
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/destroy/package.json
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/destroy/README.md
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/destroy/LICENSE
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/escape-html
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/escape-html/index.js
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/escape-html/package.json
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/escape-html/Readme.md
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/escape-html/LICENSE
+15:17:05.616 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/src
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/src/build.js
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/src/test.js
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/package.json
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/CHANGELOG.md
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/README.md
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/mime.js
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/.npmignore
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/cli.js
+15:17:05.617 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/LICENSE
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime/types.json
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/media-typer
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/media-typer/index.js
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/media-typer/package.json
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/media-typer/README.md
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/media-typer/HISTORY.md
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/media-typer/LICENSE
+15:17:05.618 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc
+15:17:05.619 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/index.js
+15:17:05.619 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander
+15:17:05.619 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander/index.js
+15:17:05.619 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander/package.json
+15:17:05.619 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander/CHANGELOG.md
+15:17:05.622 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander/Readme.md
+15:17:05.622 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander/typings
+15:17:05.622 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander/typings/index.d.ts
+15:17:05.622 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/node_modules/commander/LICENSE
+15:17:05.622 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/package.json
+15:17:05.622 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/README.md
+15:17:05.623 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/solcjs
+15:17:05.623 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/soljson.js
+15:17:05.812 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/smtsolver.js
+15:17:05.817 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/smtchecker.js
+15:17:05.817 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/translate.js
+15:17:05.817 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/linker.js
+15:17:05.817 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/abi.js
+15:17:05.818 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/wrapper.js
+15:17:05.818 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc/LICENSE
+15:17:05.818 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/require-from-string
+15:17:05.818 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/require-from-string/index.js
+15:17:05.818 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/require-from-string/readme.md
+15:17:05.819 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/require-from-string/package.json
+15:17:05.819 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/require-from-string/license
+15:17:05.819 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express
+15:17:05.819 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/index.js
+15:17:05.819 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/History.md
+15:17:05.820 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/package.json
+15:17:05.820 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/middleware
+15:17:05.820 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/middleware/init.js
+15:17:05.820 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/middleware/query.js
+15:17:05.820 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/application.js
+15:17:05.821 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/router
+15:17:05.821 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/router/index.js
+15:17:05.821 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/router/route.js
+15:17:05.821 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/router/layer.js
+15:17:05.821 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/utils.js
+15:17:05.821 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/response.js
+15:17:05.822 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/express.js
+15:17:05.822 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/view.js
+15:17:05.822 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/lib/request.js
+15:17:05.822 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/Readme.md
+15:17:05.822 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/express/LICENSE
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/index.js
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/package.json
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/README.md
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/lib
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/lib/read.js
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/lib/types
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/lib/types/text.js
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/lib/types/urlencoded.js
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/lib/types/json.js
+15:17:05.823 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/lib/types/raw.js
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/HISTORY.md
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/body-parser/LICENSE
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-types
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-types/index.js
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-types/package.json
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-types/README.md
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-types/HISTORY.md
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-types/LICENSE
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/unpipe
+15:17:05.824 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/unpipe/index.js
+15:17:05.825 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/unpipe/package.json
+15:17:05.825 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/unpipe/README.md
+15:17:05.825 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/unpipe/HISTORY.md
+15:17:05.825 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/unpipe/LICENSE
+15:17:05.825 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/browser
+15:17:05.825 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/browser/bluebird.core.min.js
+15:17:05.825 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/browser/bluebird.js
+15:17:05.829 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/browser/bluebird.min.js
+15:17:05.829 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/browser/bluebird.core.js
+15:17:05.830 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release
+15:17:05.830 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/settle.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/nodeify.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/synchronous_inspection.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/util.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/debuggability.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/promise_array.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/thenables.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/props.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/some.js
+15:17:05.831 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/es5.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/method.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/queue.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/nodeback.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/any.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/errors.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/direct_resolve.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/cancel.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/context.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/promise.js
+15:17:05.832 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/race.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/timers.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/call_get.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/bind.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/assert.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/map.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/finally.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/reduce.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/bluebird.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/filter.js
+15:17:05.833 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/promisify.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/catch_filter.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/schedule.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/join.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/each.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/using.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/generators.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/js/release/async.js
+15:17:05.834 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/package.json
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/changelog.md
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/README.md
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/bluebird/LICENSE
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js/ipaddr.min.js
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js/package.json
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js/README.md
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js/lib
+15:17:05.835 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js/lib/ipaddr.js
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js/lib/ipaddr.js.d.ts
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ipaddr.js/LICENSE
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/vary
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/vary/index.js
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/vary/package.json
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/vary/README.md
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/vary/HISTORY.md
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/vary/LICENSE
+15:17:05.836 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/.bin
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/.bin/mime
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/.bin/solc
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/.bin/semver
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/.bin/solcjs
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/.bin/rimraf
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-type
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-type/index.js
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-type/package.json
+15:17:05.837 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-type/README.md
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-type/HISTORY.md
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-type/LICENSE
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/test
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/test/memorystream.test.js
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/test/example.js
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/index.js
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/package.json
+15:17:05.838 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/README.md
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/.npmignore
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/Gruntfile.js
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/memorystream/LICENSE
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs.realpath
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs.realpath/index.js
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs.realpath/package.json
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs.realpath/README.md
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs.realpath/old.js
+15:17:05.839 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs.realpath/LICENSE
+15:17:05.840 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob
+15:17:05.840 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob/glob.js
+15:17:05.840 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob/sync.js
+15:17:05.840 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob/package.json
+15:17:05.840 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob/changelog.md
+15:17:05.840 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob/README.md
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob/common.js
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/glob/LICENSE
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/utils-merge
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/utils-merge/index.js
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/utils-merge/package.json
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/utils-merge/README.md
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/utils-merge/.npmignore
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/utils-merge/LICENSE
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/tmp
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/tmp/package.json
+15:17:05.841 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/tmp/README.md
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/tmp/lib
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/tmp/lib/tmp.js
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/tmp/LICENSE
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/test
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/test/simplestorage2.sol
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/test/simplefail.sol
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/test/simplestorage.sol
+15:17:05.842 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/.idea
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/.idea/vcs.xml
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/.idea/modules.xml
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/.idea/solc-cakeshop-cli.iml
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/.idea/misc.xml
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/package.json
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/README.md
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/bin
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/bin/solc
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/solc-cakeshop-cli/LICENSE
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send
+15:17:05.843 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/index.js
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/node_modules/ms
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/node_modules/ms/index.js
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/node_modules/ms/readme.md
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/node_modules/ms/package.json
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/node_modules/ms/license.md
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/package.json
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/README.md
+15:17:05.844 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/HISTORY.md
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/send/LICENSE
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/test
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/test/non-executable-script.js
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/test/executable-script.js
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/test/executable-script.cmd
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/test/test.js
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/index.js
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/package.json
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/README.md
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/lib
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/lib/command-exists.js
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/.jshintrc
+15:17:05.845 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/.travis.yml
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/appveyor.yml
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/command-exists/LICENSE
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/toidentifier
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/toidentifier/index.js
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/toidentifier/package.json
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/toidentifier/README.md
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/toidentifier/LICENSE
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/os-tmpdir
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/os-tmpdir/index.js
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/os-tmpdir/readme.md
+15:17:05.846 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/os-tmpdir/package.json
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/os-tmpdir/license
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/commander
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/commander/index.js
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/commander/History.md
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/commander/package.json
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/commander/Readme.md
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/commander/LICENSE
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver
+15:17:05.847 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/package.json
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/CHANGELOG.md
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/README.md
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/semver.js
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/bin
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/bin/semver
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/range.bnf
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/semver/LICENSE
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/index.js
+15:17:05.848 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/History.md
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/package.json
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/lib/browser
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/lib/browser/index.js
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/lib/compat
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/lib/compat/event-listener-count.js
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/lib/compat/index.js
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/lib/compat/callsite-tostring.js
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/Readme.md
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/depd/LICENSE
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/statuses
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/statuses/index.js
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/statuses/package.json
+15:17:05.849 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/statuses/README.md
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/statuses/HISTORY.md
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/statuses/codes.json
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/statuses/LICENSE
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/raw-body
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/raw-body/index.js
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/raw-body/package.json
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/raw-body/README.md
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/raw-body/HISTORY.md
+15:17:05.850 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/raw-body/index.d.ts
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/raw-body/LICENSE
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/parseurl
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/parseurl/index.js
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/parseurl/package.json
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/parseurl/README.md
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/parseurl/HISTORY.md
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/parseurl/LICENSE
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/merge-descriptors
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/merge-descriptors/index.js
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/merge-descriptors/package.json
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/merge-descriptors/README.md
+15:17:05.851 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/merge-descriptors/HISTORY.md
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/merge-descriptors/LICENSE
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/array-flatten
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/array-flatten/array-flatten.js
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/array-flatten/package.json
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/array-flatten/README.md
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/array-flatten/LICENSE
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/package.json
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/README.md
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings
+15:17:05.852 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/internal.js
+15:17:05.855 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables
+15:17:05.855 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/shiftjis.json
+15:17:05.855 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/cp936.json
+15:17:05.855 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/eucjp.json
+15:17:05.856 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/gbk-added.json
+15:17:05.856 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/big5-added.json
+15:17:05.856 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json
+15:17:05.856 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/cp950.json
+15:17:05.856 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/tables/cp949.json
+15:17:05.857 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/sbcs-data-generated.js
+15:17:05.857 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/index.js
+15:17:05.857 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/utf16.js
+15:17:05.857 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/sbcs-codec.js
+15:17:05.857 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/sbcs-data.js
+15:17:05.857 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/dbcs-codec.js
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/dbcs-data.js
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/encodings/utf7.js
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/lib
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/lib/bom-handling.js
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/lib/index.js
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/lib/streams.js
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/lib/extend-node.js
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/lib/index.d.ts
+15:17:05.858 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/Changelog.md
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/iconv-lite/LICENSE
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ms
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ms/index.js
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ms/readme.md
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ms/package.json
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ms/license.md
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/wrappy
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/wrappy/package.json
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/wrappy/README.md
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/wrappy/wrappy.js
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/wrappy/LICENSE
+15:17:05.859 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/balanced-match
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/balanced-match/index.js
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/balanced-match/LICENSE.md
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/balanced-match/package.json
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/balanced-match/README.md
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/balanced-match/.npmignore
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/rimraf
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/rimraf/package.json
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/rimraf/README.md
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/rimraf/bin.js
+15:17:05.860 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/rimraf/rimraf.js
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/rimraf/LICENSE
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/etag
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/etag/index.js
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/etag/package.json
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/etag/README.md
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/etag/HISTORY.md
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/etag/LICENSE
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile/index.js
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile/package.json
+15:17:05.861 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile/CHANGELOG.md
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile/README.md
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile/.npmignore
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile/appveyor.yml
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/jsonfile/LICENSE
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/test
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/test/parse.js
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/test/.eslintrc
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/test/index.js
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/test/utils.js
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/test/stringify.js
+15:17:05.862 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/.editorconfig
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/dist
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/dist/qs.js
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/.eslintignore
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/.eslintrc
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/package.json
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/CHANGELOG.md
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/README.md
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/lib
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/lib/parse.js
+15:17:05.863 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/lib/index.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/lib/utils.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/lib/formats.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/lib/stringify.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/qs/LICENSE
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs/polyfills.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs/legacy-streams.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs/package.json
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs/README.md
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs/clone.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs/graceful-fs.js
+15:17:05.864 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-fs/LICENSE
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ee-first
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ee-first/index.js
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ee-first/package.json
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ee-first/README.md
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/ee-first/LICENSE
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/src
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/src/index.js
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/src/assign.js
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/package.json
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/CHANGELOG.md
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/README.md
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/.npmignore
+15:17:05.865 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/klaw/LICENSE
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/once
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/once/package.json
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/once/README.md
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/once/once.js
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/once/LICENSE
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-db
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-db/index.js
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-db/package.json
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-db/README.md
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-db/HISTORY.md
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-db/LICENSE
+15:17:05.866 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/mime-db/db.json
+15:17:05.867 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer
+15:17:05.867 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer/dangerous.js
+15:17:05.867 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer/package.json
+15:17:05.867 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer/tests.js
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer/Readme.md
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer/safer.js
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer/Porting-Buffer.md
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safer-buffer/LICENSE
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safe-buffer
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safe-buffer/index.js
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safe-buffer/package.json
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safe-buffer/README.md
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safe-buffer/index.d.ts
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/safe-buffer/LICENSE
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/minimatch
+15:17:05.868 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/minimatch/package.json
+15:17:05.869 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/minimatch/README.md
+15:17:05.869 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/minimatch/minimatch.js
+15:17:05.869 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/minimatch/LICENSE
+15:17:05.869 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/setprototypeof/test
+15:17:05.869 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/setprototypeof/test/index.js
+15:17:05.869 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/setprototypeof/index.js
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/setprototypeof/package.json
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/setprototypeof/README.md
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/setprototypeof/index.d.ts
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/setprototypeof/LICENSE
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/package.json
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/CHANGELOG.md
+15:17:05.872 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/README.md
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/.npmignore
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/remove
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/remove/index.js
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/walk
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/walk/index.js
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/index.js
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy-sync
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy-sync/index.js
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy-sync/copy-sync.js
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy-sync/copy-file-sync.js
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/json
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/json/output-json-sync.js
+15:17:05.873 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/json/output-json.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/json/index.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/json/jsonfile.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/empty
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/empty/index.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/output
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/output/index.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/util
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/util/utimes.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/util/assign.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy/index.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy/copy.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/copy/ncp.js
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/move
+15:17:05.874 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/move/index.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/ensure
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/ensure/symlink-paths.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/ensure/index.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/ensure/file.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/ensure/symlink-type.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/ensure/link.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/ensure/symlink.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/mkdirs
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/mkdirs/index.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/mkdirs/win32.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/mkdirs/mkdirs.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/lib/mkdirs/mkdirs-sync.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fs-extra/LICENSE
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/underscore
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/underscore/underscore-min.js
+15:17:05.875 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/underscore/package.json
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/underscore/README.md
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/underscore/underscore-min.map
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/underscore/underscore.js
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/underscore/LICENSE
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/index.js
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/package.json
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/README.md
+15:17:05.876 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/lib
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/lib/encoding.js
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/lib/mediaType.js
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/lib/charset.js
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/lib/language.js
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/HISTORY.md
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/negotiator/LICENSE
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fresh
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fresh/index.js
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fresh/package.json
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fresh/README.md
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fresh/HISTORY.md
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/fresh/LICENSE
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/on-finished
+15:17:05.877 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/on-finished/index.js
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/on-finished/package.json
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/on-finished/README.md
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/on-finished/HISTORY.md
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/on-finished/LICENSE
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/forwarded
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/forwarded/index.js
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/forwarded/package.json
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/forwarded/README.md
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/forwarded/HISTORY.md
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/forwarded/LICENSE
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-readlink
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-readlink/index.js
+15:17:05.878 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-readlink/package.json
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-readlink/README.md
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-readlink/.npmignore
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-readlink/.travis.yml
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/graceful-readlink/LICENSE
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/range-parser
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/range-parser/index.js
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/range-parser/package.json
+15:17:05.879 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/range-parser/README.md
+15:17:05.880 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/range-parser/HISTORY.md
+15:17:05.880 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/range-parser/LICENSE
+15:17:05.880 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/type-is
+15:17:05.880 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/type-is/index.js
+15:17:05.880 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/type-is/package.json
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/type-is/README.md
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/type-is/HISTORY.md
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/type-is/LICENSE
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-disposition
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-disposition/index.js
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-disposition/package.json
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-disposition/README.md
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-disposition/HISTORY.md
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/content-disposition/LICENSE
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/serve-static
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/serve-static/index.js
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/serve-static/package.json
+15:17:05.881 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/serve-static/README.md
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/serve-static/HISTORY.md
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/serve-static/LICENSE
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/methods
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/methods/index.js
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/methods/package.json
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/methods/README.md
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/methods/HISTORY.md
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/methods/LICENSE
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie-signature
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie-signature/index.js
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie-signature/History.md
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie-signature/package.json
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie-signature/.npmignore
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/cookie-signature/Readme.md
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inflight
+15:17:05.882 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inflight/package.json
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inflight/README.md
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inflight/inflight.js
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/inflight/LICENSE
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/finalhandler
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/finalhandler/index.js
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/finalhandler/package.json
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/finalhandler/README.md
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/finalhandler/HISTORY.md
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/finalhandler/LICENSE
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/LICENSE.txt
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/src
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/src/sha3.js
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/package.json
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/CHANGELOG.md
+15:17:05.883 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/README.md
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/build
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/build/sha3.min.js
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/js-sha3/index.d.ts
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Creating bin directory: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/accepts
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/accepts/index.js
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/accepts/package.json
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/accepts/README.md
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/accepts/HISTORY.md
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/node_modules/accepts/LICENSE
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/package.json
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/solc-cli/package-lock.json
+15:17:05.884 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Copying binary: /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin/README.md
+2022-01-02 15:17:07.072  INFO 5463 --- [           main] c.jpmorgan.cakeshop.CakeshopApplication  : Starting CakeshopApplication v0.12.1 on swcyb-virtualbox with PID 5463 (/home/swcyb/.quorum-wizard/bin/cakeshop/0.12.1/cakeshop.war started by swcyb in /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash)
+2022-01-02 15:17:07.074  INFO 5463 --- [           main] c.jpmorgan.cakeshop.CakeshopApplication  : The following profiles are active: container,spring-boot
+2022-01-02 15:17:09.807  INFO 5463 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-02 15:17:09.965  INFO 5463 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147ms. Found 5 JPA repository interfaces.
+2022-01-02 15:17:11.578  INFO 5463 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'appConfig' of type [com.jpmorgan.cakeshop.config.AppConfig$$EnhancerBySpringCGLIB$$455c7c6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-02 15:17:12.603  INFO 5463 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.jpmorgan.cakeshop.config.CacheConfig$$EnhancerBySpringCGLIB$$959fc0ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-02 15:17:13.381  INFO 5463 --- [           main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8999
+2022-01-02 15:17:13.409  INFO 5463 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6201 ms
+2022-01-02 15:17:17.077  INFO 5463 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-02 15:17:17.095  INFO 5463 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2022-01-02 15:17:17.107  INFO 5463 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncExecutor'
+2022-01-02 15:17:19.088  WARN 5463 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-02 15:17:19.354  INFO 5463 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2022-01-02 15:17:19.364  INFO 5463 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2022-01-02 15:17:20.403  INFO 5463 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-01-02 15:17:20.726  INFO 5463 --- [           main] com.jpmorgan.cakeshop.config.WebConfig   : async task pool thread core 250
+2022-01-02 15:17:20.726  INFO 5463 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncTaskExecutor'
+2022-01-02 15:17:20.727  INFO 5463 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'asyncTaskExecutor'
+2022-01-02 15:17:20.756  INFO 5463 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2022-01-02 15:17:20.828  INFO 5463 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2022-01-02 15:17:21.170  INFO 5463 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a6fb62f, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a06904, org.springframework.security.web.header.HeaderWriterFilter@2ab9e43e, org.springframework.security.web.authentication.logout.LogoutFilter@37c2f0b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e848aea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56ec6960, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65e4cb84, org.springframework.security.web.session.SessionManagementFilter@1805383, org.springframework.security.web.access.ExceptionTranslationFilter@5cc3e49b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21a6a494]
+2022-01-02 15:17:22.075  INFO 5463 --- [           main] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-02 15:17:22.091  INFO 5463 --- [           main] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2022-01-02 15:17:22.118  INFO 5463 --- [           main] o.s.b.web.embedded.jetty.JettyWebServer  : Jetty started on port(s) 8999 (http/1.1) with context path '/'
+2022-01-02 15:17:22.408  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: java.lang.Boollean, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.408  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.606  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.606  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.607  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.607  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.689  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: java.util.List<String>, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.690  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.695  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: java.ulang.String, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.695  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.696  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: java.ulang.String, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.696  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.697  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: java.ulang.String, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.697  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.698  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: java.ulang.String, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.699  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.700  WARN 5463 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: java.ulang.String, dataTypeClass: class java.lang.Void
+2022-01-02 15:17:22.700  WARN 5463 --- [           main] s.d.b.BodyParameterSpecificationProvider : Parameter should either be a simple or a content type
+2022-01-02 15:17:22.755  INFO 5463 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-01-02 15:17:22.755  INFO 5463 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-01-02 15:17:22.756  INFO 5463 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+
+
+********************************************************************************
+Running pre-flight checks...
+
+
+Testing db path
+/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/db
+OK
+********************************************************************************
+
+
+
+
+          CAKESHOP
+          version:     0.12.1
+          build id:    4d2d232450bf9efb748ad791da4ba4946fcdcbe0
+          build date:  2021-03-10T14:02:21.961+0000
+          Access the Cakeshop UI at: http://localhost:8999
+2022-01-02 15:17:22.783  INFO 5463 --- [           main] c.jpmorgan.cakeshop.CakeshopApplication  : Started CakeshopApplication in 16.513 seconds (JVM running for 19.548)
+2022-01-02 15:17:23.062  INFO 5463 --- [         cake-1] c.j.c.service.task.InitializeNodesTask   : Loading initial nodes from: qdata/cakeshop/local/cakeshop.json
+2022-01-02 15:17:23.164  INFO 5463 --- [         cake-1] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 15:17:28.195  INFO 5463 --- [BlockScanner-45] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22000
+2022-01-02 15:17:28.443  INFO 5463 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 15:17:28.454  INFO 5463 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Filling blocks from 0 to 0
+2022-01-02 15:17:28.457  INFO 5463 --- [  BlockSaver-46] c.j.cakeshop.db.SavingBlockListener      : Persisting block #0
+2022-01-02 15:18:04.582  INFO 5463 --- [  BlockSaver-46] c.j.cakeshop.db.SavingBlockListener      : Persisting block #1
+2022-01-02 15:18:20.826  INFO 5463 --- [MessageBroker-8] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 15, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 93], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 7, completed tasks = 438]
+2022-01-02 15:21:03.092  INFO 5463 --- [  BlockSaver-46] c.j.cakeshop.db.SavingBlockListener      : Persisting block #2

@@ -1,0 +1,362 @@
+nohup: appending output to 'nohup.out'
+DEBUG[01-02|15:17:03.286] Sanitizing Go's GC trigger               percent=100
+INFO [01-02|15:17:03.287] Maximum peer count                       ETH=50 LES=0 total=50
+WARN [01-02|15:17:03.287] The flag --rpc is deprecated and will be removed in the future, please use --http 
+WARN [01-02|15:17:03.287] The flag --rpcaddr is deprecated and will be removed in the future, please use --http.addr 
+WARN [01-02|15:17:03.287] The flag --rpcport is deprecated and will be removed in the future, please use --http.port 
+WARN [01-02|15:17:03.287] The flag --rpccorsdomain is deprecated and will be removed in the future, please use --http.corsdomain 
+WARN [01-02|15:17:03.287] The flag --rpcapi is deprecated and will be removed in the future, please use --http.api 
+WARN [01-02|15:17:03.287] The flag --rpcvhosts is deprecated and will be removed in the future, please use --http.vhosts 
+WARN [01-02|15:17:03.287] The flag --wsaddr is deprecated and will be removed in the future, please use --ws.addr 
+WARN [01-02|15:17:03.288] The flag --wsport is deprecated and will be removed in the future, please use --ws.port 
+WARN [01-02|15:17:03.288] The flag --wsorigins is deprecated and will be removed in the future, please use --ws.origins 
+WARN [01-02|15:17:03.288] The flag --wsapi is deprecated and will be removed in the future, please use --ws.api 
+INFO [01-02|15:17:03.288] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+DEBUG[01-02|15:17:03.288] FS scan times                            list="37.437µs" set="4.378µs" diff="2.366µs"
+TRACE[01-02|15:17:03.288] Started watching keystore folder         path=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/keystore
+DEBUG[01-02|15:17:03.288] Failed to decode keystore key            path=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/keystore/password.txt err=EOF
+TRACE[01-02|15:17:03.288] Handled keystore changes                 time="86.393µs"
+WARN [01-02|15:17:03.289] Found deprecated node list file /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/static-nodes.json, please use the TOML config file instead. 
+INFO [01-02|15:17:03.289] Set global gas cap                       cap=25000000
+INFO [01-02|15:17:03.289] Allocated trie memory caches             clean=256.00MiB dirty=256.00MiB
+INFO [01-02|15:17:03.289] Allocated cache and file handles         database=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/chaindata cache=768.00MiB handles=524288
+DEBUG[01-02|15:17:03.356] Chain freezer table opened               database=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/chaindata/ancient table=diffs items=0 size=0.00B
+DEBUG[01-02|15:17:03.362] Chain freezer table opened               database=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/chaindata/ancient table=headers items=0 size=0.00B
+DEBUG[01-02|15:17:03.369] Chain freezer table opened               database=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/chaindata/ancient table=hashes  items=0 size=0.00B
+DEBUG[01-02|15:17:03.377] Chain freezer table opened               database=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/chaindata/ancient table=bodies  items=0 size=0.00B
+DEBUG[01-02|15:17:03.383] Chain freezer table opened               database=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/chaindata/ancient table=receipts items=0 size=0.00B
+INFO [01-02|15:17:03.383] Opened ancient database                  database=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/chaindata/ancient
+DEBUG[01-02|15:17:03.384] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:17:03.384] Current full block not old enough        number=0 hash="91ee4e…383e9e" delay=3162240
+INFO [01-02|15:17:03.384] Initialised chain configuration          config="{ChainID: 10 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 IsQuorum: true Constantinople: 0 TransactionSizeLimit: 64 MaxCodeSize: 0 Petersburg: 0 Istanbul: 0, Muir Glacier: <nil> YOLO v1: <nil> PrivacyEnhancements: 0 Engine: unknown}"
+WARN [01-02|15:17:03.384] Ethash used in full fake mode 
+INFO [01-02|15:17:03.384] Initialising Ethereum protocol           name=eth versions="[65 64 63]" network=10 dbversion=<nil>
+INFO [01-02|15:17:03.384] Initialising Quorum consensus protocol   name=eth versions="[65 64 63]" network=10 dbversion=<nil>
+WARN [01-02|15:17:03.384] Upgrade blockchain database version      from=<nil> to=8
+INFO [01-02|15:17:03.397] Loaded most recent local header          number=0 hash="91ee4e…383e9e" td=0 age=52y9mo4d
+INFO [01-02|15:17:03.397] Loaded most recent local full block      number=0 hash="91ee4e…383e9e" td=0 age=52y9mo4d
+INFO [01-02|15:17:03.397] Loaded most recent local fast block      number=0 hash="91ee4e…383e9e" td=0 age=52y9mo4d
+DEBUG[01-02|15:17:03.397] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:17:03.397] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:17:03.397] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:17:03.397] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:17:03.397] Reinjecting stale transactions           count=0
+INFO [01-02|15:17:03.398] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [01-02|15:17:03.419] Allocated fast sync bloom                size=512.00MiB
+DEBUG[01-02|15:17:03.420] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+WARN [01-02|15:17:03.422] permission-config.json file is missing. Smart-contract-based permission service will be disabled error="stat qdata/dd5/permission-config.json: no such file or directory"
+WARN [01-02|15:17:03.422] Found deprecated node list file qdata/dd5/static-nodes.json, please use the TOML config file instead. 
+INFO [01-02|15:17:03.424] Initialized fast sync bloom              items=7 errorrate=0.000 elapsed=4.202ms
+INFO [01-02|15:17:03.484] raft service registered 
+INFO [01-02|15:17:03.484] Connecting to private tx manager using IPC socket 
+INFO [01-02|15:17:03.565] Tessera API version: 3.0 
+INFO [01-02|15:17:03.565] Target Private Tx Manager                name=Tessera distributionVersion=21.1.1
+INFO [01-02|15:17:03.605] extension service registered 
+INFO [01-02|15:17:03.612] No plugins to initialise 
+INFO [01-02|15:17:03.612] Starting peer-to-peer node               instance=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5
+TRACE[01-02|15:17:03.658] Adding static node                       id=16be71cd98d454da ip=127.0.0.1 added=true
+TRACE[01-02|15:17:03.658] Starting p2p dial                        id=16be71cd98d454da ip=127.0.0.1 flag=staticdial
+DEBUG[01-02|15:17:03.659] TCP listener up                          addr=[::]:21004
+TRACE[01-02|15:17:03.659] Adding static node                       id=34fa044daadfe895 ip=127.0.0.1 added=true
+TRACE[01-02|15:17:03.659] Starting p2p dial                        id=34fa044daadfe895 ip=127.0.0.1 flag=staticdial
+TRACE[01-02|15:17:03.659] Adding static node                       id=a10039970da7ce34 ip=127.0.0.1 added=true
+TRACE[01-02|15:17:03.659] Starting p2p dial                        id=a10039970da7ce34 ip=127.0.0.1 flag=staticdial
+TRACE[01-02|15:17:03.659] Adding static node                       id=0e91101a0500b0f4 ip=127.0.0.1 added=true
+TRACE[01-02|15:17:03.659] Starting p2p dial                        id=0e91101a0500b0f4 ip=127.0.0.1 flag=staticdial
+TRACE[01-02|15:17:03.659] Adding static node                       id=48ac85a74ee19b1b ip=127.0.0.1 added=true
+INFO [01-02|15:17:03.660] New local node record                    seq=1 id=48ac85a74ee19b1b ip=127.0.0.1 udp=0 tcp=21004
+INFO [01-02|15:17:03.660] Started P2P networking                   self="enode://af590c6278e9b6a57182d3ee8117cc0b5d3a698318c2b77acb8085339e39e92082045eb625144c6f2720b6ab59f45a6a6c74f7751c7b973b5b46cd3ebe39fa3d@127.0.0.1:21004?discport=0"
+DEBUG[01-02|15:17:03.660] IPC registered                           namespace=admin
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=admin
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=debug
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=web3
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=txpool
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=debug
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=debug
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=personal
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=ethash
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=miner
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=eth
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=admin
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=debug
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=debug
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=net
+TRACE[01-02|15:17:03.666] Quorum permissioning                     id=a10039970da7ce34 addr=127.0.0.1:21002 conn=staticdial EnableNodePermission=true DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 Current Node ID=48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468 Node Name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5 Dialed Dest="enode://60210c046cd0db139191bdb5a3e537bd63bf5a1da9092b5daffba9cb0b4d1fb3d08806dd461f27ccc50df6a7eae629fb6cd728f80d9f6cc62a23ac93f5e04de2@127.0.0.1:21002?discport=0&raftport=50403" Connection ID=a10039970da7ce34 Connection String=a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913
+TRACE[01-02|15:17:03.666] Node Permissioning is Enabled.           id=a10039970da7ce34 addr=127.0.0.1:21002 conn=staticdial
+TRACE[01-02|15:17:03.666] Node Permissioning                       Connection Direction=OUTGOING
+DEBUG[01-02|15:17:03.666] parsePermissionedNodes                   DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=permissioned-nodes.json
+DEBUG[01-02|15:17:03.666] IPC registered                           namespace=raft
+DEBUG[01-02|15:17:03.667] IPC registered                           namespace=quorumExtension
+TRACE[01-02|15:17:03.662] Quorum permissioning                     id=16be71cd98d454da addr=127.0.0.1:21000 conn=staticdial EnableNodePermission=true DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 Current Node ID=48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468 Node Name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5 Dialed Dest="enode://ea590bbdce154b4fe5618b494f85aafdebdb691115f6f7935008fe6e2bfcd00d366b4cbb14f0030c03404e75d61a412392fb8ea29ff9a55232285bcb16a06ab5@127.0.0.1:21000?discport=0&raftport=50401" Connection ID=16be71cd98d454da Connection String=16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727
+TRACE[01-02|15:17:03.667] Node Permissioning is Enabled.           id=16be71cd98d454da addr=127.0.0.1:21000 conn=staticdial
+TRACE[01-02|15:17:03.667] Node Permissioning                       Connection Direction=OUTGOING
+DEBUG[01-02|15:17:03.667] parsePermissionedNodes                   DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=permissioned-nodes.json
+DEBUG[01-02|15:17:03.667] IsNodePermissioned                       permissionedList="[16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727 34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913 0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb 48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468]"
+DEBUG[01-02|15:17:03.667] IsNodePermissioned                       connection=OUTGOING nodename=a10039970da7ce342f6bd115b45fcdee ALLOWED-BY=48ac85a74ee19b1bec08d67b31f87c38
+DEBUG[01-02|15:17:03.667] isNodeBlackListed                        DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=disallowed-nodes.json
+DEBUG[01-02|15:17:03.667] Read Error for disallowed-nodes.json file. disallowed-nodes.json file is not present. err="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/disallowed-nodes.json: no such file or directory"
+INFO [01-02|15:17:03.667] IPC endpoint opened                      url=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth.ipc
+INFO [01-02|15:17:03.667] Security Plugin is not enabled 
+ERROR[01-02|15:17:03.667] Unavailable modules in HTTP API list     unavailable="[db shh quorum quorumPermission]" available="[admin debug web3 eth txpool personal ethash miner net raft quorumExtension]"
+DEBUG[01-02|15:17:03.668] IsNodePermissioned                       permissionedList="[16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727 34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913 0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb 48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468]"
+DEBUG[01-02|15:17:03.668] IsNodePermissioned                       connection=OUTGOING nodename=16be71cd98d454da5c07c5c3616dbbd2 ALLOWED-BY=48ac85a74ee19b1bec08d67b31f87c38
+DEBUG[01-02|15:17:03.668] isNodeBlackListed                        DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=disallowed-nodes.json
+DEBUG[01-02|15:17:03.668] Read Error for disallowed-nodes.json file. disallowed-nodes.json file is not present. err="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/disallowed-nodes.json: no such file or directory"
+DEBUG[01-02|15:17:03.668] Adding p2p peer                          peercount=1 id=16be71cd98d454da conn=staticdial addr=127.0.0.1:21000 name=Geth/v1.9.20-stable-...
+TRACE[01-02|15:17:03.668] Starting protocol eth/65                 id=16be71cd98d454da conn=staticdial
+ERROR[01-02|15:17:03.668] Unavailable modules in HTTP API list     unavailable="[db shh quorum quorumPermission]" available="[admin debug web3 eth txpool personal ethash miner net raft quorumExtension]"
+DEBUG[01-02|15:17:03.668] Allowed origin(s) for WS RPC interface [*] 
+INFO [01-02|15:17:03.668] Security: TLS not enabled                endpoint=0.0.0.0:22004 reason="no TLSConfigurationSource found"
+INFO [01-02|15:17:03.669] HTTP server started                      endpoint=[::]:22004    cors=* vhosts=* isTls=false
+INFO [01-02|15:17:03.669] GraphQL enabled                          url=http://[::]:22004/graphql
+INFO [01-02|15:17:03.669] GraphQL UI enabled                       url=http://[::]:22004/graphql/ui
+INFO [01-02|15:17:03.669] Security: TLS not enabled                endpoint=0.0.0.0:23004 reason="no TLSConfigurationSource found"
+INFO [01-02|15:17:03.669] WebSocket enabled                        url=ws://[::]:23004
+INFO [01-02|15:17:03.669] starting raft protocol handler 
+DEBUG[01-02|15:17:03.669] Ethereum peer connected                  id=16be71cd98d454da conn=staticdial name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5
+INFO [01-02|15:17:03.669] loaded the latest applied index          lastAppliedIndex=0
+INFO [01-02|15:17:03.669] replaying WAL 
+TRACE[01-02|15:17:03.669] Quorum permissioning                     id=34fa044daadfe895 addr=127.0.0.1:21001 conn=staticdial EnableNodePermission=true DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 Current Node ID=48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468 Node Name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5 Dialed Dest="enode://0f8c8ded4c3ef1240df3bccfb9f2f23e69a22a1f683f40fc2eecf9864a90aa367781456c9f1dc26dbb564bf479d5fcca19de533e1294a7c3cd05ba6738c971af@127.0.0.1:21001?discport=0&raftport=50402" Connection ID=34fa044daadfe895 Connection String=34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae
+TRACE[01-02|15:17:03.670] Node Permissioning is Enabled.           id=34fa044daadfe895 addr=127.0.0.1:21001 conn=staticdial
+TRACE[01-02|15:17:03.670] Node Permissioning                       Connection Direction=OUTGOING
+DEBUG[01-02|15:17:03.670] parsePermissionedNodes                   DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=permissioned-nodes.json
+DEBUG[01-02|15:17:03.670] IsNodePermissioned                       permissionedList="[16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727 34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913 0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb 48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468]"
+DEBUG[01-02|15:17:03.670] IsNodePermissioned                       connection=OUTGOING nodename=34fa044daadfe89598f0535358e3dddc ALLOWED-BY=48ac85a74ee19b1bec08d67b31f87c38
+DEBUG[01-02|15:17:03.670] isNodeBlackListed                        DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=disallowed-nodes.json
+DEBUG[01-02|15:17:03.670] Read Error for disallowed-nodes.json file. disallowed-nodes.json file is not present. err="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/disallowed-nodes.json: no such file or directory"
+TRACE[01-02|15:17:03.671] Registering sync peer                    peer=16be71cd98d454da
+DEBUG[01-02|15:17:03.671] Adding p2p peer                          peercount=2 id=a10039970da7ce34 conn=staticdial addr=127.0.0.1:21002 name=Geth/v1.9.20-stable-...
+TRACE[01-02|15:17:03.671] Starting protocol eth/65                 id=a10039970da7ce34 conn=staticdial
+DEBUG[01-02|15:17:03.671] Ethereum peer connected                  id=a10039970da7ce34 conn=staticdial name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5
+TRACE[01-02|15:17:03.671] Registering sync peer                    peer=a10039970da7ce34
+DEBUG[01-02|15:17:03.671] Relaxed downloader QoS values            rtt=20s confidence=0.500 ttl=1m0s
+DEBUG[01-02|15:17:03.673] Adding p2p peer                          peercount=3 id=34fa044daadfe895 conn=staticdial addr=127.0.0.1:21001 name=Geth/v1.9.20-stable-...
+TRACE[01-02|15:17:03.673] Starting protocol eth/65                 id=34fa044daadfe895 conn=staticdial
+DEBUG[01-02|15:17:03.673] Ethereum peer connected                  id=34fa044daadfe895 conn=staticdial name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5
+TRACE[01-02|15:17:03.674] Registering sync peer                    peer=34fa044daadfe895
+DEBUG[01-02|15:17:03.674] Relaxed downloader QoS values            rtt=20s confidence=0.333 ttl=1m0s
+TRACE[01-02|15:17:03.675] Quorum permissioning                     id=0e91101a0500b0f4 addr=127.0.0.1:21003 conn=staticdial EnableNodePermission=true DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 Current Node ID=48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468 Node Name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5 Dialed Dest="enode://f41059981e10b6b55742bb882779cdbf1411997e068413839b293534ab21061bdecad92079d6a21bbc1bc4998555670bf9e3dba0857b3c9f2bf68e7ce6d2feaa@127.0.0.1:21003?discport=0&raftport=50404" Connection ID=0e91101a0500b0f4 Connection String=0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb
+TRACE[01-02|15:17:03.675] Node Permissioning is Enabled.           id=0e91101a0500b0f4 addr=127.0.0.1:21003 conn=staticdial
+TRACE[01-02|15:17:03.675] Node Permissioning                       Connection Direction=OUTGOING
+DEBUG[01-02|15:17:03.675] parsePermissionedNodes                   DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=permissioned-nodes.json
+DEBUG[01-02|15:17:03.676] IsNodePermissioned                       permissionedList="[16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727 34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913 0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb 48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468]"
+DEBUG[01-02|15:17:03.676] IsNodePermissioned                       connection=OUTGOING nodename=0e91101a0500b0f4af3762ea2b8edcb7 ALLOWED-BY=48ac85a74ee19b1bec08d67b31f87c38
+DEBUG[01-02|15:17:03.676] isNodeBlackListed                        DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=disallowed-nodes.json
+DEBUG[01-02|15:17:03.676] Read Error for disallowed-nodes.json file. disallowed-nodes.json file is not present. err="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/disallowed-nodes.json: no such file or directory"
+DEBUG[01-02|15:17:03.809] Adding p2p peer                          peercount=4 id=0e91101a0500b0f4 conn=staticdial addr=127.0.0.1:21003 name=Geth/v1.9.20-stable-...
+TRACE[01-02|15:17:03.809] Starting protocol eth/65                 id=0e91101a0500b0f4 conn=staticdial
+DEBUG[01-02|15:17:03.809] Ethereum peer connected                  id=0e91101a0500b0f4 conn=staticdial name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5
+TRACE[01-02|15:17:03.812] Registering sync peer                    peer=0e91101a0500b0f4
+DEBUG[01-02|15:17:03.812] Relaxed downloader QoS values            rtt=20s confidence=0.250 ttl=1m0s
+INFO [01-02|15:17:03.849] loading WAL                              term=0 index=0
+INFO [01-02|15:17:03.849] startRaft                                raft ID=5
+INFO [01-02|15:17:03.849] starting a new raft log                  initial cluster size of=5
+2022-01-02 15:17:03.850113 I | rafthttp: starting peer 1...
+2022-01-02 15:17:03.850157 I | rafthttp: started HTTP pipelining with peer 1
+TRACE[01-02|15:17:03.850] Adding static node                       id=16be71cd98d454da ip=127.0.0.1 added=false
+2022-01-02 15:17:03.851305 I | rafthttp: started streaming with peer 1 (writer)
+2022-01-02 15:17:03.851416 I | rafthttp: started streaming with peer 1 (writer)
+2022-01-02 15:17:03.851748 I | rafthttp: started peer 1
+2022-01-02 15:17:03.851775 I | rafthttp: added peer 1
+2022-01-02 15:17:03.851893 I | rafthttp: starting peer 2...
+2022-01-02 15:17:03.851908 I | rafthttp: started HTTP pipelining with peer 2
+2022-01-02 15:17:03.852357 I | rafthttp: started streaming with peer 1 (stream MsgApp v2 reader)
+TRACE[01-02|15:17:03.852] Adding static node                       id=34fa044daadfe895 ip=127.0.0.1 added=false
+2022-01-02 15:17:03.852498 I | rafthttp: started streaming with peer 1 (stream Message reader)
+2022-01-02 15:17:03.853028 I | rafthttp: started streaming with peer 2 (writer)
+2022-01-02 15:17:03.853156 I | rafthttp: started streaming with peer 2 (writer)
+2022-01-02 15:17:03.853465 I | rafthttp: started peer 2
+2022-01-02 15:17:03.853489 I | rafthttp: added peer 2
+2022-01-02 15:17:03.853607 I | rafthttp: starting peer 3...
+2022-01-02 15:17:03.853632 I | rafthttp: started HTTP pipelining with peer 3
+2022-01-02 15:17:03.853832 I | rafthttp: peer 1 became active
+2022-01-02 15:17:03.853848 I | rafthttp: established a TCP streaming connection with peer 1 (stream MsgApp v2 reader)
+2022-01-02 15:17:03.854952 I | rafthttp: started streaming with peer 2 (stream MsgApp v2 reader)
+TRACE[01-02|15:17:03.855] Adding static node                       id=a10039970da7ce34 ip=127.0.0.1 added=false
+2022-01-02 15:17:03.855105 I | rafthttp: started streaming with peer 2 (stream Message reader)
+2022-01-02 15:17:03.855373 I | rafthttp: started streaming with peer 3 (writer)
+2022-01-02 15:17:03.855748 I | rafthttp: peer 2 became active
+2022-01-02 15:17:03.855762 I | rafthttp: established a TCP streaming connection with peer 2 (stream Message reader)
+2022-01-02 15:17:03.855799 I | rafthttp: started streaming with peer 3 (writer)
+2022-01-02 15:17:03.856717 I | rafthttp: started peer 3
+2022-01-02 15:17:03.856750 I | rafthttp: added peer 3
+2022-01-02 15:17:03.856843 I | rafthttp: starting peer 4...
+2022-01-02 15:17:03.856855 I | rafthttp: started HTTP pipelining with peer 4
+2022-01-02 15:17:03.856888 I | rafthttp: started streaming with peer 3 (stream Message reader)
+TRACE[01-02|15:17:03.857] Adding static node                       id=0e91101a0500b0f4 ip=127.0.0.1 added=false
+2022-01-02 15:17:03.857110 I | rafthttp: started streaming with peer 3 (stream MsgApp v2 reader)
+2022-01-02 15:17:03.857553 I | rafthttp: started streaming with peer 4 (writer)
+2022-01-02 15:17:03.857833 I | rafthttp: started streaming with peer 4 (writer)
+2022-01-02 15:17:03.858470 I | rafthttp: established a TCP streaming connection with peer 1 (stream Message reader)
+2022-01-02 15:17:03.858501 I | rafthttp: established a TCP streaming connection with peer 2 (stream MsgApp v2 reader)
+2022-01-02 15:17:03.859511 I | rafthttp: started peer 4
+2022-01-02 15:17:03.859657 I | rafthttp: peer 3 became active
+2022-01-02 15:17:03.859692 I | rafthttp: started streaming with peer 4 (stream MsgApp v2 reader)
+2022-01-02 15:17:03.859735 I | rafthttp: added peer 4
+2022-01-02 15:17:03.859749 I | rafthttp: established a TCP streaming connection with peer 3 (stream MsgApp v2 reader)
+2022-01-02 15:17:03.859851 I | rafthttp: started streaming with peer 4 (stream Message reader)
+2022-01-02 15:17:03.859937 I | rafthttp: established a TCP streaming connection with peer 3 (stream Message reader)
+raft2022/01/02 15:17:03.860042 INFO: newRaft storagehardState{0 0 0 []} confState{[] [] []}
+raft2022/01/02 15:17:03.860069 INFO: newRaft config.peers[] config.learners[]
+raft2022/01/02 15:17:03.860079 INFO: 5 became follower at term 0
+raft2022/01/02 15:17:03.860086 INFO: newRaft 5 learner: false [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+raft2022/01/02 15:17:03.860091 INFO: 5 became follower at term 1
+INFO [01-02|15:17:03.860] raft node started 
+2022-01-02 15:17:03.860179 I | rafthttp: peer 4 became active
+2022-01-02 15:17:03.860193 I | rafthttp: established a TCP streaming connection with peer 4 (stream MsgApp v2 reader)
+2022-01-02 15:17:03.860331 I | rafthttp: established a TCP streaming connection with peer 4 (stream Message reader)
+DEBUG[01-02|15:17:03.860] extension service: starting 
+DEBUG[01-02|15:17:03.860] Enrich call context with token from security context 
+DEBUG[01-02|15:17:03.860] Served eth_subscribe                     reqid=1 t="130.13µs"
+TRACE[01-02|15:17:03.860] Handled RPC response                     reqid=1 t="3.544µs"
+DEBUG[01-02|15:17:03.860] Enrich call context with token from security context 
+DEBUG[01-02|15:17:03.861] Served eth_subscribe                     reqid=2 t="76.652µs"
+TRACE[01-02|15:17:03.861] Handled RPC response                     reqid=2 t="2.066µs"
+DEBUG[01-02|15:17:03.861] Enrich call context with token from security context 
+DEBUG[01-02|15:17:03.861] Served eth_subscribe                     reqid=3 t="58.236µs"
+TRACE[01-02|15:17:03.861] Handled RPC response                     reqid=3 t="2.081µs"
+WARN [01-02|15:17:03.861] ------------------------------------------------------------------- 
+WARN [01-02|15:17:03.861] Referring to accounts by order in the keystore folder is dangerous! 
+WARN [01-02|15:17:03.861] This functionality is deprecated and will be removed in the future! 
+WARN [01-02|15:17:03.861] Please use explicit addresses! (can search via `geth account list`) 
+WARN [01-02|15:17:03.861] ------------------------------------------------------------------- 
+INFO [01-02|15:17:03.865] confChange                               confState="{Nodes:[1 2 3 4 5] Learners:[] XXX_unrecognized:[]}"
+INFO [01-02|15:17:03.865] ConfChangeAddNode                        raft id=1
+INFO [01-02|15:17:03.865] ignoring expected ConfChangeAddNode for initial peer raft id=1
+INFO [01-02|15:17:03.865] start snapshot                           applied index=0 last snapshot index=0
+INFO [01-02|15:17:03.878] compacted log                            index=0
+INFO [01-02|15:17:03.878] persisted the latest applied index       index=1
+INFO [01-02|15:17:03.878] confChange                               confState="{Nodes:[1 2 3 4 5] Learners:[] XXX_unrecognized:[]}"
+INFO [01-02|15:17:03.878] ConfChangeAddNode                        raft id=2
+INFO [01-02|15:17:03.878] ignoring expected ConfChangeAddNode for initial peer raft id=2
+INFO [01-02|15:17:03.878] start snapshot                           applied index=1 last snapshot index=1
+2022-01-02 15:17:03.880856 I | rafthttp: established a TCP streaming connection with peer 1 (stream MsgApp v2 writer)
+INFO [01-02|15:17:03.890] compacted log                            index=1
+INFO [01-02|15:17:03.891] persisted the latest applied index       index=2
+INFO [01-02|15:17:03.891] confChange                               confState="{Nodes:[1 2 3 4 5] Learners:[] XXX_unrecognized:[]}"
+INFO [01-02|15:17:03.891] ConfChangeAddNode                        raft id=3
+INFO [01-02|15:17:03.891] ignoring expected ConfChangeAddNode for initial peer raft id=3
+INFO [01-02|15:17:03.891] start snapshot                           applied index=2 last snapshot index=2
+2022-01-02 15:17:03.893632 I | rafthttp: established a TCP streaming connection with peer 1 (stream Message writer)
+2022-01-02 15:17:03.910540 I | rafthttp: established a TCP streaming connection with peer 2 (stream Message writer)
+INFO [01-02|15:17:03.913] compacted log                            index=2
+INFO [01-02|15:17:03.913] persisted the latest applied index       index=3
+INFO [01-02|15:17:03.913] confChange                               confState="{Nodes:[1 2 3 4 5] Learners:[] XXX_unrecognized:[]}"
+INFO [01-02|15:17:03.913] ConfChangeAddNode                        raft id=4
+INFO [01-02|15:17:03.913] ignoring expected ConfChangeAddNode for initial peer raft id=4
+INFO [01-02|15:17:03.913] start snapshot                           applied index=3 last snapshot index=3
+2022-01-02 15:17:03.919931 I | rafthttp: established a TCP streaming connection with peer 4 (stream Message writer)
+2022-01-02 15:17:03.928901 I | rafthttp: established a TCP streaming connection with peer 2 (stream MsgApp v2 writer)
+2022-01-02 15:17:03.939370 I | rafthttp: established a TCP streaming connection with peer 4 (stream MsgApp v2 writer)
+INFO [01-02|15:17:03.941] compacted log                            index=3
+INFO [01-02|15:17:03.941] persisted the latest applied index       index=4
+INFO [01-02|15:17:03.941] confChange                               confState="{Nodes:[1 2 3 4 5] Learners:[] XXX_unrecognized:[]}"
+INFO [01-02|15:17:03.941] ConfChangeAddNode                        raft id=5
+INFO [01-02|15:17:03.941] ignoring expected ConfChangeAddNode for initial peer raft id=5
+INFO [01-02|15:17:03.941] start snapshot                           applied index=4 last snapshot index=4
+INFO [01-02|15:17:03.946] compacted log                            index=4
+INFO [01-02|15:17:03.946] persisted the latest applied index       index=5
+2022-01-02 15:17:03.954886 I | rafthttp: established a TCP streaming connection with peer 3 (stream Message writer)
+2022-01-02 15:17:03.955299 I | rafthttp: established a TCP streaming connection with peer 3 (stream MsgApp v2 writer)
+INFO [01-02|15:17:04.869] Unlocked account                         address=0x9cB2D6DCfd9143661364B3C3900B737Fc45B2287
+WARN [01-02|15:17:04.869] permission-config.json file is missing. Smart-contract-based permission service will be disabled error="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/permission-config.json: no such file or directory"
+INFO [01-02|15:17:04.869] Privacy enhancements is configured to be enabled from block  height=0
+raft2022/01/02 15:17:04.914563 INFO: 5 [term: 1] received a MsgVote message with higher term from 3 [term: 2]
+raft2022/01/02 15:17:04.914591 INFO: 5 became follower at term 2
+raft2022/01/02 15:17:04.914597 INFO: 5 [logterm: 1, index: 5, vote: 0] cast MsgVote for 3 [logterm: 1, index: 5] at term 2
+raft2022/01/02 15:17:04.919208 INFO: raft.node: 5 elected leader 3 at term 2
+INFO [01-02|15:17:04.919] QUORUM-CHECKPOINT                        name=BECAME-VERIFIER
+INFO [01-02|15:17:04.922] persisted the latest applied index       index=6
+DEBUG[01-02|15:17:05.759] Couldn't add port mapping                proto=tcp extport=21004 intport=21004 interface="UPnP or NAT-PMP" err="no UPnP or NAT-PMP router discovered"
+DEBUG[01-02|15:17:23.420] Recalculated downloader QoS values       rtt=20s confidence=0.625 ttl=1m0s
+DEBUG[01-02|15:17:43.421] Recalculated downloader QoS values       rtt=20s confidence=0.812 ttl=1m0s
+TRACE[01-02|15:18:02.599] Pooled new future transaction            hash="f60965…27786c" from=0xdce549bF8546cbB7fAE14811Fdf4Ca40ab37506e to=nil
+TRACE[01-02|15:18:02.599] Promoting queued transaction             hash="f60965…27786c"
+TRACE[01-02|15:18:02.599] Promoted queued transactions             count=1
+TRACE[01-02|15:18:02.599] Broadcast transaction                    hash="f60965…27786c" recipients=1
+TRACE[01-02|15:18:02.599] Sent transactions                        id=a10039970da7ce34 conn=staticdial count=1
+INFO [01-02|15:18:02.622] QUORUM-CHECKPOINT                        name=TX-ACCEPTED             tx=0xf60965c0c6372d65d1142c6c707d8b78366d1a52ff0ac0da802137037f27786c
+DEBUG[01-02|15:18:02.622] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:18:02.622] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:18:02.622] AccountExtraData root after trie commit  root="56e81f…63b421"
+DEBUG[01-02|15:18:02.622] Persisted trie from memory database      nodes=0 size=0.00B     time="1.899µs"  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+DEBUG[01-02|15:18:02.622] AccountExtraData root after trie commit  root="56e81f…63b421"
+DEBUG[01-02|15:18:02.622] Inserted new block                       number=1 hash="330bf4…f59567" uncles=0 txs=1 gas=130038 elapsed="774.063µs" root="fe9772…9f52ec"
+INFO [01-02|15:18:02.622] Imported new chain segment               blocks=1 txs=1 mgas=0.130 elapsed="842.251µs" mgasps=154.393 number=1 hash="330bf4…f59567" dirty=1.90KiB
+INFO [01-02|15:18:02.622] QUORUM-CHECKPOINT                        name=BLOCK-CREATED           block=330bf4f44611fd3672937e8d5ef5805652d5954743d08811150ec00536f59567
+INFO [01-02|15:18:02.622] persisted the latest applied index       index=7
+DEBUG[01-02|15:18:02.623] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:18:02.623] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:18:02.623] Reinjecting stale transactions           count=0
+TRACE[01-02|15:18:02.623] Removed old pending transaction          hash="f60965…27786c"
+DEBUG[01-02|15:18:03.384] Current full block not old enough        number=1 hash="330bf4…f59567" delay=3162240
+DEBUG[01-02|15:18:03.421] Recalculated downloader QoS values       rtt=20s confidence=0.906 ttl=1m0s
+DEBUG[01-02|15:18:23.421] Recalculated downloader QoS values       rtt=20s confidence=0.953 ttl=1m0s
+DEBUG[01-02|15:18:43.422] Recalculated downloader QoS values       rtt=20s confidence=0.977 ttl=1m0s
+DEBUG[01-02|15:19:03.385] Current full block not old enough        number=1 hash="330bf4…f59567" delay=3162240
+DEBUG[01-02|15:19:03.422] Recalculated downloader QoS values       rtt=20s confidence=0.988 ttl=1m0s
+DEBUG[01-02|15:19:23.422] Recalculated downloader QoS values       rtt=20s confidence=0.994 ttl=1m0s
+DEBUG[01-02|15:19:43.425] Recalculated downloader QoS values       rtt=20s confidence=0.997 ttl=1m0s
+DEBUG[01-02|15:20:03.387] Current full block not old enough        number=1 hash="330bf4…f59567" delay=3162240
+DEBUG[01-02|15:20:03.425] Recalculated downloader QoS values       rtt=20s confidence=0.999 ttl=1m0s
+DEBUG[01-02|15:20:23.425] Recalculated downloader QoS values       rtt=20s confidence=0.999 ttl=1m0s
+DEBUG[01-02|15:20:43.426] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+TRACE[01-02|15:21:01.931] Pooled new future transaction            hash="f398b3…8f5324" from=0xdce549bF8546cbB7fAE14811Fdf4Ca40ab37506e to=nil
+TRACE[01-02|15:21:01.931] Promoting queued transaction             hash="f398b3…8f5324"
+TRACE[01-02|15:21:01.931] Promoted queued transactions             count=1
+TRACE[01-02|15:21:01.931] Broadcast transaction                    hash="f398b3…8f5324" recipients=1
+TRACE[01-02|15:21:01.931] Sent transactions                        id=a10039970da7ce34 conn=staticdial count=1
+INFO [01-02|15:21:01.937] QUORUM-CHECKPOINT                        name=TX-ACCEPTED             tx=0xf398b38ec4961887ad110d84f7db340dfff69bcc8a12cc7bc7121eb8818f5324
+DEBUG[01-02|15:21:01.937] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:21:01.937] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:21:01.937] AccountExtraData root after trie commit  root="56e81f…63b421"
+DEBUG[01-02|15:21:01.937] Persisted trie from memory database      nodes=0 size=0.00B     time="1.163µs"  gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+DEBUG[01-02|15:21:01.938] AccountExtraData root after trie commit  root="56e81f…63b421"
+DEBUG[01-02|15:21:01.938] Inserted new block                       number=2 hash="418e98…c2f5f0" uncles=0 txs=1 gas=130038 elapsed="616.83µs"  root="1b181e…5407b9"
+INFO [01-02|15:21:01.938] Imported new chain segment               blocks=1 txs=1 mgas=0.130 elapsed="669.915µs" mgasps=194.111 number=2 hash="418e98…c2f5f0" dirty=3.84KiB
+INFO [01-02|15:21:01.938] QUORUM-CHECKPOINT                        name=BLOCK-CREATED           block=418e981f56ad319d5001e939fee75790389c3f1284f318b01268661cbac2f5f0
+INFO [01-02|15:21:01.938] persisted the latest applied index       index=8
+DEBUG[01-02|15:21:01.938] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:21:01.938] Account Extra Data root                  hash="000000…000000"
+DEBUG[01-02|15:21:01.938] Reinjecting stale transactions           count=0
+TRACE[01-02|15:21:01.938] Removed old pending transaction          hash="f398b3…8f5324"
+DEBUG[01-02|15:21:03.387] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:21:03.426] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:21:23.426] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:21:43.427] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:22:03.387] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:22:03.427] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:22:23.427] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:22:43.427] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:23:03.387] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:23:03.428] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:23:23.428] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:23:43.429] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:24:03.388] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:24:03.429] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:24:23.429] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:24:43.429] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:25:03.389] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:25:03.430] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:25:23.430] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:25:43.430] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:26:03.390] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:26:03.431] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:26:23.432] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:26:43.432] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:27:03.392] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:27:03.433] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+TRACE[01-02|15:27:03.659] Refreshing port mapping                  proto=tcp extport=21004 intport=21004 interface="UPnP or NAT-PMP"
+DEBUG[01-02|15:27:03.659] Couldn't add port mapping                proto=tcp extport=21004 intport=21004 interface="UPnP or NAT-PMP" err="no UPnP or NAT-PMP router discovered"
+DEBUG[01-02|15:27:23.439] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:27:43.440] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
+DEBUG[01-02|15:28:03.393] Current full block not old enough        number=2 hash="418e98…c2f5f0" delay=3162240
+DEBUG[01-02|15:28:03.440] Recalculated downloader QoS values       rtt=20s confidence=1.000 ttl=1m0s
