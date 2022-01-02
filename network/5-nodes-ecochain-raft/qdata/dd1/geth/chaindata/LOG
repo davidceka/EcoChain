@@ -1,8 +1,0 @@
-=============== Dec 18, 2021 (CET) ===============
-18:35:45.576294 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:35:45.600360 db@open opening
-18:35:45.601740 version@stat F·[] S·0B[] Sc·[]
-18:35:45.603937 db@janitor F·2 G·0
-18:35:45.603972 db@open done T·3.579042ms
-18:35:45.621453 db@close closing
-18:35:45.621562 db@close done T·107.376µs
