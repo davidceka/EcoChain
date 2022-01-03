@@ -5,8 +5,9 @@ const http = require('http').Server(app);
 const authRouter=require('./routes/auth')
 const pagesRouter=require('./routes/pages')
 const dotenv=require('dotenv')
-const session=require('express-session')
+const sessions=require('express-session')
 const crypto=require('crypto')
+const cookieParser=require('cookie-parser')
 
 const handlebars = require('express-handlebars').create({
   layoutsDir: path.join(__dirname, "views/layouts"),
@@ -25,8 +26,20 @@ app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, "views"))
 
 
+const singleSession = 1000 * 60 * 30;
+
+
 var secret = crypto.randomBytes(32).toString('hex');
-console.log(secret)
+app.use(sessions({
+  secret: secret,
+  saveUninitialized: true,
+  cookie: {
+    maxAge: singleSession
+  },
+  resave: false
+}));
+
+app.use(cookieParser());
 
 app.use(pagesRouter)
 app.use(authRouter)

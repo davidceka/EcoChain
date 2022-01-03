@@ -12,6 +12,11 @@ router.get('/chisiamo',(req,res)=>{
         layout:'index'
     })
 })
+router.get('/login',(req,res)=>{
+    res.render('login',{
+        layout:'index'
+    })
+})
 
 
 

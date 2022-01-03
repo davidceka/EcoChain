@@ -775,3 +775,533 @@ OK
 2022-01-02 15:18:04.582  INFO 5463 --- [  BlockSaver-46] c.j.cakeshop.db.SavingBlockListener      : Persisting block #1
 2022-01-02 15:18:20.826  INFO 5463 --- [MessageBroker-8] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 15, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 93], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 7, completed tasks = 438]
 2022-01-02 15:21:03.092  INFO 5463 --- [  BlockSaver-46] c.j.cakeshop.db.SavingBlockListener      : Persisting block #2
+15:40:29.268 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - cakeshop.config.dir=qdata/cakeshop
+15:40:29.273 [main] INFO com.jpmorgan.cakeshop.CakeshopApplication - Adding data/local/ and qdata/cakeshop/local to config file search locations for backwards compatibility: file:./data/local/,file:./qdata/cakeshop/local/
+Extracting binaries to /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/bin
+2022-01-02 15:40:30.268  INFO 8847 --- [           main] c.jpmorgan.cakeshop.CakeshopApplication  : Starting CakeshopApplication v0.12.1 on swcyb-virtualbox with PID 8847 (/home/swcyb/.quorum-wizard/bin/cakeshop/0.12.1/cakeshop.war started by swcyb in /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash)
+2022-01-02 15:40:30.269  INFO 8847 --- [           main] c.jpmorgan.cakeshop.CakeshopApplication  : The following profiles are active: container,spring-boot
+2022-01-02 15:40:32.676  INFO 8847 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-02 15:40:32.836  INFO 8847 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 139ms. Found 5 JPA repository interfaces.
+2022-01-02 15:40:34.081  INFO 8847 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'appConfig' of type [com.jpmorgan.cakeshop.config.AppConfig$$EnhancerBySpringCGLIB$$b344d3c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-02 15:40:34.414  INFO 8847 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.jpmorgan.cakeshop.config.CacheConfig$$EnhancerBySpringCGLIB$$5b7791bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-02 15:40:35.127  INFO 8847 --- [           main] o.s.b.w.e.j.JettyServletWebServerFactory : Server initialized with port: 8999
+2022-01-02 15:40:35.164  INFO 8847 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4820 ms
+2022-01-02 15:40:48.444 ERROR 8847 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:46 heartbeat - read: -833 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at com.jpmorgan.cakeshop.CakeshopApplication.main(CakeshopApplication.java:63) ~[classes!/:0.12.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:107) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.WarLauncher.main(WarLauncher.java:59) ~[cakeshop.war:0.12.1]
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:46 heartbeat - read: -833 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	... 57 common frames omitted
+
+2022-01-02 15:40:48.447  WARN 8847 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:46 heartbeat - read: -833 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at com.jpmorgan.cakeshop.CakeshopApplication.main(CakeshopApplication.java:63) ~[classes!/:0.12.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:107) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.WarLauncher.main(WarLauncher.java:59) ~[cakeshop.war:0.12.1]
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:46 heartbeat - read: -833 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	... 57 common frames omitted
+
+2022-01-02 15:41:00.933 ERROR 8847 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:58 heartbeat - read: -3345 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at com.jpmorgan.cakeshop.CakeshopApplication.main(CakeshopApplication.java:63) ~[classes!/:0.12.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:107) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.WarLauncher.main(WarLauncher.java:59) ~[cakeshop.war:0.12.1]
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:58 heartbeat - read: -3345 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	... 55 common frames omitted
+
+2022-01-02 15:41:00.934  WARN 8847 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: -451, SQLState: S1000
+2022-01-02 15:41:00.935 ERROR 8847 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:58 heartbeat - read: -3345 ms.
+2022-01-02 15:41:00.941 ERROR 8847 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-01-02 15:41:00.943  WARN 8847 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-01-02 15:41:00.967  INFO 8847 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-02 15:41:00.968 ERROR 8847 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:140) ~[spring-boot-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at com.jpmorgan.cakeshop.CakeshopApplication.main(CakeshopApplication.java:63) ~[classes!/:0.12.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:107) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[cakeshop.war:0.12.1]
+	at org.springframework.boot.loader.WarLauncher.main(WarLauncher.java:59) ~[cakeshop.war:0.12.1]
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:403) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	... 24 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	... 28 common frames omitted
+Caused by: java.sql.SQLException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:58 heartbeat - read: -3345 ms.
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCUtil.sqlException(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCConnection.<init>(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.getConnection(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.jdbc.JDBCDriver.connect(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.25.Final.jar!/:5.4.25.Final]
+	... 42 common frames omitted
+Caused by: org.hsqldb.HsqlException: Database lock acquisition failure: lockFile: org.hsqldb.persist.LockFile@6e401662[file =/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/cakeshop/local/db/sdk.lck, exists=true, locked=false, valid=false, ] method: checkHeartbeat read: 2022-01-02 14:40:58 heartbeat - read: -3345 ms.
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.error.Error.error(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.LockFile.newLockFileLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.acquireLock(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.persist.Logger.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.reopen(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.Database.open(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.getDatabase(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	at org.hsqldb.DatabaseManager.newSession(Unknown Source) ~[hsqldb-2.5.1.jar!/:2.5.1]
+	... 55 common frames omitted
+
+2022-01-02 15:43:13.316  INFO 5463 --- [  BlockSaver-46] c.j.cakeshop.db.SavingBlockListener      : Persisting block #3
+2022-01-02 15:48:20.831  INFO 5463 --- [MessageBroker-6] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 5 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(5)-CONNECTED(5)-DISCONNECT(4)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 141], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 1693], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 7, completed tasks = 14070]
+2022-01-02 16:18:20.833  INFO 5463 --- [MessageBroker-8] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 6 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(6)-CONNECTED(6)-DISCONNECT(5)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 171], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 5296], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 7, completed tasks = 27703]
+2022-01-02 16:48:20.836  INFO 5463 --- [MessageBroker-6] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 6 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(6)-CONNECTED(6)-DISCONNECT(5)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 171], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 8894], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 7, completed tasks = 41344]
+2022-01-02 19:02:32.214  INFO 5463 --- [  BlockSaver-46] c.j.cakeshop.db.SavingBlockListener      : Persisting block #4
+2022-01-02 19:05:35.827  INFO 5463 --- [qtp511651343-52] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:05:35.827  INFO 5463 --- [qtp511651343-52] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=45)
+2022-01-02 19:05:35.828  INFO 5463 --- [qtp511651343-52] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=46)
+2022-01-02 19:05:35.828  INFO 5463 --- [qtp511651343-52] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=33)
+2022-01-02 19:05:36.563  INFO 5463 --- [qtp511651343-52] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:05:36.790  INFO 5463 --- [tp511651343-243] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22001
+2022-01-02 19:05:40.650  INFO 5463 --- [tp511651343-243] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:05:40.650  INFO 5463 --- [tp511651343-243] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=245)
+2022-01-02 19:05:40.650  INFO 5463 --- [tp511651343-243] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=246)
+2022-01-02 19:05:40.650  INFO 5463 --- [tp511651343-243] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=33)
+2022-01-02 19:05:40.650  INFO 5463 --- [lockScanner-245] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22002
+2022-01-02 19:05:40.674  INFO 5463 --- [lockScanner-245] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:05:40.678  INFO 5463 --- [tp511651343-243] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:05:45.687  INFO 5463 --- [lockScanner-263] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:09:36.223  INFO 5463 --- [ BlockSaver-264] c.j.cakeshop.db.SavingBlockListener      : Persisting block #5
+2022-01-02 19:09:46.583  INFO 5463 --- [tp511651343-176] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:09:46.583  INFO 5463 --- [tp511651343-176] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=263)
+2022-01-02 19:09:46.583  INFO 5463 --- [tp511651343-176] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=264)
+2022-01-02 19:09:46.583  INFO 5463 --- [tp511651343-176] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=269)
+2022-01-02 19:09:47.231  INFO 5463 --- [tp511651343-176] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:09:47.461  INFO 5463 --- [tp511651343-223] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22000
+2022-01-02 19:09:48.383  INFO 5463 --- [tp511651343-174] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:09:48.383  INFO 5463 --- [tp511651343-174] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=270)
+2022-01-02 19:09:48.383  INFO 5463 --- [tp511651343-174] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=271)
+2022-01-02 19:09:48.383  INFO 5463 --- [tp511651343-174] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=269)
+2022-01-02 19:09:48.384  INFO 5463 --- [lockScanner-270] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22001
+2022-01-02 19:09:48.392  INFO 5463 --- [lockScanner-270] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:09:48.395  INFO 5463 --- [tp511651343-174] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:09:53.056  INFO 5463 --- [tp511651343-174] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:09:53.057  INFO 5463 --- [tp511651343-174] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=289)
+2022-01-02 19:09:53.058  INFO 5463 --- [lockScanner-289] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22002
+2022-01-02 19:09:53.058  INFO 5463 --- [tp511651343-174] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=290)
+2022-01-02 19:09:53.059  INFO 5463 --- [tp511651343-174] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=269)
+2022-01-02 19:09:53.066  INFO 5463 --- [lockScanner-289] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:09:53.069  INFO 5463 --- [tp511651343-174] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:09:58.079  INFO 5463 --- [lockScanner-291] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:12:13.789  INFO 5463 --- [tp511651343-174] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:12:13.790  INFO 5463 --- [tp511651343-174] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=291)
+2022-01-02 19:12:13.790  INFO 5463 --- [tp511651343-174] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=292)
+2022-01-02 19:12:13.790  INFO 5463 --- [tp511651343-174] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=269)
+2022-01-02 19:12:13.790  INFO 5463 --- [tp511651343-174] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:12:13.790  INFO 5463 --- [MessageBroker-7] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22001
+2022-01-02 19:12:18.799  INFO 5463 --- [lockScanner-296] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:25:17.642  INFO 5463 --- [MessageBroker-7] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[2 current WS(2)-HttpStream(0)-HttpPoll(0), 14 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(13)-CONNECTED(13)-DISCONNECT(11)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 375], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 15288], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 8, completed tasks = 54965]
+2022-01-02 19:26:27.235  INFO 5463 --- [tp511651343-172] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:26:27.235  INFO 5463 --- [tp511651343-172] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=296)
+2022-01-02 19:26:27.236  INFO 5463 --- [tp511651343-172] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=297)
+2022-01-02 19:26:27.236  INFO 5463 --- [tp511651343-172] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=269)
+2022-01-02 19:26:27.236  INFO 5463 --- [tp511651343-172] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:26:27.493  INFO 5463 --- [tp511651343-172] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22000
+2022-01-02 19:26:32.244  INFO 5463 --- [lockScanner-326] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:26:42.027  INFO 5463 --- [tp511651343-287] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:26:42.027  INFO 5463 --- [tp511651343-287] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=326)
+2022-01-02 19:26:42.027  INFO 5463 --- [tp511651343-287] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=327)
+2022-01-02 19:26:42.027  INFO 5463 --- [tp511651343-287] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=269)
+2022-01-02 19:26:42.027  INFO 5463 --- [tp511651343-287] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:26:42.302  INFO 5463 --- [tp511651343-224] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22001
+2022-01-02 19:26:47.079  INFO 5463 --- [lockScanner-351] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:26:48.808  INFO 5463 --- [tp511651343-287] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-02 19:26:48.808  INFO 5463 --- [tp511651343-287] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=351)
+2022-01-02 19:26:48.808  INFO 5463 --- [tp511651343-287] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=352)
+2022-01-02 19:26:48.808  INFO 5463 --- [tp511651343-287] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=269)
+2022-01-02 19:26:48.808  INFO 5463 --- [tp511651343-287] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-02 19:26:48.915  INFO 5463 --- [tp511651343-344] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22000
+2022-01-02 19:26:53.817  INFO 5463 --- [lockScanner-353] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-02 19:27:42.012  INFO 5463 --- [ BlockSaver-354] c.j.cakeshop.db.SavingBlockListener      : Persisting block #6
+2022-01-02 19:27:57.810  INFO 5463 --- [tp511651343-172] c.j.c.service.impl.GethHttpServiceImpl   : New quorum web3j service connected to http://127.0.0.1:22000
+2022-01-02 19:27:57.929  WARN 5463 --- [tp511651343-172] c.j.cakeshop.controller.BaseController   : Caught exception: Could not retrieve Permission Org List: the method quorumPermission_orgList does not exist/is not available
+
+com.jpmorgan.cakeshop.error.APIException: Could not retrieve Permission Org List: the method quorumPermission_orgList does not exist/is not available
+	at com.jpmorgan.cakeshop.service.impl.PermissionsServiceImpl.get(PermissionsServiceImpl.java:56) ~[classes!/:0.12.1]
+	at com.jpmorgan.cakeshop.controller.PermissionsController.getPermissionsDetails(PermissionsController.java:41) ~[classes!/:0.12.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:517) ~[jakarta.servlet-api-4.0.4.jar!/:4.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:584) ~[jakarta.servlet-api-4.0.4.jar!/:4.0.4]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:791) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.websocket.server.WebSocketUpgradeFilter.doFilter(WebSocketUpgradeFilter.java:228) ~[websocket-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.6.RELEASE.jar!/:5.3.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.7.RELEASE.jar!/:2.3.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1601) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:548) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:602) ~[jetty-security-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1435) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501) ~[jetty-servlet-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1350) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:766) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273) ~[jetty-server-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336) ~[jetty-util-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313) ~[jetty-util-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171) ~[jetty-util-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129) ~[jetty-util-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375) ~[jetty-util-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:773) ~[jetty-util-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:905) ~[jetty-util-9.4.35.v20201120.jar!/:9.4.35.v20201120]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-01-02 19:30:36.430  INFO 5463 --- [ BlockSaver-354] c.j.cakeshop.db.SavingBlockListener      : Persisting block #7
+2022-01-02 19:55:17.667  INFO 5463 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[2 current WS(2)-HttpStream(0)-HttpPoll(0), 17 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(16)-CONNECTED(16)-DISCONNECT(14)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 468], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 22510], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 8, completed tasks = 68593]
+2022-01-02 20:25:17.668  INFO 5463 --- [MessageBroker-4] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[2 current WS(2)-HttpStream(0)-HttpPoll(0), 17 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(16)-CONNECTED(16)-DISCONNECT(14)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 468], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 29706], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 8, completed tasks = 82239]
+2022-01-03 15:45:11.869  INFO 5463 --- [ BlockSaver-354] c.j.cakeshop.db.SavingBlockListener      : Persisting block #8
+2022-01-03 15:54:38.482  INFO 5463 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 17 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(16)-CONNECTED(16)-DISCONNECT(16)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 501], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 34851], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 6, completed tasks = 95880]
+2022-01-03 16:23:59.316  INFO 5463 --- [tp511651343-479] c.j.c.service.impl.GethHttpServiceImpl   : Shutting down BlockScanner
+2022-01-03 16:23:59.316  INFO 5463 --- [tp511651343-479] com.jpmorgan.cakeshop.db.BlockScanner    : Stopping BlockScanner (thread id=353)
+2022-01-03 16:23:59.316  INFO 5463 --- [tp511651343-479] c.j.cakeshop.db.SavingBlockListener      : Stopping SavingBlockListener (thread id=354)
+2022-01-03 16:23:59.316  INFO 5463 --- [tp511651343-479] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=356)
+2022-01-03 16:24:00.023  INFO 5463 --- [tp511651343-479] c.j.c.service.impl.GethHttpServiceImpl   : Starting new BlockScanner
+2022-01-03 16:24:00.346  INFO 5463 --- [tp511651343-172] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22001
+2022-01-03 16:24:05.032  INFO 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
+2022-01-03 16:24:38.487  INFO 5463 --- [MessageBroker-3] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 19 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(18)-CONNECTED(18)-DISCONNECT(17)], stompBrokerRelay[null], inboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 546], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 36149], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 7, completed tasks = 109509]
+2022-01-03 16:45:49.682  INFO 5463 --- [ BlockSaver-531] c.j.cakeshop.db.SavingBlockListener      : Persisting block #9
+2022-01-03 16:51:33.298  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:34.079  INFO 5463 --- [extShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-01-03 16:51:34.079  INFO 5463 --- [extShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-01-03 16:51:34.079  INFO 5463 --- [extShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-01-03 16:51:35.134  INFO 5463 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2022-01-03 16:51:35.135  INFO 5463 --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2022-01-03 16:51:35.136  INFO 5463 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncTaskExecutor'
+2022-01-03 16:51:35.316  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:35.852  WARN 5463 --- [extShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'shutdownExecutors': java.lang.NullPointerException: Cannot invoke "org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.getThreadPoolExecutor()" because "this.asyncTaskExecutor" is null
+2022-01-03 16:51:35.852  INFO 5463 --- [extShutdownHook] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=574)
+2022-01-03 16:51:35.949  INFO 5463 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2022-01-03 16:51:35.951  INFO 5463 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2022-01-03 16:51:35.954  INFO 5463 --- [extShutdownHook] c.j.c.service.impl.GethHttpServiceImpl   : Stopping solc daemon
+2022-01-03 16:51:37.318  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:39.320  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:41.321  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:43.322  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:45.323  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:47.324  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:49.324  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:51.325  WARN 5463 --- [lockScanner-530] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-03 16:51:51.955  INFO 5463 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-03 16:51:51.957  INFO 5463 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'

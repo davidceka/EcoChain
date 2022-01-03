@@ -4,3 +4,6 @@
 15:17:03.629920 version@stat F·[] S·0B[] Sc·[]
 15:17:03.656257 db@janitor F·2 G·0
 15:17:03.658490 db@open done T·30.85866ms
+=============== Jan 3, 2022 (CET) ===============
+16:51:34.731446 db@close closing
+16:51:34.833220 db@close done T·101.767699ms

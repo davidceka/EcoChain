@@ -1,14 +1,13 @@
 const express = require("express");
 const res = require("express/lib/response");
-//const authController = require("../controllers/auth");
+const authController = require("../controllers/authController");
 const router = express.Router();
 
 
+router.post('/login',authController)
 
-router.get('/login',(req,res)=>{
-    res.render('login2',{
-        layout:'index'
-    })
-})
+
+
+
 
 module.exports = router;
