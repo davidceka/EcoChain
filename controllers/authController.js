@@ -13,7 +13,6 @@ exports.login = (req,res)=>{
         email,
         password
     }=req.body;
-    
     isLogged=true;
     req.session.isLogged = isLogged;
     console.log(req.session)
