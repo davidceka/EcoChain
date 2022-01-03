@@ -1,7 +1,6 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const http = require('http').Server(app);
 const authRouter=require('./routes/auth')
 const pagesRouter=require('./routes/pages')
 const dotenv=require('dotenv')
@@ -26,6 +25,13 @@ app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, "views"))
 
 
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(express.json());
+
+
+
 const singleSession = 1000 * 60 * 30;
 
 
@@ -41,8 +47,8 @@ app.use(sessions({
 
 app.use(cookieParser());
 
-app.use(pagesRouter)
-app.use(authRouter)
+app.use('/',pagesRouter)
+app.use('/auth',authRouter)
 
 
 app.listen(5000, ()=>{

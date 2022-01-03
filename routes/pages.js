@@ -3,8 +3,10 @@ const { home } = require('nodemon/lib/utils');
 const router=express.Router()
 
 router.get('/',(req,res)=>{
+    var isLogged = req.session.isLogged;
     res.render('home',{
-        layout:'index'
+        layout:'index',
+        isLogged:isLogged
     })
 })
 router.get('/chisiamo',(req,res)=>{
@@ -17,6 +19,7 @@ router.get('/login',(req,res)=>{
         layout:'index'
     })
 })
+
 
 
 

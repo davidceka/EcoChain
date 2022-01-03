@@ -6,6 +6,27 @@ var conn=mysql.createConnection({
     database:process.env.DB_NAME,
 })
 
-exports.login=(req,res)=>{
+exports.login = (req,res)=>{
     
+    var isLogged=false;
+    const {
+        email,
+        password
+    }=req.body;
+    
+    isLogged=true;
+    req.session.isLogged = isLogged;
+    console.log(req.session)
+    res.redirect('/');
+
+}
+exports.logout=(req,res)=>{
+    if (req.session.isLogged == true) {
+        req.session.destroy();
+        res.redirect('/')
+      } else {
+        res.render("login", {
+          message: "Effettua prima l'accesso",
+        });
+      }
 }
