@@ -7,3 +7,35 @@
 =============== Jan 3, 2022 (CET) ===============
 16:51:34.485020 db@close closing
 16:51:34.539281 db@close done T·54.259186ms
+=============== Jan 3, 2022 (CET) ===============
+21:42:05.177579 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:42:05.332682 version@stat F·[] S·0B[] Sc·[]
+21:42:05.332729 db@open opening
+21:42:05.332808 journal@recovery F·1
+21:42:05.333303 journal@recovery recovering @1
+21:42:05.420056 memdb@flush created L0@2 N·15 S·241B "applied,v15":"applied,v1"
+21:42:05.420491 version@stat F·[1] S·241B[241B] Sc·[0.25]
+21:42:05.588922 db@janitor F·3 G·0
+21:42:05.588952 db@open done T·256.214586ms
+=============== Jan 3, 2022 (CET) ===============
+21:47:42.617040 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:47:42.639409 version@stat F·[1] S·241B[241B] Sc·[0.25]
+21:47:42.641916 db@open opening
+21:47:42.642009 journal@recovery F·1
+21:47:42.642830 journal@recovery recovering @3
+21:47:42.665344 memdb@flush created L0@5 N·3 S·146B "applied,v19":"applied,v17"
+21:47:42.666073 version@stat F·[2] S·387B[387B] Sc·[0.50]
+21:47:42.749984 db@janitor F·4 G·0
+21:47:42.750075 db@open done T·108.148008ms
+22:33:11.489605 db@close closing
+22:33:11.521798 db@close done T·32.197749ms
+=============== Jan 3, 2022 (CET) ===============
+23:00:13.600372 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:00:13.612744 version@stat F·[2] S·387B[387B] Sc·[0.50]
+23:00:13.612784 db@open opening
+23:00:13.612828 journal@recovery F·1
+23:00:13.625367 journal@recovery recovering @6
+23:00:13.706034 memdb@flush created L0@8 N·19 S·253B "applied,v39":"applied,v21"
+23:00:13.727369 version@stat F·[3] S·640B[640B] Sc·[0.75]
+23:00:13.806274 db@janitor F·5 G·0
+23:00:13.806314 db@open done T·193.522071ms
