@@ -2,16 +2,17 @@ const express=require('express');
 const { home } = require('nodemon/lib/utils');
 const router=express.Router()
 
+
 router.get('/',(req,res)=>{
-    var isLogged = req.session.isLogged;
     res.render('home',{
         layout:'index',
-        isLogged:isLogged
+        isLogged:req.session.isLogged
     })
 })
 router.get('/chisiamo',(req,res)=>{
     res.render('chisiamo',{
-        layout:'index'
+        layout:'index',
+        isLogged:req.session.isLogged
     })
 })
 router.get('/login',(req,res)=>{
@@ -19,7 +20,36 @@ router.get('/login',(req,res)=>{
         layout:'index'
     })
 })
-
+router.get('/pagina1',(req,res)=>{
+    var isLogged=req.session.isLogged;
+    if(isLogged)
+    res.render('pagina1',{
+        layout:'index',
+        isLogged:isLogged
+    })
+    else
+    res.redirect('/')
+})
+router.get('/pagina2',(req,res)=>{
+    var isLogged=req.session.isLogged;
+    if(isLogged)
+    res.render('pagina2',{
+        layout:'index',
+        isLogged:isLogged
+    })
+    else
+    res.redirect('/')
+})
+router.get('/pagina3',(req,res)=>{
+    var isLogged=req.session.isLogged;
+    if(isLogged)
+    res.render('pagina3',{
+        layout:'index',
+        isLogged:isLogged
+    })
+    else
+    res.redirect('/')
+})
 
 
 

@@ -25,8 +25,6 @@ exports.logout=(req,res)=>{
         req.session.destroy();
         res.redirect('/')
       } else {
-        res.render("login", {
-          message: "Effettua prima l'accesso",
-        });
+        res.redirect('/')
       }
 }
