@@ -12,7 +12,7 @@ contract CarbonFootprint is ERC721, ERC721Enumerable, Ownable {
     Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("CarbonFootprint", "CFP") {}
-
+//la funzione seguente crea un nuovo NFT e aggiorna il contatore NFT
     function safeMint(address to) public {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
