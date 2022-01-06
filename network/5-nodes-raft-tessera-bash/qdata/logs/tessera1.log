@@ -17344,3 +17344,23 @@ ERROR: Cause is Address already in use
 2022-01-06 19:10:10.437 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
 2022-01-06 19:10:15.440 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
 2022-01-06 19:10:15.441 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-06 19:10:20.441 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-06 19:10:20.442 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-06 19:10:25.442 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-06 19:10:25.443 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-06 19:10:30.444 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-06 19:10:30.445 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-06 19:10:35.445 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Started PartyInfo polling round
+2022-01-06 19:10:35.446 [pool-2-thread-1] INFO  c.q.t.p.p.PartyInfoBroadcaster - Finished PartyInfo polling round
+2022-01-06 19:10:39.062 [Thread-1] INFO  c.quorum.tessera.server.JerseyServer - Stopping Jersey server at http://127.0.0.1:9081
+2022-01-06 19:10:39.067 [Thread-1] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@429f0ca8{HTTP/1.1, (http/1.1)}{0.0.0.0:9081}
+2022-01-06 19:10:39.098 [Thread-1] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@f4d391c{/,null,STOPPED}
+2022-01-06 19:10:39.104 [Thread-1] INFO  c.quorum.tessera.server.JerseyServer - Stopped Jersey server at http://127.0.0.1:9081
+2022-01-06 19:10:39.104 [Thread-1] INFO  c.quorum.tessera.server.JerseyServer - Stopping Jersey server at unix:/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/c1/tm.ipc
+2022-01-06 19:10:39.106 [Thread-1] INFO  o.e.jetty.server.AbstractConnector - Stopped UnixSocketConnector@5895c065{HTTP/1.1, (http/1.1)}{/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/c1/tm.ipc}
+2022-01-06 19:10:39.128 [Thread-1] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@627d5f1{/,null,STOPPED}
+2022-01-06 19:10:39.130 [Thread-1] INFO  c.quorum.tessera.server.JerseyServer - Stopped Jersey server at unix:/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/c1/tm.ipc
+2022-01-06 19:10:39.130 [Thread-1] INFO  c.quorum.tessera.server.JerseyServer - Stopping Jersey server at http://127.0.0.1:9001
+2022-01-06 19:10:39.133 [Thread-1] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@468646ea{HTTP/1.1, (http/1.1)}{0.0.0.0:9001}
+2022-01-06 19:10:39.144 [Thread-1] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1390a415{/,null,STOPPED}
+2022-01-06 19:10:39.146 [Thread-1] INFO  c.quorum.tessera.server.JerseyServer - Stopped Jersey server at http://127.0.0.1:9001
