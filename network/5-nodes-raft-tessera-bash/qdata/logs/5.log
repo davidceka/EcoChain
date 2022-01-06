@@ -5885,3 +5885,134 @@ DEBUG[01-06|17:27:34.881] Recalculated downloader QoS values       rtt=20s confi
 INFO [01-06|17:27:47.733] Got interrupt, shutting down... 
 DEBUG[01-06|17:27:47.815] RPC server shutting down 
 INFO [01-06|17:27:48.369] HTTP server stopped                      endpoint=[::]:22004
+INFO [01-06|17:27:48.914] HTTP server stopped                      endpoint=[::]:23004
+DEBUG[01-06|17:27:48.914] RPC server shutting down 
+INFO [01-06|17:27:48.914] IPC endpoint closed                      url=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth.ipc
+DEBUG[01-06|17:27:48.914] RPC server shutting down 
+DEBUG[01-06|17:27:48.914] RPC connection read error                err=EOF
+INFO [01-06|17:27:48.914] Stopping all plugins                     count=0
+INFO [01-06|17:27:48.970] All plugins stopped                      errors=[]
+INFO [01-06|17:27:48.994] extension service: stopping 
+INFO [01-06|17:27:49.010] extension service: stopped 
+INFO [01-06|17:27:49.087] Writing cached state to disk             block=44 hash="dd020e…77f689" root="c75870…6b2a50"
+INFO [01-06|17:27:49.340] Persisted trie from memory database      nodes=0 size=0.00B time=177.234404ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [01-06|17:27:49.427] Writing cached state to disk             block=43 hash="93252d…f6b890" root="58c4ea…ac1fdb"
+INFO [01-06|17:27:49.428] Persisted trie from memory database      nodes=0 size=0.00B time="2.977µs"    gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [01-06|17:27:49.428] Writing clean trie cache to disk         path=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/triecache threads=8
+INFO [01-06|17:27:49.585] Persisted the clean trie cache           path=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/geth/triecache elapsed=157.510ms
+INFO [01-06|17:27:49.589] Blockchain stopped 
+INFO [01-06|17:27:49.589] stopping raft protocol handler... 
+TRACE[01-06|17:27:49.589] Removing static node                     id=16be71cd98d454da ok=true
+INFO [01-06|17:27:49.589] Looking for peers                        peercount=4 tried=0 static=4
+DEBUG[01-06|17:27:49.589] Ethereum message handling failed         id=16be71cd98d454da conn=inbound    err=EOF
+DEBUG[01-06|17:27:50.079] Removing Ethereum peer                   peer=16be71cd98d454da
+TRACE[01-06|17:27:50.244] Unregistering sync peer                  peer=16be71cd98d454da
+2022-01-06 17:27:50.304764 I | rafthttp: stopping peer 1...
+2022-01-06 17:27:50.305031 I | rafthttp: closed the TCP streaming connection with peer 1 (stream MsgApp v2 writer)
+2022-01-06 17:27:50.305053 I | rafthttp: stopped streaming with peer 1 (writer)
+2022-01-06 17:27:50.305216 I | rafthttp: closed the TCP streaming connection with peer 1 (stream Message writer)
+2022-01-06 17:27:50.305228 I | rafthttp: stopped streaming with peer 1 (writer)
+2022-01-06 17:27:50.305245 I | rafthttp: stopped HTTP pipelining with peer 1
+2022-01-06 17:27:50.305295 W | rafthttp: lost the TCP streaming connection with peer 1 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.305304 E | rafthttp: failed to read 1 on stream MsgApp v2 (context canceled)
+2022-01-06 17:27:50.305309 I | rafthttp: peer 1 became inactive (message send to peer failed)
+2022-01-06 17:27:50.305314 I | rafthttp: stopped streaming with peer 1 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.305340 W | rafthttp: lost the TCP streaming connection with peer 1 (stream Message reader)
+2022-01-06 17:27:50.305385 I | rafthttp: stopped streaming with peer 1 (stream Message reader)
+2022-01-06 17:27:50.305391 I | rafthttp: stopped peer 1
+2022-01-06 17:27:50.305398 I | rafthttp: removed peer 1
+DEBUG[01-06|17:27:50.384] Removing p2p peer                        peercount=3 id=16be71cd98d454da duration=5m34.667s req=false err="disconnect requested"
+TRACE[01-06|17:27:50.384] Removing static node                     id=34fa044daadfe895 ok=true
+DEBUG[01-06|17:27:50.385] Ethereum message handling failed         id=34fa044daadfe895 conn=inbound    err=EOF
+DEBUG[01-06|17:27:50.385] Removing Ethereum peer                   peer=34fa044daadfe895
+TRACE[01-06|17:27:50.385] Unregistering sync peer                  peer=34fa044daadfe895
+2022-01-06 17:27:50.385284 I | rafthttp: stopping peer 2...
+DEBUG[01-06|17:27:50.385] Removing p2p peer                        peercount=2 id=34fa044daadfe895 duration=5m34.854s req=false err="disconnect requested"
+2022-01-06 17:27:50.385525 I | rafthttp: closed the TCP streaming connection with peer 2 (stream MsgApp v2 writer)
+2022-01-06 17:27:50.385584 I | rafthttp: stopped streaming with peer 2 (writer)
+2022-01-06 17:27:50.385815 I | rafthttp: closed the TCP streaming connection with peer 2 (stream Message writer)
+2022-01-06 17:27:50.385831 I | rafthttp: stopped streaming with peer 2 (writer)
+2022-01-06 17:27:50.385848 I | rafthttp: stopped HTTP pipelining with peer 2
+2022-01-06 17:27:50.385907 W | rafthttp: lost the TCP streaming connection with peer 2 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.385923 I | rafthttp: stopped streaming with peer 2 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.385966 W | rafthttp: lost the TCP streaming connection with peer 2 (stream Message reader)
+2022-01-06 17:27:50.385980 I | rafthttp: stopped streaming with peer 2 (stream Message reader)
+2022-01-06 17:27:50.386014 I | rafthttp: stopped peer 2
+2022-01-06 17:27:50.386028 I | rafthttp: removed peer 2
+TRACE[01-06|17:27:50.386] Removing static node                     id=a10039970da7ce34 ok=true
+DEBUG[01-06|17:27:50.386] Ethereum message handling failed         id=a10039970da7ce34 conn=inbound    err=EOF
+DEBUG[01-06|17:27:50.386] Removing Ethereum peer                   peer=a10039970da7ce34
+TRACE[01-06|17:27:50.386] Unregistering sync peer                  peer=a10039970da7ce34
+2022-01-06 17:27:50.386315 I | rafthttp: stopping peer 3...
+DEBUG[01-06|17:27:50.386] Removing p2p peer                        peercount=1 id=a10039970da7ce34 duration=5m34.915s req=false err="disconnect requested"
+2022-01-06 17:27:50.386891 I | rafthttp: closed the TCP streaming connection with peer 3 (stream MsgApp v2 writer)
+2022-01-06 17:27:50.387006 I | rafthttp: stopped streaming with peer 3 (writer)
+2022-01-06 17:27:50.387265 I | rafthttp: closed the TCP streaming connection with peer 3 (stream Message writer)
+2022-01-06 17:27:50.387294 I | rafthttp: stopped streaming with peer 3 (writer)
+2022-01-06 17:27:50.387395 I | rafthttp: stopped HTTP pipelining with peer 3
+2022-01-06 17:27:50.387457 W | rafthttp: lost the TCP streaming connection with peer 3 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.387469 E | rafthttp: failed to read 3 on stream MsgApp v2 (context canceled)
+2022-01-06 17:27:50.387475 I | rafthttp: peer 3 became inactive (message send to peer failed)
+2022-01-06 17:27:50.387481 I | rafthttp: stopped streaming with peer 3 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.387511 W | rafthttp: lost the TCP streaming connection with peer 3 (stream Message reader)
+2022-01-06 17:27:50.387522 I | rafthttp: stopped streaming with peer 3 (stream Message reader)
+2022-01-06 17:27:50.387721 I | rafthttp: stopped peer 3
+2022-01-06 17:27:50.387772 I | rafthttp: removed peer 3
+TRACE[01-06|17:27:50.387] Removing static node                     id=0e91101a0500b0f4 ok=true
+DEBUG[01-06|17:27:50.387] Ethereum message handling failed         id=0e91101a0500b0f4 conn=inbound    err=EOF
+DEBUG[01-06|17:27:50.387] Removing Ethereum peer                   peer=0e91101a0500b0f4
+TRACE[01-06|17:27:50.387] Unregistering sync peer                  peer=0e91101a0500b0f4
+2022-01-06 17:27:50.387999 I | rafthttp: stopping peer 4...
+DEBUG[01-06|17:27:50.388] Removing p2p peer                        peercount=0 id=0e91101a0500b0f4 duration=5m34.613s req=false err="disconnect requested"
+2022-01-06 17:27:50.388172 I | rafthttp: closed the TCP streaming connection with peer 4 (stream MsgApp v2 writer)
+2022-01-06 17:27:50.388178 I | rafthttp: stopped streaming with peer 4 (writer)
+2022-01-06 17:27:50.388403 I | rafthttp: closed the TCP streaming connection with peer 4 (stream Message writer)
+2022-01-06 17:27:50.388431 I | rafthttp: stopped streaming with peer 4 (writer)
+2022-01-06 17:27:50.388445 I | rafthttp: stopped HTTP pipelining with peer 4
+2022-01-06 17:27:50.388480 W | rafthttp: lost the TCP streaming connection with peer 4 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.388489 E | rafthttp: failed to read 4 on stream MsgApp v2 (context canceled)
+2022-01-06 17:27:50.388494 I | rafthttp: peer 4 became inactive (message send to peer failed)
+2022-01-06 17:27:50.388500 I | rafthttp: stopped streaming with peer 4 (stream MsgApp v2 reader)
+2022-01-06 17:27:50.388524 W | rafthttp: lost the TCP streaming connection with peer 4 (stream Message reader)
+2022-01-06 17:27:50.388539 I | rafthttp: stopped streaming with peer 4 (stream Message reader)
+2022-01-06 17:27:50.388545 I | rafthttp: stopped peer 4
+2022-01-06 17:27:50.388552 I | rafthttp: removed peer 4
+INFO [01-06|17:27:50.423] raft protocol handler stopped 
+INFO [01-06|17:27:50.423] Raft stopped 
+TRACE[01-06|17:27:50.477] Accepted connection                      addr=127.0.0.1:50462
+TRACE[01-06|17:27:50.477] Accepted connection                      addr=127.0.0.1:50464
+TRACE[01-06|17:27:50.477] Accepted connection                      addr=127.0.0.1:50470
+DEBUG[01-06|17:27:50.423] Reset ancient limit to zero 
+INFO [01-06|17:27:50.501] Ethereum protocol stopped 
+INFO [01-06|17:27:50.553] Transaction pool stopped 
+DEBUG[01-06|17:27:50.553] Read error                               err="accept tcp [::]:21004: use of closed network connection"
+DEBUG[01-06|17:27:50.553] Deleting port mapping                    proto=tcp extport=21004 intport=21004 interface="UPnP or NAT-PMP"
+TRACE[01-06|17:27:50.553] P2P networking is spinning down 
+2022-01-06 17:27:50.557515 E | rafthttp: failed to find member 1 in cluster 1000
+2022-01-06 17:27:50.557593 E | rafthttp: failed to find member 3 in cluster 1000
+2022-01-06 17:27:50.557656 E | rafthttp: failed to find member 1 in cluster 1000
+2022-01-06 17:27:50.557706 E | rafthttp: failed to find member 4 in cluster 1000
+TRACE[01-06|17:27:50.672] Quorum permissioning                     id=0e91101a0500b0f4 addr=127.0.0.1:50470 conn=inbound    EnableNodePermission=true DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 Current Node ID=48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468 Node Name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5 Dialed Dest=nil Connection ID=0e91101a0500b0f4 Connection String=0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb
+TRACE[01-06|17:27:50.672] Node Permissioning is Enabled.           id=0e91101a0500b0f4 addr=127.0.0.1:50470 conn=inbound
+TRACE[01-06|17:27:50.672] Quorum permissioning                     id=a10039970da7ce34 addr=127.0.0.1:50464 conn=inbound    EnableNodePermission=true DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 Current Node ID=48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468 Node Name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5 Dialed Dest=nil Connection ID=a10039970da7ce34 Connection String=a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913
+TRACE[01-06|17:27:50.673] Node Permissioning is Enabled.           id=a10039970da7ce34 addr=127.0.0.1:50464 conn=inbound
+TRACE[01-06|17:27:50.673] Quorum permissioning                     id=34fa044daadfe895 addr=127.0.0.1:50462 conn=inbound    EnableNodePermission=true DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 Current Node ID=48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468 Node Name=Geth/v1.9.20-stable-fb104840(quorum-v21.4.0)/linux-amd64/go1.15.5 Dialed Dest=nil Connection ID=34fa044daadfe895 Connection String=34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae
+TRACE[01-06|17:27:50.673] Node Permissioning is Enabled.           id=34fa044daadfe895 addr=127.0.0.1:50462 conn=inbound
+DEBUG[01-06|17:27:50.715] parsePermissionedNodes                   DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=permissioned-nodes.json
+DEBUG[01-06|17:27:50.715] parsePermissionedNodes                   DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=permissioned-nodes.json
+DEBUG[01-06|17:27:50.715] IsNodePermissioned                       permissionedList="[16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727 34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913 0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb 48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468]"
+DEBUG[01-06|17:27:50.715] IsNodePermissioned                       connection=INCOMING nodename=34fa044daadfe89598f0535358e3dddc ALLOWED-BY=48ac85a74ee19b1bec08d67b31f87c38
+DEBUG[01-06|17:27:50.715] isNodeBlackListed                        DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=disallowed-nodes.json
+DEBUG[01-06|17:27:50.715] Read Error for disallowed-nodes.json file. disallowed-nodes.json file is not present. err="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/disallowed-nodes.json: no such file or directory"
+TRACE[01-06|17:27:50.715] Rejected peer                            id=34fa044daadfe895 addr=127.0.0.1:50462 conn=inbound    err="server stopped"
+DEBUG[01-06|17:27:50.715] IsNodePermissioned                       permissionedList="[16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727 34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913 0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb 48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468]"
+DEBUG[01-06|17:27:50.715] IsNodePermissioned                       connection=INCOMING nodename=0e91101a0500b0f4af3762ea2b8edcb7 ALLOWED-BY=48ac85a74ee19b1bec08d67b31f87c38
+DEBUG[01-06|17:27:50.715] isNodeBlackListed                        DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=disallowed-nodes.json
+DEBUG[01-06|17:27:50.715] Read Error for disallowed-nodes.json file. disallowed-nodes.json file is not present. err="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/disallowed-nodes.json: no such file or directory"
+TRACE[01-06|17:27:50.715] Rejected peer                            id=0e91101a0500b0f4 addr=127.0.0.1:50470 conn=inbound    err="server stopped"
+DEBUG[01-06|17:27:50.715] parsePermissionedNodes                   DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=permissioned-nodes.json
+DEBUG[01-06|17:27:50.715] IsNodePermissioned                       permissionedList="[16be71cd98d454da5c07c5c3616dbbd2dff3b748bbb0b585dc80cc75f4f07727 34fa044daadfe89598f0535358e3dddc47b9f9134e92f864d7e65b8e846d4bae a10039970da7ce342f6bd115b45fcdeeae4b7a03836d22e48a1fa3891e6cb913 0e91101a0500b0f4af3762ea2b8edcb7a8c3cea9325a46689cb5385febfa51eb 48ac85a74ee19b1bec08d67b31f87c38fb0ed4cf0b7cf820a7d2e9f1f532b468]"
+DEBUG[01-06|17:27:50.716] IsNodePermissioned                       connection=INCOMING nodename=a10039970da7ce342f6bd115b45fcdee ALLOWED-BY=48ac85a74ee19b1bec08d67b31f87c38
+DEBUG[01-06|17:27:50.716] isNodeBlackListed                        DataDir=/home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5 file=disallowed-nodes.json
+DEBUG[01-06|17:27:50.716] Read Error for disallowed-nodes.json file. disallowed-nodes.json file is not present. err="stat /home/swcyb/EcoChain/network/5-nodes-raft-tessera-bash/qdata/dd5/disallowed-nodes.json: no such file or directory"
+TRACE[01-06|17:27:50.716] Rejected peer                            id=a10039970da7ce34 addr=127.0.0.1:50464 conn=inbound    err="server stopped"

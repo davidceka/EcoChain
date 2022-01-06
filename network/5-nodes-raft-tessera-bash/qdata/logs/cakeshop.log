@@ -2106,3 +2106,72 @@ OK
 2022-01-06 17:22:46.450  INFO 14883 --- [BlockScanner-45] c.j.c.service.impl.GethHttpServiceImpl   : New httpService connected to http://127.0.0.1:22000
 2022-01-06 17:22:46.698  INFO 14883 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Catching database up to latest block
 2022-01-06 17:23:38.593  INFO 14883 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[1 current WS(0)-HttpStream(1)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(1)-DISCONNECT(1)], stompBrokerRelay[null], inboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 30], outboundChannel[pool size = 16, active threads = 0, queued tasks = 0, completed tasks = 27], sockJsScheduler[pool size = 8, active threads = 1, queued tasks = 7, completed tasks = 441]
+2022-01-06 17:27:50.752  WARN 14883 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-06 17:27:51.229 ERROR 14883 --- [MessageBroker-4] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+com.jpmorgan.cakeshop.error.APIException: RPC call failed
+	at com.jpmorgan.cakeshop.service.impl.GethHttpServiceImpl.executeGethCall(GethHttpServiceImpl.java:154) ~[classes!/:0.12.1]
+	at com.jpmorgan.cakeshop.service.impl.GethHttpServiceImpl.executeGethCall(GethHttpServiceImpl.java:143) ~[classes!/:0.12.1]
+	at com.jpmorgan.cakeshop.service.impl.BlockServiceImpl.get(BlockServiceImpl.java:47) ~[classes!/:0.12.1]
+	at com.jpmorgan.cakeshop.service.impl.WebSocketPushServiceImpl.pushLatestBlocks(WebSocketPushServiceImpl.java:126) ~[classes!/:0.12.1]
+	at jdk.internal.reflect.GeneratedMethodAccessor100.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.12.RELEASE.jar!/:5.2.12.RELEASE]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.ConnectException: Failed to connect to /127.0.0.1:22000
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154) ~[okhttp-4.9.0.jar!/:na]
+	at org.web3j.protocol.http.HttpService.performIO(HttpService.java:160) ~[core-4.6.0.jar!/:na]
+	at org.web3j.protocol.Service.send(Service.java:48) ~[core-4.6.0.jar!/:na]
+	at org.web3j.protocol.core.Request.send(Request.java:87) ~[core-4.6.0.jar!/:na]
+	at com.jpmorgan.cakeshop.service.impl.GethHttpServiceImpl.executeGethCall(GethHttpServiceImpl.java:150) ~[classes!/:0.12.1]
+	... 14 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:120) ~[okhttp-4.9.0.jar!/:na]
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295) ~[okhttp-4.9.0.jar!/:na]
+	... 33 common frames omitted
+
+2022-01-06 17:27:51.770  INFO 14883 --- [extShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-01-06 17:27:51.770  INFO 14883 --- [extShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2022-01-06 17:27:51.770  INFO 14883 --- [extShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-01-06 17:27:51.914  INFO 14883 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2022-01-06 17:27:51.915  INFO 14883 --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2022-01-06 17:27:51.916  INFO 14883 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncTaskExecutor'
+2022-01-06 17:27:51.997  WARN 14883 --- [extShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'shutdownExecutors': java.lang.NullPointerException: Cannot invoke "org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.getThreadPoolExecutor()" because "this.asyncTaskExecutor" is null
+2022-01-06 17:27:51.998  INFO 14883 --- [extShutdownHook] c.j.cakeshop.db.MetricsBlockListener     : Stopping MetricsBlockListener (thread id=33)
+2022-01-06 17:27:52.042  INFO 14883 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2022-01-06 17:27:52.043  INFO 14883 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2022-01-06 17:27:52.045  INFO 14883 --- [extShutdownHook] c.j.c.service.impl.GethHttpServiceImpl   : Stopping solc daemon
+2022-01-06 17:27:52.752  WARN 14883 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-06 17:27:54.755  WARN 14883 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-06 17:27:56.756  WARN 14883 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-06 17:27:58.757  WARN 14883 --- [BlockScanner-45] com.jpmorgan.cakeshop.db.BlockScanner    : Error fetching block: RPC call failed
+2022-01-06 17:27:59.784  INFO 14883 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-06 17:27:59.786  INFO 14883 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
