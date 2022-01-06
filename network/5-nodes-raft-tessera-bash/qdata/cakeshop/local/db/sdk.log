@@ -1,0 +1,3 @@
+/*C63*/SET SCHEMA PUBLIC
+alter table TRANSACTIONS_EVENTS drop constraint UK_lfmdcp78aghs1ncbevvecjytl
+alter table TRANSACTIONS_EVENTS add constraint UK_lfmdcp78aghs1ncbevvecjytl unique (logs_id)
