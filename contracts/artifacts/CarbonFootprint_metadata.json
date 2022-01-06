@@ -649,11 +649,11 @@
 			]
 		},
 		"contracts/CarbonFootprint.sol": {
-			"keccak256": "0xd1afb6d88473f984cb3a0874cd57a6b34c7a84d13a0fe3d01dffdde2888eaa38",
+			"keccak256": "0x276e9c139f0baac250abd4200c8b17bdd168a573f20b9127a73c0ef321d48424",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3f68218a055cd050a5c9d128490fe3062c31b545341c5f092fd3d7b9f0e03823",
-				"dweb:/ipfs/QmZGgF9nuYXNDrSb7RDJ5tefvpjKm6woZtsZgrjQhjLR76"
+				"bzz-raw://a421c25df6f1817c5ec90dd2b535cef79e62dbd22021b62e0cb5e98a75506ee5",
+				"dweb:/ipfs/QmdYYZSsZ9VmJKSaaydQ9926Pt6HNvPpJRMa7tVB94VFt4"
 			]
 		}
 	},
