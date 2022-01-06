@@ -2402,3 +2402,5 @@ Caused by: java.net.ConnectException: Connection refused
 2022-01-06 19:10:39.417  INFO 21666 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
 2022-01-06 19:10:39.417  INFO 21666 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
 2022-01-06 19:10:39.420  INFO 21666 --- [extShutdownHook] c.j.c.service.impl.GethHttpServiceImpl   : Stopping solc daemon
+2022-01-06 19:10:46.020  INFO 21666 --- [extShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-06 19:10:46.021  INFO 21666 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'asyncExecutor'
