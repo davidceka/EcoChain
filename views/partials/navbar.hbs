@@ -32,9 +32,12 @@
           </ul>
         </li>
         {{/if}}
+        {{#if isLogged}}
+        {{else}}
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link" href="/register">Registrati</a>
         </li>
+        {{/if}}
       </ul>
       <!--
       <form class="d-flex">

@@ -20,6 +20,13 @@ router.get('/login',(req,res)=>{
         layout:'index'
     })
 })
+
+router.get('/register',(req,res)=>{
+    res.render('register',{
+        layout:'index'
+    })
+})
+
 router.get('/pagina1',(req,res)=>{
     var isLogged=req.session.isLogged;
     if(isLogged)
@@ -50,7 +57,5 @@ router.get('/pagina3',(req,res)=>{
     else
     res.redirect('/')
 })
-
-
 
 module.exports=router;
