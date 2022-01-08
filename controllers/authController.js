@@ -65,28 +65,24 @@ exports.register= async(req,res)=>{
       password,
       confpassword
       //ruolo
-  }=req.body;
-  var valid1 = false;
-  var valid2 = false;
-  valid1 = validPassword(password, confpassword)
-  if(valid1){
-    executeQuery("SELECT nome FROM users WHERE email = ?", [email], function(error, results){
+  }=req.body
+  if(validPassword(password, confpassword)){
+    executeQuery("SELECT nome FROM users WHERE email = ?", [email], async function(error, results){
       if(error) throw error;
-      if(results==""){
-        valid2 = true
+      if(results.length==0){
+          console.log("registro")
+          let hashed = await bcrypt.hash(password, 10);
+          executeQuery("INSERT INTO users (email, password, wallet_address, nome, cognome, ruolo) VALUES (?, ?, ?, ?, ?, ?)", [email, hashed, 'qualcosa3', name, surname, 'cliente'],  function(error, results){
+            if(error) throw error;
+            console.log("dopo "+ hashed)
+            res.redirect('/login')
+          })
       }else{
+        console.log("non nuovo")
         //redirect to register
       }
     })
   }
   //MAIL DI CONFERMA?
-  if(valid2){
-    let hashed = await bcrypt.hash(password, 10);
-    executeQuery("INSERT INTO users (email, password, wallet_address, nome, cognome, ruolo) VALUES (?, ?, ?, ?, ?, ?)", [email, hashed, 'qualcosa', name, surname, 'cliente'],  function(error, results){
-      if(error) throw error;
-      console.log("dopo "+ hashed)
-      //res.redirect('/login')
-    })
-  }
 }
 
