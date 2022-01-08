@@ -1,3 +1,16 @@
+var session;
+
+function getProfile(req){
+    session=req.session;
+    return session.user;
+
+}
+function setProfile(req,user){
+    session=req.session;
+    session.user=user;
+}
+
+
 
 function clearNotifications(req){
     req.session.message=null
@@ -21,10 +34,13 @@ function setLogged(req,value){
     req.session.isLogged=value;
 }
 
+
 module.exports={
     clearNotifications:clearNotifications,
     setSuccess:setSuccess,
     setError:setError,
     setWarning:setWarning,
-    setLogged:setLogged
+    setLogged:setLogged,
+    setProfile:setProfile,
+    getProfile:getProfile
 }

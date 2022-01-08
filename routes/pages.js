@@ -21,7 +21,6 @@ router.get('/chisiamo',(req,res)=>{
     })
 })
 router.get('/login',(req,res)=>{
-    console.log(req.session.success)
     res.render('login',{
         layout:'index',        
         success:req.session.success,
@@ -71,6 +70,26 @@ router.get('/pagina3',(req,res)=>{
     })
     else
     res.redirect('/')
+})
+router.get('/profilo',(req,res)=>{
+    
+    if(req.session.isLogged){
+        user=session.getProfile(req)
+        res.render('profilo',{
+            layout:'index',
+            isLogged:req.session.isLogged,
+            email:user.email,
+            nome:user.nome,
+            cognome:user.cognome,
+            ruolo:user.ruolo,
+            wallet_address:user.wallet_address
+        })
+    }else{
+        session.setError(req,'Devi effettuare il login per accedere a questa pagina.')
+        console.log(req.session.message)
+        console.log(req.session.error)
+        res.redirect('/')
+    }
 })
 router.get('/nuovoaccount',blockchainController.newAccount)
 
