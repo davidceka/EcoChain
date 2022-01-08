@@ -1,9 +1,12 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const dotenv=require('dotenv').config({
+  path:'./configs/.env'
+})
 const authRouter=require('./routes/auth')
 const pagesRouter=require('./routes/pages')
-const dotenv=require('dotenv')
+
 const sessions=require('express-session')
 const crypto=require('crypto')
 const cookieParser=require('cookie-parser')
@@ -15,9 +18,7 @@ const handlebars = require('express-handlebars').create({
   extname: 'hbs'
 });
 
-dotenv.config({
-  path:'./configs/.env'
-})
+dotenv
 
 
 app.engine('hbs', handlebars.engine)

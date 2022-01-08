@@ -1,6 +1,5 @@
 const mysql = require('mysql');
 const bcrypt = require('bcrypt');
-const { connect } = require('../routes/auth');
 
 function defineConn(){
     var conn = mysql.createConnection({

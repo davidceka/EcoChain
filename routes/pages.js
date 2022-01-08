@@ -1,7 +1,6 @@
 const express=require('express');
-const { home } = require('nodemon/lib/utils');
 const router=express.Router()
-
+const blockchainController=require('../controllers/blockchainController')
 
 router.get('/',(req,res)=>{
     res.render('home',{
@@ -57,5 +56,6 @@ router.get('/pagina3',(req,res)=>{
     else
     res.redirect('/')
 })
+router.get('/nuovoaccount',blockchainController.newAccount)
 
 module.exports=router;
