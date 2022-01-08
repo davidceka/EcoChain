@@ -1,12 +1,18 @@
 const express=require('express');
 const router=express.Router()
 const blockchainController=require('../controllers/blockchainController')
+const session=require('../controllers/session')
+
 
 router.get('/',(req,res)=>{
     res.render('home',{
         layout:'index',
-        isLogged:req.session.isLogged
+        isLogged:req.session.isLogged,
+        success:req.session.success,
+        error:req.session.error,
+        message:req.session.message
     })
+    session.clearNotifications(req)
 })
 router.get('/chisiamo',(req,res)=>{
     res.render('chisiamo',{
@@ -18,9 +24,10 @@ router.get('/login',(req,res)=>{
     console.log(req.session.success)
     res.render('login',{
         layout:'index',        
-        success:req.session.success
+        success:req.session.success,
+        message:req.session.message
     })
-    clearNotifications(req)
+    session.clearNotifications(req)
 })
 
 router.get('/register',(req,res)=>{
@@ -30,7 +37,7 @@ router.get('/register',(req,res)=>{
         warning:req.session.warning,
         message:req.session.message
     })
-    clearNotifications(req)
+    session.clearNotifications(req);
     
     
 })
@@ -67,10 +74,5 @@ router.get('/pagina3',(req,res)=>{
 })
 router.get('/nuovoaccount',blockchainController.newAccount)
 
-function clearNotifications(req){
-    req.session.message=null;
-    req.session.warning=null;
-    req.session.error=null;
-}
 
 module.exports=router;

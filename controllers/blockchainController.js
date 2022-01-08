@@ -1,7 +1,4 @@
 const Web3=require('web3')
-
-
-
 const tokenABI=require('../contracts/artifacts/CarbonFootprint.json')
 
 var web3Provider = new Web3.providers.HttpProvider(process.env.QUORUM_N1);
