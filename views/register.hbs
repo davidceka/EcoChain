@@ -1,4 +1,16 @@
 <section class="vh-100" style="margin-bottom: -20%;">
+  {{#if error}}
+  <div class="alert alert-danger" role="alert">
+    {{message}}
+  </div>
+  {{/if}}
+
+
+  {{#if warning}}
+  <div class="alert alert-warning" role="alert">
+    {{message}}
+  </div>
+  {{/if}}
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100 mt-5">
       <div class="col-md-9 col-lg-6 col-xl-5">

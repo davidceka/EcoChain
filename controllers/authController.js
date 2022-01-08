@@ -1,5 +1,7 @@
 const mysql = require('mysql');
 const bcrypt = require('bcrypt');
+const blockchainController=require('./blockchainController');
+const { redirect } = require('express/lib/response');
 
 function defineConn(){
     var conn = mysql.createConnection({
@@ -57,7 +59,6 @@ exports.logout=(req,res)=>{
 }
 
 exports.register= async(req,res)=>{
-  var isLogged=false;
   const {
       name,
       surname,
@@ -72,16 +73,26 @@ exports.register= async(req,res)=>{
       if(results.length==0){
           console.log("registro")
           let hashed = await bcrypt.hash(password, 10);
-          executeQuery("INSERT INTO users (email, password, wallet_address, nome, cognome, ruolo) VALUES (?, ?, ?, ?, ?, ?)", [email, hashed, 'qualcosa3', name, surname, 'cliente'],  function(error, results){
+          var newAccount=await blockchainController.newAccount();
+          executeQuery("INSERT INTO users (email, password, wallet_address, nome, cognome, ruolo) VALUES (?, ?, ?, ?, ?, ?)", [email, hashed, newAccount , name, surname, 'cliente'],  function(error, results){
             if(error) throw error;
             console.log("dopo "+ hashed)
+            req.session.success=true
+            req.session.message='Account registrato con successo!'
             res.redirect('/login')
           })
       }else{
         console.log("non nuovo")
-        //redirect to register
+        req.session.warning=true;
+        req.session.message='Account già presente!'
+        res.redirect('/register')
       }
     })
+  }
+  else{
+    req.session.error=true
+    req.session.message='Password non combacianti'
+    res.redirect('/register')
   }
   //MAIL DI CONFERMA?
 }

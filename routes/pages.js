@@ -15,15 +15,24 @@ router.get('/chisiamo',(req,res)=>{
     })
 })
 router.get('/login',(req,res)=>{
+    console.log(req.session.success)
     res.render('login',{
-        layout:'index'
+        layout:'index',        
+        success:req.session.success
     })
+    clearNotifications(req)
 })
 
 router.get('/register',(req,res)=>{
     res.render('register',{
-        layout:'index'
+        layout:'index',
+        error:req.session.error,
+        warning:req.session.warning,
+        message:req.session.message
     })
+    clearNotifications(req)
+    
+    
 })
 
 router.get('/pagina1',(req,res)=>{
@@ -57,5 +66,11 @@ router.get('/pagina3',(req,res)=>{
     res.redirect('/')
 })
 router.get('/nuovoaccount',blockchainController.newAccount)
+
+function clearNotifications(req){
+    req.session.message=null;
+    req.session.warning=null;
+    req.session.error=null;
+}
 
 module.exports=router;
