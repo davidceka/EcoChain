@@ -10,13 +10,16 @@ contract CarbonFootprint is ERC721, ERC721Enumerable, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
+    mapping(address=>uint256) public token;
     
-    constructor() ERC721("CarbonFootprint", "CFP") {}
+    constructor() ERC721("CarbonFootprint", "CFP") {
+    }
 //la funzione seguente crea un nuovo NFT e aggiorna il contatore NFT
-    function safeMint(address to) public {
+    function safeMint(address to) public returns (uint256){
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
+        return tokenId;
     }
 
     // The following functions are overrides required by Solidity.
