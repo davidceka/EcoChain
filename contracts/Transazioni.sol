@@ -4,11 +4,10 @@ pragma solidity ^0.8.2;
 import "./CarbonFootprint.sol";
 
 contract Transazione {
-
-    address carbonFootprintContract;
+    CarbonFootprint tokenContract;
 
     constructor (address _carbonFootprintContract){
-        carbonFootprintContract=_carbonFootprintContract;
+        tokenContract=CarbonFootprint(_carbonFootprintContract);
     }
 
 
@@ -32,13 +31,12 @@ contract Transazione {
     mapping(uint256=>Prodotti) public prodotti;
 
     function creaToken()  public{
-        CarbonFootprint token=CarbonFootprint(carbonFootprintContract);
-        uint256 tokenId=token.safeMint(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
+        uint256 tokenId=tokenContract.safeMint(msg.sender);
         materia_prima[0]=MateriaPrima({
             id_lottomateria:0,
             nome:"pomodori",
-            owner:0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2,
-            token:1
+            owner:msg.sender,
+            token:tokenId
         });
         
     }
