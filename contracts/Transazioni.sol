@@ -28,17 +28,17 @@ contract Transazione {
         address owner;
 
     }
-    MateriaPrima [] public materia_prima;
-    Prodotti [] public prodotti;
+    mapping(uint256=>MateriaPrima) public materia_prima;
+    mapping(uint256=>Prodotti) public prodotti;
 
     function creaToken()  public{
         CarbonFootprint token=CarbonFootprint(carbonFootprintContract);
-        uint256 tokenId=token.safeMint(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
+        uint256 tokenId=token.safeMint(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
         materia_prima[0]=MateriaPrima({
             id_lottomateria:0,
-            nome:"latte",
-            owner:0x5B38Da6a701c568545dCfcB03FcB875f56beddC4,
-            token:tokenId
+            nome:"pomodori",
+            owner:0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2,
+            token:1
         });
         
     }
