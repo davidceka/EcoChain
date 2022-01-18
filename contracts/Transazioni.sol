@@ -43,7 +43,7 @@ contract Transazione {
     }
     mapping(uint256=>MateriaPrima) public materia_prima;
     mapping(uint256=>Prodotti) public prodotti;
-
+    
     function creaNuovaMateriaPrima(string memory _nome,uint256 _amount) public{
         uint256 tokenId=tokenContract.safeMint(msg.sender);
         materia_prima[0]=MateriaPrima({
@@ -51,7 +51,8 @@ contract Transazione {
             nome:_nome,
             owner:msg.sender,
             token:tokenId,
-            amount:_amount
+            amount:_amount,
+            not_available: false
         });
         materiaPrimaCounter++;
         incrementMaterie();
