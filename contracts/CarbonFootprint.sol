@@ -1,42 +1,37 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.2;
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract CarbonFootprint is ERC721, ERC721Enumerable, Ownable {
+contract CarbonFootprint is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
-    mapping(address=>uint256) public token;
     
+    mapping(uint256=>uint256) impattoAmbientale;
+
+
     constructor() ERC721("CarbonFootprint", "CFP") {
     }
 //la funzione seguente crea un nuovo NFT e aggiorna il contatore NFT
-    function safeMint(address to) public returns (uint256){
+    function safeMint(address to,uint256 _impattoAmbientale) public returns (uint256){
         uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
+        
         _safeMint(to, tokenId);
+        impattoAmbientale[tokenId]=_impattoAmbientale;
+
+        _tokenIdCounter.increment();
+
         return tokenId;
     }
-
-    // The following functions are overrides required by Solidity.
-
-    function _beforeTokenTransfer(address from, address to, uint256 tokenId)
-        internal
-        override(ERC721, ERC721Enumerable)
-    {
-        super._beforeTokenTransfer(from, to, tokenId);
+    function getImpattoAmbientale(uint256 _tokenId) view public returns (uint256){
+        require(_exists(_tokenId));
+        return impattoAmbientale[_tokenId];
     }
-
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721, ERC721Enumerable)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
-    }
+    
+    //chiedere se va bene solo il salvataggio dell'URI semplice (singola stringa) oppure si necessita di creare un JSON
 }
