@@ -6,8 +6,6 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract Transazione {
     CarbonFootprint tokenContract;
-    uint256 materiePrimeCounter;
-    uint256 prodottiCounter;
 
     uint256 prodottiId;
     uint256 materiePrimeId;
@@ -22,11 +20,9 @@ contract Transazione {
 
     function incrementMaterie() internal{
         materiePrimeId++;
-        materiePrimeCounter++;
     }
     function incrementProdotti() internal{
         prodottiId++;
-        prodottiCounter++;
     }
 
 
@@ -55,7 +51,7 @@ contract Transazione {
 
     function creaNuovaMateriaPrima(string memory _nome,uint256 _amount, uint256 _impattoAmbientale) public{
         uint256 tokenId=tokenContract.safeMint(msg.sender,_impattoAmbientale);
-        materia_prima[materiePrimeCounter]=MateriaPrima({
+        materia_prima[materiePrimeId]=MateriaPrima({
             id_lottomateria:materiePrimeId,
             nome:_nome,
             owner:msg.sender,
@@ -99,7 +95,6 @@ contract Transazione {
                     quantitaRimanente-=materia_prima[i].amount;
                     materia_prima[i].amount=0;
                     materia_prima[i].not_available=true;
-                    materiePrimeCounter--;
                     //aggiungere gli emit lotto terminato
                 }
             }
@@ -109,7 +104,7 @@ contract Transazione {
 
         // da aggiungere: ricavare l'impatto dal vecchio token e sommarlo al nuovo
         uint256 tokenId=tokenContract.safeMint(msg.sender,_impattoAmbientale);
-        prodotti[prodottiCounter]=Prodotti({
+        prodotti[prodottiId]=Prodotti({
             id_prodotto:prodottiId,
             nome:_nome,
             owner:msg.sender,
