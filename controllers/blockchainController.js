@@ -52,7 +52,7 @@ async function safeMint(address){
 
 async function safeTransferFrom(from,to,token_id){
     try {
-        await carbonFootprintInstance.methods.safeTransferFrom(to,from,token_id).send({
+        await carbonFootprintInstance.methods.safeTransferFrom(from,to,token_id).send({
             from:from,
             gasPrice: web3.utils.toHex(0),
             gasLimit: web3.utils.toHex(5000000)
