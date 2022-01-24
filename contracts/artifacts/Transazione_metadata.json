@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_carbonFootprintContract",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -14,253 +20,75 @@
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "approved",
-						"type": "address"
-					},
-					{
-						"indexed": true,
+						"indexed": false,
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "_idLotto",
 						"type": "uint256"
-					}
-				],
-				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
 					},
 					{
 						"indexed": false,
-						"internalType": "bool",
-						"name": "approved",
-						"type": "bool"
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_impatto",
+						"type": "uint256"
 					}
 				],
-				"name": "ApprovalForAll",
+				"name": "materiaPrimaCreata",
 				"type": "event"
 			},
 			{
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "previousOwner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "OwnershipTransferred",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"indexed": true,
+						"indexed": false,
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "_idLotto",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_impatto",
 						"type": "uint256"
 					}
 				],
-				"name": "Transfer",
+				"name": "prodottoCreato",
 				"type": "event"
 			},
 			{
 				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "approve",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "getApproved",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "getImpattoAmbientale",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
-					}
-				],
-				"name": "isApprovedForAll",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "name",
-				"outputs": [
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "_nome",
 						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
+					},
 					{
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "_amount",
 						"type": "uint256"
-					}
-				],
-				"name": "ownerOf",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "renounceOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
 					},
 					{
 						"internalType": "uint256",
@@ -268,226 +96,228 @@
 						"type": "uint256"
 					}
 				],
-				"name": "safeMint",
+				"name": "creaNuovaMateriaPrima",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nome",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_quantitaRichiesta",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_impattoAmbientale",
+						"type": "uint256"
+					}
+				],
+				"name": "creaNuovoProdotto",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idLotto",
+						"type": "uint256"
+					}
+				],
+				"name": "getMateriaPrima",
 				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id_lottomateria",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nome",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "token",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "not_available",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Transazione.MateriaPrima",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_idLotto",
+						"type": "uint256"
+					}
+				],
+				"name": "getProdotto",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id_prodotto",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nome",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "token",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "not_available",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Transazione.Prodotti",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
+				"name": "materia_prima",
+				"outputs": [
 					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "id_lottomateria",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
 					},
 					{
 						"internalType": "address",
-						"name": "to",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "token",
 						"type": "uint256"
-					}
-				],
-				"name": "safeTransferFrom",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "amount",
 						"type": "uint256"
-					},
-					{
-						"internalType": "bytes",
-						"name": "_data",
-						"type": "bytes"
-					}
-				],
-				"name": "safeTransferFrom",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "operator",
-						"type": "address"
 					},
 					{
 						"internalType": "bool",
-						"name": "approved",
+						"name": "not_available",
 						"type": "bool"
 					}
 				],
-				"name": "setApprovalForAll",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "bytes4",
-						"name": "interfaceId",
-						"type": "bytes4"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"name": "supportsInterface",
+				"name": "prodotti",
 				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id_prodotto",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "nome",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "token",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
 					{
 						"internalType": "bool",
-						"name": "",
+						"name": "not_available",
 						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "symbol",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "tokenURI",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "transferFrom",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "transferOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {
-				"approve(address,uint256)": {
-					"details": "See {IERC721-approve}."
-				},
-				"balanceOf(address)": {
-					"details": "See {IERC721-balanceOf}."
-				},
-				"getApproved(uint256)": {
-					"details": "See {IERC721-getApproved}."
-				},
-				"isApprovedForAll(address,address)": {
-					"details": "See {IERC721-isApprovedForAll}."
-				},
-				"name()": {
-					"details": "See {IERC721Metadata-name}."
-				},
-				"owner()": {
-					"details": "Returns the address of the current owner."
-				},
-				"ownerOf(uint256)": {
-					"details": "See {IERC721-ownerOf}."
-				},
-				"renounceOwnership()": {
-					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
-				},
-				"safeTransferFrom(address,address,uint256)": {
-					"details": "See {IERC721-safeTransferFrom}."
-				},
-				"safeTransferFrom(address,address,uint256,bytes)": {
-					"details": "See {IERC721-safeTransferFrom}."
-				},
-				"setApprovalForAll(address,bool)": {
-					"details": "See {IERC721-setApprovalForAll}."
-				},
-				"supportsInterface(bytes4)": {
-					"details": "See {IERC165-supportsInterface}."
-				},
-				"symbol()": {
-					"details": "See {IERC721Metadata-symbol}."
-				},
-				"tokenURI(uint256)": {
-					"details": "See {IERC721Metadata-tokenURI}."
-				},
-				"transferFrom(address,address,uint256)": {
-					"details": "See {IERC721-transferFrom}."
-				},
-				"transferOwnership(address)": {
-					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				}
-			},
+			"methods": {},
 			"version": 1
 		},
 		"userdoc": {
@@ -498,7 +328,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/CarbonFootprint.sol": "CarbonFootprint"
+			"contracts/Transazioni.sol": "Transazione"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -630,6 +460,14 @@
 			"urls": [
 				"bzz-raw://55e91b5340b4e915a0ecb30e135bde915295e6f3c10de420b28856fae5ce5fde",
 				"dweb:/ipfs/QmY8qb9YZoFc1cibdMGHAYFsnij8JYcCAnHQiWJ4Ub6qk4"
+			]
+		},
+		"contracts/Transazioni.sol": {
+			"keccak256": "0xac1438079f6bcd27eb87f57176762725eb386debe58cba2557451e08a984c78e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bdb043a089b07f81bbde44a8bd5ad801bdc1d43ec8345cbfbf60075c052c9c51",
+				"dweb:/ipfs/QmQ2Zr63V89NsZG5amJ3NaNueFeNePChmTvRCVxmwW7jbz"
 			]
 		}
 	},
