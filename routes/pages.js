@@ -82,6 +82,7 @@ router.get('/profilo',(req,res)=>{
     
     if(req.session.isLogged){
         user=session.getProfile(req)
+        console.log("prova "+user.ruolo)
         res.render('profilo',{
             layout:'index',
             isLogged:req.session.isLogged,
@@ -89,7 +90,9 @@ router.get('/profilo',(req,res)=>{
             nome:user.nome,
             cognome:user.cognome,
             ruolo:user.ruolo,
-            wallet_address:user.wallet_address
+            wallet_address:user.wallet_address,
+            isWorker:req.session.isWorker,
+            isProducer:req.session.isProducer
         })
     }else{
         session.setError(req,'Devi effettuare il login per accedere a questa pagina.')
