@@ -6,6 +6,7 @@ const dotenv=require('dotenv').config({
 })
 const authRouter=require('./routes/auth')
 const pagesRouter=require('./routes/pages')
+const transactionsRouter=require('./routes/transactions')
 
 const sessions=require('express-session')
 const crypto=require('crypto')
@@ -50,6 +51,7 @@ app.use(cookieParser());
 
 app.use('/',pagesRouter)
 app.use('/auth',authRouter)
+app.use('/transactions',transactionsRouter)
 
 
 app.listen(5000, ()=>{

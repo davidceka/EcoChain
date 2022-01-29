@@ -1,6 +1,8 @@
+const { parse } = require('dotenv');
 const Web3=require('web3')
 const cfABI=require('../contracts/artifacts/CarbonFootprint.json')
 const tABI=require('../contracts/artifacts/Transazione.json')
+const session = require("./session");
 
 var web3Provider = new Web3.providers.HttpProvider(process.env.QUORUM_N1);
 var web3 = new Web3(web3Provider);
@@ -47,7 +49,7 @@ async function safeMint(address){
         })
         return true
     }catch(error){
-        console.log(error)
+        console.log(error) 
         return false
     }
 }
@@ -67,33 +69,43 @@ async function safeTransferFrom(from,to,token_id){
     }
 }
 
-exports.creaNuovaMateriaPrima=async (address, nome, quantità, impattoAmbientale)=>{
-    try{
-        await transazioniInstance.methods.creaNuovaMateriaPrima(nome, quantità, impattoAmbientale).send({
-            from:address,
-            gasPrice: web3.utils.toHex(0),
-            gasLimit: web3.utils.toHex(5000000)
-        })
-        return true;
-    } catch (error) {
-        console.log(error)
-        return false
-    }
+exports.creaNuovaMateriaPrima=async (req, res)=>{
+    const {
+        name,
+        amount,
+        carbfoot
+    } = req.body;
+    var amountValue = parseInt(amount)
+    var carbfootValue = parseInt(carbfoot)
+    if ((typeof name == 'string' && name != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+        console.log("OK");
+        try{
+            var user = session.getProfile(req)
+            await transazioniInstance.methods.creaNuovaMateriaPrima(name, amountValue, carbfootValue).send({
+                from: user.wallet_address, 
+                gasPrice: web3.utils.toHex(0), 
+                gasLimit: web3.utils.toHex(5000000)
+            })
+            session.setSuccess(req, "New raw material added to blockchain");
+            
+        } catch (error) {
+            console.log(error);
+            session.setError(req, "Unknown Error");
+        }
+        
+    }else {
+        console.log("NOT OK")
+        session.setError(req, "Check input fields");
+    } 
+    //typeof == 'number'
+    res.redirect("/newrawmaterial");
+    
 }
 
-exports.creaNuovoProdotto = async (address, nome, quantitaRichiesta, impattoAmbientale)=>{
-    try{
-        await transazioniInstance.methods.creaNuovoProdotto(nome, quantitaRichiesta, impattoAmbientale).send({
-            from:address,
-            gasPrice: web3.utils.toHex(0),
-            gasLimit: web3.utils.toHex(5000000)
-        })
-        return true;
-    } catch (error) {
-        console.log(error)
-        return false
-    }
+exports.creaNuovoProdotto=async (req, res)=>{
+    console.log("ciao")
 }
+  
 
 exports.getMateriaPrima = async (idLotto)=>{
     try{

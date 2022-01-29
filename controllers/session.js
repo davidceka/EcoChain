@@ -3,15 +3,11 @@ var session;
 function getProfile(req){
     session=req.session;
     return session.user;
-
 }
 function setProfile(req,user){
     session=req.session;
     session.user=user;
 }
-
-
-
 function clearNotifications(req){
     req.session.message=null
     req.session.error=null
@@ -32,15 +28,26 @@ function setWarning(req,message){
 }
 function setLogged(req,value){
     req.session.isLogged=value;
+    if(!value){
+        req.session.isProducer = false
+        req.session.isWorker = frue
+    }
 }
-
-
+function setRole(req, value){
+    if(value=="produttore"){
+        req.session.isProducer = true
+    }
+    if(value=="lavoratore"){
+        req.session.isWorker = true
+    }
+}
 module.exports={
     clearNotifications:clearNotifications,
     setSuccess:setSuccess,
     setError:setError,
     setWarning:setWarning,
     setLogged:setLogged,
+    setRole:setRole,
     setProfile:setProfile,
     getProfile:getProfile
 }

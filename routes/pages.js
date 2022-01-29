@@ -8,6 +8,8 @@ router.get('/',(req,res)=>{
     res.render('home',{
         layout:'index',
         isLogged:req.session.isLogged,
+        isWorker:req.session.isWorker,
+        isProducer:req.session.isProducer,
         success:req.session.success,
         error:req.session.error,
         message:req.session.message
@@ -41,20 +43,25 @@ router.get('/register',(req,res)=>{
     
 })
 
-router.get('/pagina1',(req,res)=>{
+router.get('/newrawmaterial',(req,res)=>{
     var isLogged=req.session.isLogged;
-    if(isLogged)
-    res.render('pagina1',{
-        layout:'index',
-        isLogged:isLogged
-    })
+    if(isLogged){
+        res.render('newrawmaterial',{
+            layout:'index',
+            error:req.session.error,
+            success:req.session.success,
+            message:req.session.message,
+            isLogged:isLogged
+        })
+        session.clearNotifications(req);
+    }
     else
     res.redirect('/')
 })
-router.get('/pagina2',(req,res)=>{
+router.get('/newproduct',(req,res)=>{
     var isLogged=req.session.isLogged;
     if(isLogged)
-    res.render('pagina2',{
+    res.render('newproduct',{
         layout:'index',
         isLogged:isLogged
     })

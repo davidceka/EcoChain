@@ -1,0 +1,32 @@
+<section class="vh-100" style="margin-bottom: -20%;">
+  {{#if success}}
+  <div class="alert alert-success" role="alert">
+    {{message}}
+  </div>
+  {{/if}}
+
+
+  {{#if error}}
+  <div class="alert alert-danger" role="alert">
+    {{message}}
+  </div>
+  {{/if}}
+  
+  <div class="row d-flex justify-content-center align-items-center h-100 mt-5">
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-5">
+      <form action="/transactions/newrawmaterial" method="post">
+        <legend>Register new raw material:</legend>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Name"><br>
+        <label for="amount">Amount:</label><br>
+        <input type="number" id="amount" name="amount" min="0" max="250"><br>
+        <label for="carboonfootprint">Carboon Footprint:</label><br>
+        <input type="number" id="carbfoot" name="carbfoot" min="0" max="100"><br>
+        <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</section>
