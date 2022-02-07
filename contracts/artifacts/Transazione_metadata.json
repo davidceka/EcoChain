@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.11+commit.d7f03943"
 	},
 	"language": "Solidity",
 	"output": {
@@ -9,12 +9,25 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_carbonFootprintContract",
+						"name": "_tokenContractAddress",
 						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "messaggio",
+						"type": "string"
+					}
+				],
+				"name": "lottoTerminato",
+				"type": "event"
 			},
 			{
 				"anonymous": false,
@@ -77,6 +90,24 @@
 				],
 				"name": "prodottoCreato",
 				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_idLotto",
+						"type": "uint256"
+					}
+				],
+				"name": "acquistoMateriaPrima",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [
@@ -147,9 +178,55 @@
 								"type": "string"
 							},
 							{
-								"internalType": "address",
-								"name": "owner",
-								"type": "address"
+								"internalType": "uint256",
+								"name": "token",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "not_available",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Transazione.MateriaPrima",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_idLotto",
+						"type": "uint256"
+					}
+				],
+				"name": "getMateriaPrimaByAddress",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id_prodotto",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nome",
+								"type": "string"
 							},
 							{
 								"internalType": "uint256",
@@ -167,7 +244,7 @@
 								"type": "bool"
 							}
 						],
-						"internalType": "struct Transazione.MateriaPrima",
+						"internalType": "struct Transazione.Prodotti",
 						"name": "",
 						"type": "tuple"
 					}
@@ -198,11 +275,6 @@
 								"type": "string"
 							},
 							{
-								"internalType": "address",
-								"name": "owner",
-								"type": "address"
-							},
-							{
 								"internalType": "uint256",
 								"name": "token",
 								"type": "uint256"
@@ -229,86 +301,49 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "materia_prima",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "id_lottomateria",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "nome",
-						"type": "string"
-					},
-					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "_address",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "token",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "not_available",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
+						"name": "_idLotto",
 						"type": "uint256"
 					}
 				],
-				"name": "prodotti",
+				"name": "getProdottoByAddress",
 				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "id_prodotto",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "nome",
-						"type": "string"
-					},
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "token",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "not_available",
-						"type": "bool"
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id_prodotto",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "nome",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "token",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "not_available",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Transazione.Prodotti",
+						"name": "",
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -463,11 +498,11 @@
 			]
 		},
 		"contracts/Transazioni.sol": {
-			"keccak256": "0xac1438079f6bcd27eb87f57176762725eb386debe58cba2557451e08a984c78e",
+			"keccak256": "0x1486bada410eef4e0a3f44c8a4780ec480d3be8e6fc6c7ba4bd435c25578a3ce",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bdb043a089b07f81bbde44a8bd5ad801bdc1d43ec8345cbfbf60075c052c9c51",
-				"dweb:/ipfs/QmQ2Zr63V89NsZG5amJ3NaNueFeNePChmTvRCVxmwW7jbz"
+				"bzz-raw://2df92fb7244261225251c07ffbaeeffa5c2ee709144d31345891d4e7ae457508",
+				"dweb:/ipfs/Qmbhzto9PbZvynGHnvNZXYitA7RStyQtX7QsaiaHpQj2N6"
 			]
 		}
 	},

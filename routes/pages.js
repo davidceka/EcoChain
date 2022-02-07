@@ -82,7 +82,6 @@ router.get('/profilo',(req,res)=>{
     
     if(req.session.isLogged){
         user=session.getProfile(req)
-        console.log("prova "+user.ruolo)
         res.render('profilo',{
             layout:'index',
             isLogged:req.session.isLogged,

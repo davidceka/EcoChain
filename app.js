@@ -19,7 +19,6 @@ const handlebars = require('express-handlebars').create({
   extname: 'hbs'
 });
 
-dotenv
 
 
 app.engine('hbs', handlebars.engine)

@@ -3,17 +3,30 @@ const Web3=require('web3')
 const cfABI=require('../contracts/artifacts/CarbonFootprint.json')
 const tABI=require('../contracts/artifacts/Transazione.json')
 const session = require("./session");
+const logController=require('./logController');
+const { blockchainLogger } = require('./logController');
 
-var web3Provider = new Web3.providers.HttpProvider(process.env.QUORUM_N1);
-var web3 = new Web3(web3Provider);
-web3.eth.getBlockNumber().then((result) => {
-  console.log("Latest Ethereum Block is ",result);
-});
 
-const ADDRESS_CF=process.env.ADDRESS_CF;
-const ADDRESS_T=process.env.ADDRESS_T;
-const carbonFootprintInstance=new web3.eth.Contract(cfABI.abi, ADDRESS_CF)
-const transazioniInstance=new web3.eth.Contract(tABI.abi, ADDRESS_T)
+const blochChainLogger=logController.blockchainLogger;
+try{
+    
+    var web3Provider = new Web3.providers.HttpProvider(process.env.QUORUM_N1);
+    var web3 = new Web3(web3Provider);
+    web3.eth.getBlockNumber().then((result) => {
+    console.log("Latest Ethereum Block is ",result);
+    });
+
+    const ADDRESS_CF=process.env.ADDRESS_CF;
+    const ADDRESS_T=process.env.ADDRESS_T;
+    const carbonFootprintInstance=new web3.eth.Contract(cfABI.abi, ADDRESS_CF)
+    const transazioniInstance=new web3.eth.Contract(tABI.abi, ADDRESS_T)
+    blochChainLogger.tokenLog("Connesso con successo allo smart contract Token.")
+    blockchainLogger.transactionLog("Connesso con successo allo smart contract transazioni.")
+}
+catch(error){
+    console.log(error);
+    blochChainLogger.error(error);
+}
 
 
 exports.newAccount=async ()=>{
@@ -27,9 +40,11 @@ exports.newAccount=async ()=>{
                 })
             }
         })
+        blockchainLogger.blockchain("Account "+account+" creato con successo.")
         return account
     } catch (error) {
         console.log(error)
+        blockchainLogger.error(error)
         return false
     }
     //TODO aggiungere codice per log tracciamento nuovo account
@@ -81,6 +96,7 @@ exports.creaNuovaMateriaPrima=async (req, res)=>{
         console.log("OK");
         try{
             var user = session.getProfile(req)
+            console.log(transazioniInstance)
             await transazioniInstance.methods.creaNuovaMateriaPrima(name, amountValue, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
