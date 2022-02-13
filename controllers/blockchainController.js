@@ -4,29 +4,23 @@ const cfABI=require('../contracts/artifacts/CarbonFootprint.json')
 const tABI=require('../contracts/artifacts/Transazione.json')
 const session = require("./session");
 const logController=require('./logController');
-const { blockchainLogger } = require('./logController');
 
 
-const blochChainLogger=logController.blockchainLogger;
-try{
-    
-    var web3Provider = new Web3.providers.HttpProvider(process.env.QUORUM_N1);
-    var web3 = new Web3(web3Provider);
-    web3.eth.getBlockNumber().then((result) => {
-    console.log("Latest Ethereum Block is ",result);
-    });
+const blockChainLogger=logController.blockchainLogger;
+var web3Provider = new Web3.providers.WebsocketProvider(process.env.QUORUM_N1);
+var web3 = new Web3(web3Provider);
+web3.eth.getBlockNumber().then((result) => {
+console.log("Latest Ethereum Block is ",result);
+});
 
-    const ADDRESS_CF=process.env.ADDRESS_CF;
-    const ADDRESS_T=process.env.ADDRESS_T;
-    const carbonFootprintInstance=new web3.eth.Contract(cfABI.abi, ADDRESS_CF)
-    const transazioniInstance=new web3.eth.Contract(tABI.abi, ADDRESS_T)
-    blochChainLogger.tokenLog("Connesso con successo allo smart contract Token.")
-    blockchainLogger.transactionLog("Connesso con successo allo smart contract transazioni.")
-}
-catch(error){
-    console.log(error);
-    blochChainLogger.error(error);
-}
+const ADDRESS_CF=process.env.ADDRESS_CF;
+const ADDRESS_T=process.env.ADDRESS_T;
+const carbonFootprintInstance=new web3.eth.Contract(cfABI.abi, ADDRESS_CF)
+const transazioniInstance=new web3.eth.Contract(tABI.abi, ADDRESS_T)
+blockChainLogger.tokenLog("Connesso con successo allo smart contract Token.")
+blockChainLogger.transactionLog("Connesso con successo allo smart contract transazioni.")
+
+
 
 
 exports.newAccount=async ()=>{
@@ -142,3 +136,34 @@ exports.getProdotto = async(idLotto)=>{
         return false
     } 
 }
+
+/*
+
+EVENT LISTENERS
+
+
+
+*/
+
+var materiaprima_creata = transazioniInstance.events.materiaPrimaCreata({},
+    (error, eventObj) => {
+      if (error) {
+        blochChainLogger.error(error)
+      }
+      if (eventObj) {
+        console.log(eventObj.returnValues)
+        blochChainLogger.transactionLog(
+          "MATERIA PRIMA CREATA: " +
+          eventObj.event +
+          " \t| LOTTOID: " +
+          eventObj.returnValues._idLotto +
+          " NOME: " +
+          eventObj.returnValues.nome +
+          " QUANTITA': " +
+          eventObj.returnValues._amount+
+          " IMPATTO AMBIENTALE: "+
+          eventObj.returnValues._impatto
+        );
+      }
+    }
+  );

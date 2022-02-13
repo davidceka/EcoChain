@@ -23,7 +23,8 @@ contract Transazione {
     //emit ed eventi da aggiungere
     event materiaPrimaCreata(uint256 _idLotto,string nome,uint256 _amount,uint256 _impatto);
     event prodottoCreato(uint256 _idLotto,string nome,uint256 _amount,uint256 _impatto);
-    event lottoTerminato(string messaggio);
+    event lottoTerminato(uint256 _idLotto);
+    event quantitaSufficiente(bool status);
 
     function incrementMaterie() internal{
         materiePrimeId++;
@@ -80,7 +81,7 @@ contract Transazione {
             }
         }
         //emit la quantità è sufficiente, la transazione procede
-        emit lottoTerminato("La quantita' e' sufficiente, la transazione procede.");
+        emit quantitaSufficiente(true);
         require(quantitaDisponibile>=_quantitaRichiesta,"Quantita di materia prima non sufficiente.");
         //giustificare il for
 
@@ -91,15 +92,17 @@ contract Transazione {
 
                     materia_prima[msg.sender][i].amount-=quantitaRimanente;
                     quantitaRimanente=0;
-                    if(materia_prima[msg.sender][i].amount==0)
-                        emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
-
+                    if(materia_prima[msg.sender][i].amount==0){
+                        //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
+                        emit lottoTerminato(i);
+                    }
                 }
                 else{
                     quantitaRimanente-=materia_prima[msg.sender][i].amount;
                     materia_prima[msg.sender][i].amount=0;
                     materia_prima[msg.sender][i].not_available=true;
-                    emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
+                    //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
+                    emit lottoTerminato(i);
                 }
             i++;
         }
