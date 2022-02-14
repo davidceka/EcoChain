@@ -85,3 +85,11 @@
 [14-02-2022 17:58:27] [tokenLog]: 	Connesso con successo allo smart contract Token.
 [14-02-2022 17:58:27] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
 [14-02-2022 17:58:40] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 10 NOME: latte QUANTITA': 12 IMPATTO AMBIENTALE: 12
+[14-02-2022 18:05:09] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 11 NOME: latte QUANTITA': 90 IMPATTO AMBIENTALE: 15
+[14-02-2022 18:14:06] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 18:14:06] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 18:14:10] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 18:14:10] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 18:14:39] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 1 NOME: latte QUANTITA': 15 IMPATTO AMBIENTALE: 20
+[14-02-2022 18:14:54] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 2 NOME: latte QUANTITA': 20 IMPATTO AMBIENTALE: 40
+[14-02-2022 18:15:09] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 3 NOME: latte QUANTITA': 90 IMPATTO AMBIENTALE: 90

@@ -4,7 +4,7 @@
 echo "### Avvio XAMPP... ###"
 sudo /opt/lampp/xampp start
 
-cd ./network/5-nodes-raft-tessera-bash;
+cd ./network/3-nodes-istanbul-tessera-bash;
 echo "### Avvio la blockchain: EcoChain... ###"
 bash start.sh;
 cd ../../
