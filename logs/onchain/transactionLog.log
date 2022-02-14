@@ -8,3 +8,80 @@
 [07-02-2022 19:58:14] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
 [07-02-2022 19:58:30] [tokenLog]: 	Connesso con successo allo smart contract Token.
 [07-02-2022 19:58:30] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 14:46:09] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 14:46:09] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:07:01] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:07:01] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:08:49] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:08:49] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:30:17] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:30:17] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:30:17] [error]: 	The current provider doesn't support subscriptions: HttpProvider
+[08-02-2022 15:31:07] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:31:07] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:31:07] [error]: 	The current provider doesn't support subscriptions: HttpProvider
+[08-02-2022 15:31:11] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:31:11] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:31:11] [error]: 	The current provider doesn't support subscriptions: HttpProvider
+[08-02-2022 15:32:12] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:32:12] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:32:12] [error]: 	The current provider doesn't support subscriptions: HttpProvider
+[08-02-2022 15:35:07] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:35:07] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:35:45] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:35:45] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:35:50] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:35:50] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:35:53] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[08-02-2022 15:35:53] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[08-02-2022 15:36:05] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 1 NOME: latte QUANTITA': 15 IMPATTO AMBIENTALE: 202
+[13-02-2022 15:05:48] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[13-02-2022 15:05:48] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[13-02-2022 15:06:46] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[13-02-2022 15:06:46] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[13-02-2022 15:13:40] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[13-02-2022 15:13:40] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[13-02-2022 15:13:43] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 3 NOME: pollo QUANTITA': 15 IMPATTO AMBIENTALE: 20
+[13-02-2022 15:46:23] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[13-02-2022 15:46:23] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[13-02-2022 15:46:31] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[13-02-2022 15:46:31] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[13-02-2022 15:46:36] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[13-02-2022 15:46:36] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:50:44] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:50:44] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:52:11] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 4 NOME: latte QUANTITA': 20 IMPATTO AMBIENTALE: 20
+[14-02-2022 12:53:16] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:53:16] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:53:24] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:53:24] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:53:52] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:53:52] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:54:59] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:54:59] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:55:16] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 6 NOME: latte QUANTITA': 15 IMPATTO AMBIENTALE: 20
+[14-02-2022 12:56:45] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:56:45] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:57:05] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 7 NOME: latte QUANTITA': 15 IMPATTO AMBIENTALE: 20
+[14-02-2022 12:57:10] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:57:10] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:58:18] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:58:18] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:58:50] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:58:51] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:59:07] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:59:07] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:59:45] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:59:45] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 12:59:47] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 12:59:47] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 17:57:11] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 17:57:11] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 17:58:01] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 17:58:01] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 17:58:14] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 9 NOME: latte QUANTITA': 12 IMPATTO AMBIENTALE: 12
+[14-02-2022 17:58:25] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 17:58:25] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 17:58:27] [tokenLog]: 	Connesso con successo allo smart contract Token.
+[14-02-2022 17:58:27] [transactionLog]: 	Connesso con successo allo smart contract transazioni.
+[14-02-2022 17:58:40] [transactionLog]: 	MATERIA PRIMA CREATA: materiaPrimaCreata 	| LOTTOID: 10 NOME: latte QUANTITA': 12 IMPATTO AMBIENTALE: 12

@@ -90,7 +90,6 @@ exports.creaNuovaMateriaPrima=async (req, res)=>{
         console.log("OK");
         try{
             var user = session.getProfile(req)
-            console.log(transazioniInstance)
             await transazioniInstance.methods.creaNuovaMateriaPrima(name, amountValue, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
@@ -148,11 +147,11 @@ EVENT LISTENERS
 var materiaprima_creata = transazioniInstance.events.materiaPrimaCreata({},
     (error, eventObj) => {
       if (error) {
-        blochChainLogger.error(error)
+        blockChainLogger.error(error)
       }
       if (eventObj) {
         console.log(eventObj.returnValues)
-        blochChainLogger.transactionLog(
+        blockChainLogger.transactionLog(
           "MATERIA PRIMA CREATA: " +
           eventObj.event +
           " \t| LOTTOID: " +
