@@ -44,8 +44,6 @@ exports.login = (req, res) => {
       var control = true
       if (control) {
         session.setLogged(req, true);
-        
-        //console.log(req.session)
         user={
           email:results[0].email,
           wallet_address:results[0].wallet_address,
@@ -118,3 +116,73 @@ exports.register = async (req, res) => {
     res.redirect("/register");
   }
 };
+
+exports.getAllProducers = async (req, res) => {
+  executeQuery(
+  "SELECT nome, cognome, wallet_address FROM users WHERE ruolo = 'produttore'",
+  [''],
+  async function (error, results) {
+    var producers = []//new Array(results.length)
+    if (error) throw error;
+    results.forEach(function (item){
+      producers.push({
+        nome:item.nome,
+        cognome:item.cognome,
+        walletAddress:item.wallet_address
+      })
+    })
+    session.setListProducers(req, producers)
+    var selectedMaterials = [{nome:"", quantità:"",walletAddress:""}]
+    session.setListRawMaterial(req, selectedMaterials)
+    res.redirect("/listrawmaterials")
+  })
+}  
+
+//VARIABILI FITTIZIE PER TESTARE
+/*var source = [
+      {nome:"materia a", quantità: 10, walletAddress: "Address1"}, {nome:"materia b", quantità: 10, walletAddress: "Address2"}, {nome:"materia c", quantità: 10, walletAddress: "Address3"},
+      {nome:"materia d", quantità: 10, walletAddress: "Address1"}, {nome:"materia e", quantità: 10, walletAddress: "Address2"}, {nome:"materia f", quantità: 10, walletAddress: "Address3"},
+      {nome:"materia g", quantità: 10, walletAddress: "Address1"}, {nome:"materia h", quantità: 10, walletAddress: "Address3"}, {nome:"materia i", quantità: 10, walletAddress: "Address3"}
+  ]
+  source.forEach(function (item){
+      if(item.walletAddress == selectWA){
+          rawMaterials.push(item)
+      }
+  })*/
+
+exports.getRawMaterials = (req, res) => {
+  const{selectWA} = req.body;
+  var rawMaterials = []
+  
+  session.setListRawMaterial(req, rawMaterials)
+  res.redirect("/listrawmaterials")
+}  
+
+exports.getAllWorkers = async (req, res) => {
+  executeQuery(
+  "SELECT nome, cognome, wallet_address FROM users WHERE ruolo = 'lavoratore'",
+  [''],
+  async function (error, results) {
+    var workers = []//new Array(results.length)
+    if (error) throw error;
+    results.forEach(function (item){
+      workers.push({
+        nome:item.nome,
+        cognome:item.cognome,
+        walletAddress:item.wallet_address
+      })
+    })
+    session.setListWorkers(req, workers)
+    var selectedMaterials = [{nome:"", quantità:"",walletAddress:""}]
+    session.setListProducts(req, selectedMaterials)
+    res.redirect("/listproducts")
+  })
+} 
+
+exports.getProducts = (req, res) => {
+  const{selectWA} = req.body;
+  var products = []
+  session.setListProducts(req, products)
+  res.redirect("/listproducts")
+}  
+

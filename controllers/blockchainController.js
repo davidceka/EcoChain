@@ -34,7 +34,7 @@ exports.newAccount=async ()=>{
                 })
             }
         })
-        blockchainLogger.blockchain("Account "+account+" creato con successo.")
+        blockChainLogger.blockchain("Account "+account+" creato con successo.")
         return account
     } catch (error) {
         console.log(error)

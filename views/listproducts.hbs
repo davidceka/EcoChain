@@ -1,0 +1,38 @@
+<section class="vh-100" >
+    <div class="row d-flex justify-content-center align-items-center h-250 mt-5">
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-5" >
+                
+                <form action="/auth/listproudcts" method="post">
+                    <label for="selectWA">Choose a worker:</label>
+                    <select id="selectWA" name="selectWA">   <!--> size="3"><-->
+                        {{#each workers}}
+                            <option value={{this.walletAddress}}>{{this.nome}}&nbsp;{{this.cognome}}</option>
+                        {{/each}}
+                    </select> <br><br>
+                    <button type="submit">Confirm</button>
+                </form>
+
+                <ul data-role="listview">
+                    {{#each products}}
+                        <li>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">{{this.nome}}&nbsp;{{this.quantità}}</h6>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+                <hr class="dropdown-divider">
+            </ul>
+        </div>
+    </div>
+</section> <!--><div class="col-sm-9 text-secondary">
+                                            <a class="btn btn-info " target="__blank" href="">Compra</a>
+                                        </div><-->
+

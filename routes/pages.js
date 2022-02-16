@@ -1,4 +1,5 @@
 const express=require('express');
+const { raw } = require('mysql');
 const router=express.Router()
 const blockchainController=require('../controllers/blockchainController')
 const session=require('../controllers/session')
@@ -10,6 +11,7 @@ router.get('/',(req,res)=>{
         isLogged:req.session.isLogged,
         isWorker:req.session.isWorker,
         isProducer:req.session.isProducer,
+        isCostumer:req.session.isCostumer,
         success:req.session.success,
         error:req.session.error,
         message:req.session.message
@@ -19,7 +21,8 @@ router.get('/',(req,res)=>{
 router.get('/chisiamo',(req,res)=>{
     res.render('chisiamo',{
         layout:'index',
-        isLogged:req.session.isLogged
+        isLogged:req.session.isLogged,
+        producers:req.session.producers
     })
 })
 router.get('/login',(req,res)=>{
@@ -68,18 +71,35 @@ router.get('/newproduct',(req,res)=>{
     else
     res.redirect('/')
 })
-router.get('/pagina3',(req,res)=>{
+
+router.get('/listrawmaterials',(req,res)=>{
     var isLogged=req.session.isLogged;
-    if(isLogged)
-    res.render('pagina3',{
+    var producers = session.getListProducers(req)
+    producers.forEach(function (item){
+        console.log(producers.nome)
+      })
+    var rawMaterials = session.getListRawMaterial(req)
+    res.render('listrawmaterials',{
         layout:'index',
-        isLogged:isLogged
+        isLogged:isLogged,
+        producers:producers,
+        rawMaterials:rawMaterials
     })
-    else
-    res.redirect('/')
 })
+
+router.get('/listproducts',(req,res)=>{
+    var isLogged=req.session.isLogged;
+    var workers = session.getListWorkers(req)
+    var products= session.getListProducts(req)
+    res.render('listproducts',{
+        layout:'index',
+        isLogged:isLogged,
+        workers:workers,
+        products:products
+    })
+})
+
 router.get('/profilo',(req,res)=>{
-    
     if(req.session.isLogged){
         user=session.getProfile(req)
         res.render('profilo',{

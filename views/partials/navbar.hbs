@@ -30,9 +30,14 @@
             {{/if}} 
             {{#if isWorker}}
             <li><a class="dropdown-item" href="/newproduct">New product</a></li>
-            {{/if}}
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/pagina3">Pagina3</a></li>
+            <li><a class="dropdown-item" href="/auth/listproducers">Buy raw material</a></li>
+            {{/if}}
+            {{#if isCostumer}}
+            <li><a class="dropdown-item" href="/auth/listworkers">Buy product</a></li>
+            {{/if}}
+
+            
           </ul>
         </li>
         {{/if}}

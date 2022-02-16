@@ -44,7 +44,6 @@ contract Transazione {
 
 
     struct Prodotti{
-
         uint256 id_prodotto;
         string nome;
         uint256 token;
