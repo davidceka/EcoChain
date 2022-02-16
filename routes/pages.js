@@ -54,6 +54,7 @@ router.get('/newrawmaterial',(req,res)=>{
             error:req.session.error,
             success:req.session.success,
             message:req.session.message,
+            isProducer:req.session.isProducer,
             isLogged:isLogged
         })
         session.clearNotifications(req);
@@ -66,6 +67,7 @@ router.get('/newproduct',(req,res)=>{
     if(isLogged)
     res.render('newproduct',{
         layout:'index',
+        isWorker:req.session.isWorker,
         isLogged:isLogged
     })
     else
@@ -83,6 +85,7 @@ router.get('/listrawmaterials',(req,res)=>{
         layout:'index',
         isLogged:isLogged,
         producers:producers,
+        isWorker:req.session.isWorker,
         rawMaterials:rawMaterials
     })
 })
