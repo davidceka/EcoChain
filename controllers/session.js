@@ -1,12 +1,8 @@
-var session;
-
 function getProfile(req){
-    session=req.session;
-    return session.user;
+    return req.session.user;
 }
-function setProfile(req,user){
-    session=req.session;
-    session.user=user;
+function setProfile(req,_user){
+    session=req.session.user=_user;
 }
 
 function setListProducers(req,producers){

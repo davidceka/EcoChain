@@ -13,25 +13,34 @@
                 </form>
 
                 <ul data-role="listview">
-                    {{#each rawMaterials}}
-                        <li>
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Numero Lotto {{this.idLotto}}</h6>
-                                            <h6 class="mb-0">Nome {{this.nome}}</h6>
-                                            <h6 class="mb-0">Quantità {{this.quantità}}</h6>
-                                            <div class="col-sm-9 text-secondary">
-                                                <a class="btn btn-info " target="__blank" href="">Compra</a>
-                                            </div><-->
+                        {{#each rawMaterials}}
+                            <form action="/transactions/acquistoMateriaPrima" method="post">
+                                <li>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <select id="_lottoScelto" name="_lottoScelto" hidden="true">
+                                                        <option value={{this.idLotto}}></option>
+                                                    </select>
+                                                    <select id="_walletProduttore" name="_walletProduttore" hidden="true">
+                                                        <option value={{this.owner}}></option>
+                                                    </select>
+                                                    <h6 value={{this.idLotto}} class="mb-0">Numero Lotto {{this.idLotto}}</h6>
+                                                    <h6 class="mb-0">Nome {{this.nome}}</h6>
+                                                    <h6 class="mb-0">Quantità {{this.quantita}}</h6>
+                                                    <div class="col-sm-9 text-secondary">
+                                                        <button  type="submit" class="btn btn-info " target="__blank">Compra</a>
+                                                    </div><-->
+                                                </div>
+                                            
+                                            </div>
                                         </div>
-                                       
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                    {{/each}}
+                                </li>
+                            </form>
+                        {{/each}}
+                   
                 </ul>
                 <hr class="dropdown-divider">
             </ul>

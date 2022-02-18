@@ -120,6 +120,10 @@ router.get('/profilo',(req,res)=>{
         res.redirect('/')
     }
 })
+
+    
+
+
 router.get('/nuovoaccount',blockchainController.newAccount)
 
 

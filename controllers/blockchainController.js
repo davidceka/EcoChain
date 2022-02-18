@@ -89,11 +89,12 @@ exports.getListRawMaterialsByOwner = async (req, res)=>{
         if(!rawMaterial){
         }else{
             console.log(rawMaterial.nome)
-            if(!rawMaterial.not_available || rawMaterial.amount==0){
+            if(rawMaterial.amount>0 && rawMaterial.name!=""){
                 rawMaterials.push({
-                    "id":rawMaterial.idLotto, 
+                    "idLotto":rawMaterial.id_lottomateria, 
                     "nome":rawMaterial.nome,
-                    "quantità":rawMaterial.amount
+                    "quantita":rawMaterial.amount,
+                    "owner":selectWA
                 })
             } 
         }
@@ -109,6 +110,30 @@ exports.getProducts = (req, res) => {
     session.setListProducts(req, products)
     res.redirect("/listproducts")
   }  
+
+
+exports.acquistoMateriaPrima=async (req,res)=>{
+    var user_wallet=session.getProfile(req).wallet_address
+    const{
+        _walletProduttore,
+        _lottoScelto,
+    }=req.body;
+    try{
+        await transazioniInstance.methods.acquistoMateriaPrima(_walletProduttore,session.getProfile(req).wallet_address ,_lottoScelto ).send({
+                    from: user_wallet, 
+                    gasPrice: web3.utils.toHex(0), 
+                    gasLimit: web3.utils.toHex(5000000)
+                })
+                session.setSuccess(req,"Acquisto eseguito con successo!")
+                res.redirect('/')
+    }
+    catch(error){
+        console.log(error)
+        blockChainLogger.error(error)
+    }
+}
+
+
 
 exports.creaNuovaMateriaPrima=async (req, res)=>{
     const {

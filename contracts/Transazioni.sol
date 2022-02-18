@@ -54,6 +54,7 @@ contract Transazione {
         bool not_available;
 
     }
+
     mapping(address=>mapping(uint256=>Prodotti)) prodotti;
     mapping(address=> mapping(uint256=>MateriaPrima)) materia_prima;
 
