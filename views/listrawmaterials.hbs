@@ -2,7 +2,7 @@
     <div class="row d-flex justify-content-center align-items-center h-250 mt-5">
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-5" >
                 
-                <form action="/auth/listrawmaterials" method="post">
+                <form action="/transactions/listrawmaterials" method="post">
                     <label for="selectWA">Choose a producer:</label>
                     <select id="selectWA" name="selectWA">   <!--> size="3"><-->
                         {{#each producers}}
@@ -19,7 +19,12 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">{{this.nome}}&nbsp;{{this.quantità}}</h6>
+                                            <h6 class="mb-0">Numero Lotto {{this.idLotto}}</h6>
+                                            <h6 class="mb-0">Nome {{this.nome}}</h6>
+                                            <h6 class="mb-0">Quantità {{this.quantità}}</h6>
+                                            <div class="col-sm-9 text-secondary">
+                                                <a class="btn btn-info " target="__blank" href="">Compra</a>
+                                            </div><-->
                                         </div>
                                        
                                     </div>
@@ -32,9 +37,7 @@
             </ul>
         </div>
     </div>
-</section> <!--><div class="col-sm-9 text-secondary">
-                                            <a class="btn btn-info " target="__blank" href="">Compra</a>
-                                        </div><-->
+</section> 
 
 
 

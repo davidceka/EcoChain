@@ -4,6 +4,7 @@ const cfABI=require('../contracts/artifacts/CarbonFootprint.json')
 const tABI=require('../contracts/artifacts/Transazione.json')
 const session = require("./session");
 const logController=require('./logController');
+const { raw } = require('mysql');
 
 
 const blockChainLogger=logController.blockchainLogger;
@@ -19,8 +20,6 @@ const carbonFootprintInstance=new web3.eth.Contract(cfABI.abi, ADDRESS_CF)
 const transazioniInstance=new web3.eth.Contract(tABI.abi, ADDRESS_T)
 blockChainLogger.tokenLog("Connesso con successo allo smart contract Token.")
 blockChainLogger.transactionLog("Connesso con successo allo smart contract transazioni.")
-
-
 
 
 exports.newAccount=async ()=>{
@@ -76,7 +75,40 @@ async function safeTransferFrom(from,to,token_id){
         console.log(error)
         return false
     }
+} 
+
+exports.getListRawMaterialsByOwner = async (req, res)=>{
+    const{selectWA} = req.body;
+    var limit = await transazioniInstance.methods.getMateriePrimeId().call()
+    console.log("sto pending " +limit)
+    //var selectWA = "0x17BE7A41e13e89cc86a4cd445233Fb83351dd506"
+    
+    var rawMaterials = []
+    for (var i = 0; i < limit; i++){
+        var rawMaterial = await this.getMateriaPrima(selectWA,i)
+        if(!rawMaterial){
+        }else{
+            console.log(rawMaterial.nome)
+            if(!rawMaterial.not_available || rawMaterial.amount==0){
+                rawMaterials.push({
+                    "id":rawMaterial.idLotto, 
+                    "nome":rawMaterial.nome,
+                    "quantità":rawMaterial.amount
+                })
+            } 
+        }
+        
+    } 
+    session.setListRawMaterial(req, rawMaterials)
+    res.redirect("/listrawmaterials")
 }
+
+exports.getProducts = (req, res) => {
+    const{selectWA} = req.body;
+    var products = []
+    session.setListProducts(req, products)
+    res.redirect("/listproducts")
+  }  
 
 exports.creaNuovaMateriaPrima=async (req, res)=>{
     const {
@@ -100,8 +132,7 @@ exports.creaNuovaMateriaPrima=async (req, res)=>{
         } catch (error) {
             console.log(error);
             session.setError(req, "Unknown Error");
-        }
-        
+        }  
     }else {
         console.log("NOT OK")
         session.setError(req, "Check input fields");
@@ -116,12 +147,12 @@ exports.creaNuovoProdotto=async (req, res)=>{
 }
   
 
-exports.getMateriaPrima = async (idLotto)=>{
+exports.getMateriaPrima = async (wallet, idLotto)=>{
     try{
-        var response=await transazioniInstance.methods.getMateriaPrima(idLotto).call()
+        var response = await transazioniInstance.methods.getMateriaPrimaByAddress(wallet, idLotto).call()
         return response
     }catch(error){
-        console.log(error)
+        console.log("QUIIIIIIIIIIIIIIIIIIIIII " +error)
         return false
     } 
 } 

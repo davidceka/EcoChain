@@ -33,6 +33,9 @@ contract Transazione {
         prodottiId++;
     }
 
+    function getMateriePrimeId() view public returns(uint256){
+        return materiePrimeId;
+    }
 
     struct MateriaPrima{
         uint256 id_lottomateria;
@@ -139,8 +142,8 @@ contract Transazione {
         require(_idLotto<=prodottiId,"Il lotto con ID richiesto non esiste.");
         return prodotti[_address][_idLotto];
     }   
-    function getMateriaPrimaByAddress(address _address,uint256 _idLotto) view public returns (Prodotti memory){
-        require(_idLotto<=prodottiId,"Il lotto con ID richiesto non esiste.");
-        return prodotti[_address][_idLotto];
+    function getMateriaPrimaByAddress(address _address,uint256 _idLotto) view public returns (MateriaPrima memory){
+        require(_idLotto<=materiePrimeId,"Il lotto con ID richiesto non esiste.");
+        return materia_prima[_address][_idLotto];
     }   
 }

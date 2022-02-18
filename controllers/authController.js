@@ -132,30 +132,10 @@ exports.getAllProducers = async (req, res) => {
       })
     })
     session.setListProducers(req, producers)
-    var selectedMaterials = [{nome:"", quantità:"",walletAddress:""}]
+    var selectedMaterials = [{nome:"---", quantità:"---",idLotto:"---"}]
     session.setListRawMaterial(req, selectedMaterials)
     res.redirect("/listrawmaterials")
   })
-}  
-
-//VARIABILI FITTIZIE PER TESTARE
-/*var source = [
-      {nome:"materia a", quantità: 10, walletAddress: "Address1"}, {nome:"materia b", quantità: 10, walletAddress: "Address2"}, {nome:"materia c", quantità: 10, walletAddress: "Address3"},
-      {nome:"materia d", quantità: 10, walletAddress: "Address1"}, {nome:"materia e", quantità: 10, walletAddress: "Address2"}, {nome:"materia f", quantità: 10, walletAddress: "Address3"},
-      {nome:"materia g", quantità: 10, walletAddress: "Address1"}, {nome:"materia h", quantità: 10, walletAddress: "Address3"}, {nome:"materia i", quantità: 10, walletAddress: "Address3"}
-  ]
-  source.forEach(function (item){
-      if(item.walletAddress == selectWA){
-          rawMaterials.push(item)
-      }
-  })*/
-
-exports.getRawMaterials = (req, res) => {
-  const{selectWA} = req.body;
-  var rawMaterials = []
-  
-  session.setListRawMaterial(req, rawMaterials)
-  res.redirect("/listrawmaterials")
 }  
 
 exports.getAllWorkers = async (req, res) => {
@@ -178,11 +158,3 @@ exports.getAllWorkers = async (req, res) => {
     res.redirect("/listproducts")
   })
 } 
-
-exports.getProducts = (req, res) => {
-  const{selectWA} = req.body;
-  var products = []
-  session.setListProducts(req, products)
-  res.redirect("/listproducts")
-}  
-

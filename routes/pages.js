@@ -77,9 +77,6 @@ router.get('/newproduct',(req,res)=>{
 router.get('/listrawmaterials',(req,res)=>{
     var isLogged=req.session.isLogged;
     var producers = session.getListProducers(req)
-    producers.forEach(function (item){
-        console.log(producers.nome)
-      })
     var rawMaterials = session.getListRawMaterial(req)
     res.render('listrawmaterials',{
         layout:'index',

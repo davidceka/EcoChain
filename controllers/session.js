@@ -18,7 +18,7 @@ function getListProducers(req){
 }
 
 function setListRawMaterial(req, listRawMaterials){
-    req.session.selectedMaterials=listRawMaterials
+    req.session.listRawMaterials=listRawMaterials
 }
 
 function getListRawMaterial(req){
