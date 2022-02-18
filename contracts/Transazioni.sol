@@ -124,10 +124,10 @@ contract Transazione {
         
     }
 
-    function acquistoMateriaPrima(address buyer,uint256 _idLotto) public {
-        materia_prima[buyer][_idLotto]=materia_prima[msg.sender][_idLotto];
-        tokenContract.safeTransferFrom(msg.sender,buyer,materia_prima[buyer][_idLotto].token);
-        delete materia_prima[msg.sender][_idLotto];
+    function acquistoMateriaPrima(address seller, address buyer,uint256 _idLotto) public {
+        materia_prima[buyer][_idLotto]=materia_prima[seller][_idLotto];
+        tokenContract.safeTransferFrom(seller,buyer,materia_prima[buyer][_idLotto].token);
+        delete materia_prima[seller][_idLotto];
     }
 
     function getMateriaPrima(uint _idLotto) view public returns (MateriaPrima memory){
