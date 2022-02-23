@@ -284,6 +284,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getProdottiId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -529,11 +542,11 @@
 			]
 		},
 		"contracts/Transazioni.sol": {
-			"keccak256": "0xcd5737771db9e044f2bb1ab9f5fbbbf0bd6c0ea691e01d9a0e992d82b9ec609a",
+			"keccak256": "0xa68e05607baf111542c4a17fc351ea86195e5d20412f209c799983353707ba55",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bbd59ddf5a787a545dd410eec61a9fff375f6150180b0ce572cc2d12697eea69",
-				"dweb:/ipfs/QmUVgGbCWaCDdwcjNVaJaTtxiX3HJt4cbXtgeHPwYHSUYi"
+				"bzz-raw://ecf6aa5cd7bba645138e2b288af9dc2b5bd8a7b0899443d98f29784d579457dd",
+				"dweb:/ipfs/QmTgQSmmZ4vYPbrkGdept1rfziJPkG2hES7zy5JNYdqgUs"
 			]
 		}
 	},

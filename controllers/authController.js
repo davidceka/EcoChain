@@ -132,7 +132,8 @@ exports.getAllProducers = async (req, res) => {
       })
     })
     session.setListProducers(req, producers)
-    var selectedMaterials = [{nome:"---", quantità:"---",idLotto:"---"}]
+    await blockchainController.getListOwnRawMaterials(req)
+    var selectedMaterials = new Array(0)
     session.setListRawMaterial(req, selectedMaterials)
     res.redirect("/listrawmaterials")
   })
@@ -143,7 +144,7 @@ exports.getAllWorkers = async (req, res) => {
   "SELECT nome, cognome, wallet_address FROM users WHERE ruolo = 'lavoratore'",
   [''],
   async function (error, results) {
-    var workers = []//new Array(results.length)
+    var workers = []
     if (error) throw error;
     results.forEach(function (item){
       workers.push({
@@ -153,8 +154,9 @@ exports.getAllWorkers = async (req, res) => {
       })
     })
     session.setListWorkers(req, workers)
-    var selectedMaterials = [{nome:"", quantità:"",walletAddress:""}]
-    session.setListProducts(req, selectedMaterials)
+    //await blockchainController.getListOwnProducts(req)
+    var selectedProducts = new Array(0)
+    session.setListProducts(req, selectedProducts)
     res.redirect("/listproducts")
   })
 } 

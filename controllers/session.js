@@ -21,6 +21,14 @@ function getListRawMaterial(req){
     return req.session.listRawMaterials;
 }
 
+function setListOwnRawMaterial(req, listOwnRawMaterials){
+    req.session.listOwnRawMaterials=listOwnRawMaterials
+}
+
+function getListOwnRawMaterial(req){
+    return req.session.listOwnRawMaterials;
+}
+
 function setListWorkers(req,producers){
     req.session.producers=producers
 }
@@ -35,6 +43,14 @@ function setListProducts(req, listProducts){
 
 function getListProducts(req){
     return req.session.listProducts;
+}
+
+function setListOwnProducts(req, listOwnProducts){
+    req.session.listOwnProducts=listOwnProducts
+}
+
+function getListOwnProducts(req){
+    return req.session.listOwnProducts;
 }
 
 
@@ -88,8 +104,12 @@ module.exports={
     getListProducers:getListProducers,
     setListRawMaterial:setListRawMaterial,
     getListRawMaterial:getListRawMaterial,
+    setListOwnRawMaterial:setListOwnRawMaterial,
+    getListOwnRawMaterial:getListOwnRawMaterial,
     setListWorkers:setListWorkers,
     getListWorkers:getListWorkers,
     setListProducts:setListProducts,
-    getListProducts:getListProducts
+    getListProducts:getListProducts,
+    setListOwnProducts:setListOwnProducts,
+    getListOwnProducts:getListOwnProducts
 }

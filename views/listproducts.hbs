@@ -1,38 +1,92 @@
 <section class="vh-100" >
-    <div class="row d-flex justify-content-center align-items-center h-250 mt-5">
-        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-5" >
-                
-                <form action="/auth/listproudcts" method="post">
-                    <label for="selectWA">Choose a worker:</label>
-                    <select id="selectWA" name="selectWA">   <!--> size="3"><-->
-                        {{#each workers}}
-                            <option value={{this.walletAddress}}>{{this.nome}}&nbsp;{{this.cognome}}</option>
-                        {{/each}}
-                    </select> <br><br>
-                    <button type="submit">Confirm</button>
-                </form>
+  <div class="container">
+      <div class="main-body">
+          <div class="row gutters-sm mt-5">
+              
+              <div class="col-md-4 mb-3">
+                <div class="card">
+                  <div class="card-body">
+                      <form action="/transactions/listrawmaterials" method="post">
+                          <label for="selectWA">Choose a workers:</label>
+                          <select id="selectWA" name="selectWA">   <!--> size="3"><-->
+                              {{#each workers}}
+                                  <option value={{this.walletAddress}}>{{this.nome}}&nbsp;{{this.cognome}}</option>
+                              {{/each}}
+                          </select> <br><br>
+                          <button type="submit">Confirm</button>
+                      </form>
 
-                <ul data-role="listview">
-                    {{#each products}}
-                        <li>
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">{{this.nome}}&nbsp;{{this.quantità}}</h6>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    {{/each}}
-                </ul>
-                <hr class="dropdown-divider">
-            </ul>
-        </div>
-    </div>
-</section> <!--><div class="col-sm-9 text-secondary">
-                                            <a class="btn btn-info " target="__blank" href="">Compra</a>
-                                        </div><-->
+                      <ul data-role="listview">
+                          {{#each products}}
+                              <form action="/transactions/acquistoProdotto" method="post">
+                                  <li>
+                                      <div class="card mb-3">
+                                          <div class="card-body">
+                                              <div class="row">
+                                                  <div class="col-sm-3">
+                                                      <select id="_lottoScelto" name="_lottoScelto" hidden="true">
+                                                          <option value={{this.idLotto}}></option>
+                                                      </select>
+                                                      <select id="_walletProduttore" name="_walletProduttore" hidden="true">
+                                                          <option value={{this.owner}}></option>
+                                                      </select>
+                                                      <h6 value={{this.idLotto}} class="mb-0">Numero Lotto {{this.idLotto}}</h6>
+                                                      <h6 class="mb-0">Nome {{this.nome}}</h6>
+                                                      <h6 class="mb-0">Quantita {{this.quantita}}</h6>
+                                                      <div class="col-sm-9 text-secondary">
+                                                          <button  type="submit" class="btn btn-info " target="__blank">Compra</a>
+                                                      </div>
+                                                  </div>
+                                              
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </li>
+                              </form>
+                          {{/each}}
+                          <hr class="dropdown-divider">           
+                      </ul>
+                      
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8">
+                  <div class="card mb-3">
+                      <div class="card-body">
+                      {{#each ownProducts}}
+                          <li>
+                          <div class="row">
+                              <div class="col-sm-3">
+                              <h6 class="mb-0">ID Lotto</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                              {{this.idLotto}}
+                              </div>
+                              <div class="col-sm-3">
+                              <h6 class="mb-0">Name</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                              {{this.nome}}
+                              </div>
+                              <div class="col-sm-3">
+                              <h6 class="mb-0">Amount</h6>
+                              </div>
+                              <div class="col-sm-9 text-secondary">
+                              {{this.quantita}}
+                              </div>
+                          </div>
+                          </li>
+                          <hr>
+                      {{/each}}
+                      </div>
+                  </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+</section> 
+
+
 

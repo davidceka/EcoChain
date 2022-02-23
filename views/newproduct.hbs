@@ -12,21 +12,67 @@
   </div>
   {{/if}}
   
-  <div class="row d-flex justify-content-center align-items-center h-250 mt-5">
-    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-5">
-      <form action="/transactions/newproduct" method="post">
-        <legend>Register new product:</legend>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Enter Name"><br>
-        <label for="amount">Amount:</label><br>
-        <input type="number" id="amount" name="amount" min="0" max="100"><br>
-        <label for="carboonfootprint">Carboon Footprint:</label><br>
-        <input type="number" id="carbfoot" name="carbfoot" min="0" max="100"><br>
-        <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Create</button>
+<div class="container">
+    <div class="main-body">
+          <div class="row gutters-sm mt-5">
+            
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <form action="/transactions/addproduct" method="post">
+                        <legend>Register new product:</legend>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter Name"><br>
+                        <label for="amount">Amount:</label><br>
+                        <input type="number" id="amount" name="amount" min="0" max="100"><br>
+                        <label for="carbfoot">Carboon Footprint:</label><br>
+                        <input type="number" id="carbfoot" name="carbfoot" min="0" max="100"><br>
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Create</button>
+                        </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-8">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      {{#each products}}
+                        <li>
+                          <div class="row">
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">ID Lotto</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              {{this.idLotto}}
+                            </div>
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              {{this.nome}}
+                            </div>
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Amount</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              {{this.quantita}}
+                            </div>
+                          </div>
+                        </li>
+                        <hr>
+                      {{/each}}
+                  </div>
+                </div>
+              </div>
+
+          </div>
         </div>
-      </form>
     </div>
-  </div>
+    
+   
+
+                 
   
 </section>

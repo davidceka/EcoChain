@@ -37,6 +37,10 @@ contract Transazione {
         return materiePrimeId;
     }
 
+    function getProdottiId() view public returns(uint256){
+        return prodottiId;
+    }
+
     struct MateriaPrima{
         uint256 id_lottomateria;
         string nome;

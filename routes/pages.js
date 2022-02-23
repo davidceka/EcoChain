@@ -48,55 +48,89 @@ router.get('/register',(req,res)=>{
 
 router.get('/newrawmaterial',(req,res)=>{
     var isLogged=req.session.isLogged;
+    var rawMaterials=session.getListOwnRawMaterial(req)
     if(isLogged){
         res.render('newrawmaterial',{
             layout:'index',
+            rawMaterials:rawMaterials,
             error:req.session.error,
             success:req.session.success,
             message:req.session.message,
             isProducer:req.session.isProducer,
             isLogged:isLogged
         })
-        session.clearNotifications(req);
     }
-    else
-    res.redirect('/')
+    else{
+        session.setError(req,'Devi effettuare il login per accedere a questa pagina.')
+        console.log(req.session.message)
+        console.log(req.session.error)
+        res.redirect('/')
+    }
 })
+
 router.get('/newproduct',(req,res)=>{
     var isLogged=req.session.isLogged;
-    if(isLogged)
-    res.render('newproduct',{
-        layout:'index',
-        isWorker:req.session.isWorker,
-        isLogged:isLogged
-    })
-    else
-    res.redirect('/')
+    var products=session.getListOwnProducts(req)
+    if(isLogged){
+        res.render('newproduct',{
+                layout:'index',
+                success:req.session.success,
+                message:req.session.message,
+                products:products,
+                isWorker:req.session.isWorker,
+                isLogged:isLogged
+            })
+    }
+    else{
+        session.setError(req,'Devi effettuare il login per accedere a questa pagina.')
+        console.log(req.session.message)
+        console.log(req.session.error)
+        res.redirect('/')
+    }
+    
 })
 
 router.get('/listrawmaterials',(req,res)=>{
     var isLogged=req.session.isLogged;
     var producers = session.getListProducers(req)
+    var ownRawMaterials = session.getListOwnRawMaterial(req)
     var rawMaterials = session.getListRawMaterial(req)
-    res.render('listrawmaterials',{
-        layout:'index',
-        isLogged:isLogged,
-        producers:producers,
-        isWorker:req.session.isWorker,
-        rawMaterials:rawMaterials
-    })
+    if(isLogged){
+        res.render('listrawmaterials',{
+            layout:'index',
+            isLogged:isLogged,
+            producers:producers,
+            isWorker:req.session.isWorker,
+            ownRawMaterials:ownRawMaterials,
+            rawMaterials:rawMaterials
+        })
+    }
+    else{
+        session.setError(req,'Devi effettuare il login per accedere a questa pagina.')
+        console.log(req.session.message)
+        console.log(req.session.error)
+        res.redirect('/')
+    }
 })
 
 router.get('/listproducts',(req,res)=>{
     var isLogged=req.session.isLogged;
     var workers = session.getListWorkers(req)
     var products= session.getListProducts(req)
-    res.render('listproducts',{
-        layout:'index',
-        isLogged:isLogged,
-        workers:workers,
-        products:products
-    })
+    if(isLogged){
+        res.render('listproducts',{
+            layout:'index',
+            isLogged:isLogged,
+            workers:workers,
+            products:products
+        })
+    }
+    else{
+        session.setError(req,'Devi effettuare il login per accedere a questa pagina.')
+        console.log(req.session.message)
+        console.log(req.session.error)
+        res.redirect('/')
+    }
 })
 
 router.get('/profilo',(req,res)=>{
