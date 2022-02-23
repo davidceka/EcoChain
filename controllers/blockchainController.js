@@ -91,7 +91,7 @@ exports.goToNewProduct = async (req, res) => {
 exports.getListOwnRawMaterials = async (req) => {
     var walletAddress = session.getProfile(req).wallet_address
     var limit = await transazioniInstance.methods.getMateriePrimeId().call()
-    
+     
     var rawMaterials = []
     for (var i = 0; i < limit; i++){
         var rawMaterial = await this.getMateriaPrima(walletAddress,i)
@@ -110,7 +110,7 @@ exports.getListOwnRawMaterials = async (req) => {
     session.setListOwnRawMaterial(req, rawMaterials)    
 }
 
-
+ 
 exports.getListOwnProducts= async (req) => {
     var walletAddress = session.getProfile(req).wallet_address
     var limit = await transazioniInstance.methods.getProdottiId().call()
@@ -160,12 +160,30 @@ exports.getListRawMaterialsByOwner = async (req, res)=>{
     res.redirect("/listrawmaterials")
 }
 
-exports.getProducts = (req, res) => {
+exports.getListProductsByOwner  = async (req, res) => {
     const{selectWA} = req.body;
+    var limit = await transazioniInstance.methods.getProdottiId().call()
+    //var selectWA = "0x17BE7A41e13e89cc86a4cd445233Fb83351dd506"
+    
     var products = []
+    for (var i = 0; i < limit; i++){
+        var products = await this.getProdotto(selectWA,i)
+        if(!products){
+        }else{ 
+            console.log(products.nome)
+            if(products.amount>0 && products.name!=""){
+                products.push({
+                    "idLotto":products.id_prodotti, 
+                    "nome":products.nome,
+                    "quantita":products.amount,
+                    "owner":selectWA
+                }) 
+            } 
+        } 
+    } 
     session.setListProducts(req, products)
     res.redirect("/listproducts")
-  }  
+}
 
 
 exports.acquistoMateriaPrima=async (req,res)=>{
@@ -175,7 +193,7 @@ exports.acquistoMateriaPrima=async (req,res)=>{
         _lottoScelto,
     }=req.body;
     try{
-        await transazioniInstance.methods.acquistoMateriaPrima(_walletProduttore,session.getProfile(req).wallet_address ,_lottoScelto ).send({
+        await transazioniInstance.methods.acquistoMateriaPrima(_walletProduttore, user_wallet ,_lottoScelto ).send({
                     from: user_wallet, 
                     gasPrice: web3.utils.toHex(0), 
                     gasLimit: web3.utils.toHex(5000000)
@@ -199,17 +217,15 @@ exports.acquistoProdotto=async (req,res)=>{
     }=req.body;
     try{
         console.log("ciao")
-        /*
-        await transazioniInstance.methods.acquistoProdotto(_walletProduttore,session.getProfile(req).wallet_address ,_lottoScelto ).send({
+        await transazioniInstance.methods.acquistoProdotto(_walletProduttore, user_wallet,_lottoScelto ).send({
                     from: user_wallet, 
                     gasPrice: web3.utils.toHex(0), 
                     gasLimit: web3.utils.toHex(5000000)
                 })
                 session.setSuccess(req,"Acquisto eseguito con successo!")
                 await this.getListOwnProducts(req)
-                session.setListRawMaterial(req, new Array(0))
+                session.setListProducts(req, new Array(0))
                 res.redirect('/listproducts')
-        */
     }
     catch(error){
         console.log(error)

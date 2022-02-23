@@ -130,6 +130,29 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_idLotto",
+						"type": "uint256"
+					}
+				],
+				"name": "acquistoProdotto",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "string",
 						"name": "_nome",
 						"type": "string"
@@ -542,11 +565,11 @@
 			]
 		},
 		"contracts/Transazioni.sol": {
-			"keccak256": "0xa68e05607baf111542c4a17fc351ea86195e5d20412f209c799983353707ba55",
+			"keccak256": "0xa990c23cca6b930415f366a6896f0716b87e394d3211b62ae7533c2867f3e22d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ecf6aa5cd7bba645138e2b288af9dc2b5bd8a7b0899443d98f29784d579457dd",
-				"dweb:/ipfs/QmTgQSmmZ4vYPbrkGdept1rfziJPkG2hES7zy5JNYdqgUs"
+				"bzz-raw://a51a9e2b74d22054f8a2d4063289e8cc81c78e142ce7af043ce2c37cb5c0f91c",
+				"dweb:/ipfs/QmR1ady7FGPrAA4KN2Yd7Rq4pnnv4jkgZSfXXCKvgBwcYE"
 			]
 		}
 	},

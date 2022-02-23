@@ -154,7 +154,7 @@ exports.getAllWorkers = async (req, res) => {
       })
     })
     session.setListWorkers(req, workers)
-    //await blockchainController.getListOwnProducts(req)
+    await blockchainController.getListOwnProducts(req)
     var selectedProducts = new Array(0)
     session.setListProducts(req, selectedProducts)
     res.redirect("/listproducts")

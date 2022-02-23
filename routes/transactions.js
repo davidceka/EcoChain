@@ -9,7 +9,7 @@ router.post('/addrawmaterial', blockchainController.creaNuovaMateriaPrima)
 router.post('/addproduct', blockchainController.creaNuovoProdotto)
 
 router.post('/listrawmaterials',blockchainController.getListRawMaterialsByOwner)
-router.post('/listproducts',blockchainController.getProducts)
+router.post('/listproducts',blockchainController.getListProductsByOwner)
 
 router.post('/acquistoMateriaPrima',blockchainController.acquistoMateriaPrima)
 router.post('/acquistoProdotto', blockchainController.acquistoProdotto)
