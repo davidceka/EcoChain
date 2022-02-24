@@ -23,7 +23,7 @@
                                         <div class="card mb-3">
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-sm-3">
+                                                    <div>
                                                         <select id="_lottoScelto" name="_lottoScelto" hidden="true">
                                                             <option value={{this.idLotto}}></option>
                                                         </select>
@@ -31,8 +31,9 @@
                                                             <option value={{this.owner}}></option>
                                                         </select>
                                                         <h6 value={{this.idLotto}} class="mb-0">Numero Lotto {{this.idLotto}}</h6>
-                                                        <h6 class="mb-0">Nome {{this.nome}}</h6>
-                                                        <h6 class="mb-0">Quantita {{this.quantita}}</h6>
+                                                        <h6 class="mb-0">Nome: {{this.nome}}</h6>
+                                                        <h6 class="mb-0">Quantita: {{this.quantita}}</h6>
+                                                        <h6 class="mb-0">Impatto Ambientale: {{this.impatto}}</h6>
                                                         <div class="col-sm-9 text-secondary">
                                                             <button  type="submit" class="btn btn-info " target="__blank">Compra</a>
                                                         </div>
@@ -74,6 +75,12 @@
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                 {{this.quantita}}
+                                </div>
+                                <div class="col-sm-3">
+                                <h6 class="mb-0">Impatto</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                {{this.impatto}}
                                 </div>
                             </div>
                             </li>

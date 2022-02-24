@@ -135,6 +135,12 @@ contract Transazione {
         delete materia_prima[seller][_idLotto];
     }
 
+    function acquistoProdotto(address seller, address buyer,uint256 _idLotto) public {
+        prodotti[buyer][_idLotto]=prodotti[seller][_idLotto];
+        tokenContract.safeTransferFrom(seller,buyer,prodotti[buyer][_idLotto].token);
+        delete prodotti[seller][_idLotto];
+    }
+
     function getMateriaPrima(uint _idLotto) view public returns (MateriaPrima memory){
         require(_idLotto<=materiePrimeId,"Il lotto con ID richiesto non esiste.");
         return materia_prima[msg.sender][_idLotto];

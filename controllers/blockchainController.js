@@ -14,6 +14,8 @@ web3.eth.getBlockNumber().then((result) => {
 console.log("Latest Ethereum Block is ",result);
 });
 
+web3.eth.handleRevert = true;
+
 const ADDRESS_CF=process.env.ADDRESS_CF;
 const ADDRESS_T=process.env.ADDRESS_T;
 const carbonFootprintInstance=new web3.eth.Contract(cfABI.abi, ADDRESS_CF)
@@ -34,6 +36,13 @@ exports.newAccount=async ()=>{
             }
         })
         blockChainLogger.blockchain("Account "+account+" creato con successo.")
+        await web3.eth.personal.unlockAccount(account,"", 600)
+        .then(console.log('Account unlocked!'));
+        await carbonFootprintInstance.methods.setApprovalForAll(ADDRESS_T,true).send({
+            from:account,
+            gasPrice: web3.utils.toHex(0),
+            gasLimit: web3.utils.toHex(5000000)
+        });
         return account
     } catch (error) {
         console.log(error)
@@ -41,41 +50,6 @@ exports.newAccount=async ()=>{
         return false
     }
     //TODO aggiungere codice per log tracciamento nuovo account
-}
-
-
-async function ownerOf(id_token){
-    var response=await carbonFootprintInstance.methods.ownerOf(id_token).call()
-    return response
-}
-
-async function safeMint(address){
-    try{
-        await carbonFootprintInstance.methods.safeMint(address).send({
-            from:address,
-            gasPrice: web3.utils.toHex(0),
-            gasLimit: web3.utils.toHex(5000000)
-        })
-        return true
-    }catch(error){
-        console.log(error) 
-        return false
-    }
-}
-
-async function safeTransferFrom(from,to,token_id){
-    try {
-        await carbonFootprintInstance.methods.safeTransferFrom(from,to,token_id).send({
-            from:from,
-            gasPrice: web3.utils.toHex(0),
-            gasLimit: web3.utils.toHex(5000000)
-        
-        });
-        return true;
-    } catch (error) {
-        console.log(error)
-        return false
-    }
 }
 
 exports.goToNewRawMaterial = async (req, res) => {
@@ -98,11 +72,13 @@ exports.getListOwnRawMaterials = async (req) => {
         if(!rawMaterial){
         }else{
             console.log(rawMaterial.nome)
+            var _impatto=await this.getImpattoAmbientale(rawMaterial.token)
             if(rawMaterial.amount>0 && rawMaterial.name!=""){
                 rawMaterials.push({
                     "idLotto":rawMaterial.id_lottomateria, 
                     "nome":rawMaterial.nome,
-                    "quantita":rawMaterial.amount
+                    "quantita":rawMaterial.amount,
+                    "impatto":_impatto
                 })
             } 
         }
@@ -121,12 +97,13 @@ exports.getListOwnProducts= async (req) => {
         var product = await this.getProdotto(walletAddress,i)
         if(!product){
         }else{
-            console.log(product.nome)
+            var _impatto=await this.getImpattoAmbientale(product.token)
             if(product.amount>0 && product.name!=""){
                 products.push({
                     "idLotto":product.id_prodotto, 
                     "nome":product.nome,
-                    "quantita":product.amount
+                    "quantita":product.amount,
+                    "impatto":_impatto
                 })
             } 
         }
@@ -145,13 +122,14 @@ exports.getListRawMaterialsByOwner = async (req, res)=>{
         var rawMaterial = await this.getMateriaPrima(selectWA,i)
         if(!rawMaterial){
         }else{ 
-            console.log(rawMaterial.nome)
+            var _impatto=await this.getImpattoAmbientale(rawMaterial.token)
             if(rawMaterial.amount>0 && rawMaterial.name!=""){
                 rawMaterials.push({
                     "idLotto":rawMaterial.id_lottomateria, 
                     "nome":rawMaterial.nome,
                     "quantita":rawMaterial.amount,
-                    "owner":selectWA
+                    "owner":selectWA,
+                    "impatto":_impatto
                 }) 
             } 
         } 
@@ -167,16 +145,17 @@ exports.getListProductsByOwner  = async (req, res) => {
     
     var products = []
     for (var i = 0; i < limit; i++){
-        var products = await this.getProdotto(selectWA,i)
-        if(!products){
+        var product = await this.getProdotto(selectWA,i)
+        if(!product){
         }else{ 
-            console.log(products.nome)
-            if(products.amount>0 && products.name!=""){
+            var _impatto=await this.getImpattoAmbientale(product.token)
+            if(product.amount>0 && product.name!=""){
                 products.push({
-                    "idLotto":products.id_prodotti, 
-                    "nome":products.nome,
-                    "quantita":products.amount,
-                    "owner":selectWA
+                    "idLotto":product.id_prodotto, 
+                    "nome":product.nome,
+                    "quantita":product.amount,
+                    "owner":selectWA,
+                    "impatto":_impatto
                 }) 
             } 
         } 
@@ -285,8 +264,8 @@ exports.creaNuovoProdotto=async (req, res)=>{
             await this.getListOwnProducts(req)
              
         } catch (error) {
-            console.log(error);
-            session.setError(req, "Unknown Error");
+            console.log(error.reason);
+            session.setError(req, error.reason);
         }  
     }else {
         console.log("NOT OK")
@@ -305,6 +284,18 @@ exports.getMateriaPrima = async (wallet, idLotto)=>{
         return false
     } 
 } 
+
+exports.getImpattoAmbientale=async(token_id)=>{
+    try{
+        var response=await carbonFootprintInstance.methods.getImpattoAmbientale(token_id).call()
+        return response;
+
+    }catch(error){
+        blockChainLogger.error(error)
+        console.log(error)
+        return -1
+    }
+}
 
 exports.getProdotto = async(wallet, idLotto)=>{
     try{

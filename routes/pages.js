@@ -66,6 +66,7 @@ router.get('/newrawmaterial',(req,res)=>{
         console.log(req.session.error)
         res.redirect('/')
     }
+    session.clearNotifications(req);
 })
 
 router.get('/newproduct',(req,res)=>{
@@ -78,7 +79,8 @@ router.get('/newproduct',(req,res)=>{
                 message:req.session.message,
                 products:products,
                 isWorker:req.session.isWorker,
-                isLogged:isLogged
+                isLogged:isLogged,
+                error:req.session.error,
             })
     }
     else{
@@ -87,7 +89,7 @@ router.get('/newproduct',(req,res)=>{
         console.log(req.session.error)
         res.redirect('/')
     }
-    
+    session.clearNotifications(req);
 })
 
 router.get('/listrawmaterials',(req,res)=>{
@@ -111,18 +113,21 @@ router.get('/listrawmaterials',(req,res)=>{
         console.log(req.session.error)
         res.redirect('/')
     }
+    session.clearNotifications(req);
 })
 
 router.get('/listproducts',(req,res)=>{
     var isLogged=req.session.isLogged;
     var workers = session.getListWorkers(req)
     var products= session.getListProducts(req)
+    var ownProducts= session.getListOwnProducts(req)
     if(isLogged){
         res.render('listproducts',{
             layout:'index',
             isLogged:isLogged,
             workers:workers,
-            products:products
+            products:products,
+            ownProducts:ownProducts
         })
     }
     else{
@@ -131,6 +136,7 @@ router.get('/listproducts',(req,res)=>{
         console.log(req.session.error)
         res.redirect('/')
     }
+    session.clearNotifications(req);
 })
 
 router.get('/profilo',(req,res)=>{
@@ -153,6 +159,7 @@ router.get('/profilo',(req,res)=>{
         console.log(req.session.error)
         res.redirect('/')
     }
+    session.clearNotifications(req);
 })
 
     
