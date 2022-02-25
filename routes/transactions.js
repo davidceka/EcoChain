@@ -3,7 +3,7 @@ const blockchainController = require("../controllers/blockchainController");
 const router = express.Router();
 
 router.get('/newrawmaterial', blockchainController.goToNewRawMaterial)
-router.get('/newproduct', blockchainController.goToNewProduct)
+//router.get('/newproduct', blockchainController.goToNewProduct)
 
 router.post('/addrawmaterial', blockchainController.creaNuovaMateriaPrima)
 router.post('/addproduct', blockchainController.creaNuovoProdotto)
@@ -13,5 +13,5 @@ router.post('/listproducts',blockchainController.getListProductsByOwner)
 
 router.post('/acquistoMateriaPrima',blockchainController.acquistoMateriaPrima)
 router.post('/acquistoProdotto', blockchainController.acquistoProdotto)
-
+ 
 module.exports = router;

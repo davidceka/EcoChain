@@ -6,6 +6,7 @@ const dotenv=require('dotenv').config({
 })
 const authRouter=require('./routes/auth')
 const pagesRouter=require('./routes/pages')
+const dbdataRouter=require('./routes/dbdata')
 const transactionsRouter=require('./routes/transactions')
 
 const sessions=require('express-session')
@@ -51,6 +52,8 @@ app.use(cookieParser());
 app.use('/',pagesRouter)
 app.use('/auth',authRouter)
 app.use('/transactions',transactionsRouter)
+app.use('/dbdataRouter',dbdataRouter)
+
 
 
 app.listen(5000, ()=>{

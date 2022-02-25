@@ -27,7 +27,7 @@ contract Transazione {
     event quantitaSufficiente(bool status);
 
     function incrementMaterie() internal{
-        materiePrimeId++;
+           materiePrimeId++;
     }
     function incrementProdotti() internal{
         prodottiId++;
@@ -56,7 +56,6 @@ contract Transazione {
         uint256 token;
         uint256 amount;
         bool not_available;
-
     }
 
     mapping(address=>mapping(uint256=>Prodotti)) prodotti;
@@ -76,11 +75,10 @@ contract Transazione {
         
     }
     function creaNuovoProdotto(string memory _nome,uint _quantitaRichiesta,uint256 _impattoAmbientale) public {
-
         uint256 quantitaRimanente=_quantitaRichiesta;
         uint256 quantitaDisponibile=0;
         uint256 i=0;
-        while((quantitaDisponibile<=_quantitaRichiesta)&&(i<materiePrimeId))
+        while(quantitaDisponibile<=_quantitaRichiesta&&i<materiePrimeId)
         {
             if(!materia_prima[msg.sender][i].not_available){
                 quantitaDisponibile+=materia_prima[msg.sender][i].amount;
@@ -95,26 +93,24 @@ contract Transazione {
         i=0;
         while(quantitaRimanente>0&&i<materiePrimeId) //verificare da togliere il materiePrimeId
         {
-                if(materia_prima[msg.sender][i].amount>quantitaRimanente){
+            if(materia_prima[msg.sender][i].amount>quantitaRimanente){
 
-                    materia_prima[msg.sender][i].amount-=quantitaRimanente;
-                    quantitaRimanente=0;
-                    if(materia_prima[msg.sender][i].amount==0){
-                        //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
-                        emit lottoTerminato(i);
-                    }
-                }
-                else{
-                    quantitaRimanente-=materia_prima[msg.sender][i].amount;
-                    materia_prima[msg.sender][i].amount=0;
-                    materia_prima[msg.sender][i].not_available=true;
+                materia_prima[msg.sender][i].amount-=quantitaRimanente;
+                quantitaRimanente=0;
+                if(materia_prima[msg.sender][i].amount==0){
                     //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
                     emit lottoTerminato(i);
                 }
+            }
+            else{
+                quantitaRimanente-=materia_prima[msg.sender][i].amount;
+                materia_prima[msg.sender][i].amount=0;
+                materia_prima[msg.sender][i].not_available=true;
+                //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
+                emit lottoTerminato(i);
+            }
             i++;
         }
-
-
         // da aggiungere: ricavare l'impatto dal vecchio token e sommarlo al nuovo
         uint256 tokenId=tokenContract.safeMint(msg.sender,_impattoAmbientale);
         prodotti[msg.sender][prodottiId]=Prodotti({
@@ -126,7 +122,6 @@ contract Transazione {
         });
         emit prodottoCreato(prodottiId,_nome,_quantitaRichiesta,_impattoAmbientale);
         incrementProdotti();
-        
     }
 
     function acquistoMateriaPrima(address seller, address buyer,uint256 _idLotto) public {

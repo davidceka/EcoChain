@@ -41,6 +41,25 @@
             <label class="form-label" for="email">Email address</label>
           </div>
 
+          <div class="form-outline mb-4">
+            <label for="role">Choose the role:</label>
+            <select id="role" name="role"  class="form-control form-control-lg"> 
+              <option value="cliente">Cliente</option>
+              <option value="lavoratore">Lavoratore</option>
+              <option value="produttore">Produttore</option>
+            </select> 
+          </div>
+
+          <div class="form-outline mb-4">
+            <label for="type">Choose the type (Only if you ar not a costumer):</label>
+            <select id="type" name="type"  class="form-control form-control-lg"> 
+              <option value=""></option>
+              <option value="Tipologia1">Tipologia1</option>
+              <option value="Tipologia2">Tipologia2</option>
+              <option value="Tipologia3">Tipologia3</option>
+            </select> 
+          </div>
+
           <!-- Password input -->
           <div class="form-outline mb-3">
             <input type="password" id="password" name="password" class="form-control form-control-lg"

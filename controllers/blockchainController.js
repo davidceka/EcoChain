@@ -36,8 +36,6 @@ exports.newAccount=async ()=>{
             }
         })
         blockChainLogger.blockchain("Account "+account+" creato con successo.")
-        await web3.eth.personal.unlockAccount(account,"", 600)
-        .then(console.log('Account unlocked!'));
         await carbonFootprintInstance.methods.setApprovalForAll(ADDRESS_T,true).send({
             from:account,
             gasPrice: web3.utils.toHex(0),
@@ -46,32 +44,38 @@ exports.newAccount=async ()=>{
         return account
     } catch (error) {
         console.log(error)
-        blockchainLogger.error(error)
+        blockChainLogger.error(error)
         return false
     }
     //TODO aggiungere codice per log tracciamento nuovo account
+}
+
+exports.unlockAccount=async(account)=>{
+    //un qualche controllo
+    await web3.eth.personal.unlockAccount(account,"", 600)
+        .then(console.log('Account unlocked!'));
 }
 
 exports.goToNewRawMaterial = async (req, res) => {
     await this.getListOwnRawMaterials(req)
     res.redirect("/newrawmaterial")
 }
-
+/*
 exports.goToNewProduct = async (req, res) => {
     await this.getListOwnProducts(req)
+    //authController.getAllProductsByType(req)
     res.redirect("/newproduct")
-}
+}*/
 
 exports.getListOwnRawMaterials = async (req) => {
     var walletAddress = session.getProfile(req).wallet_address
     var limit = await transazioniInstance.methods.getMateriePrimeId().call()
-     
+
     var rawMaterials = []
     for (var i = 0; i < limit; i++){
         var rawMaterial = await this.getMateriaPrima(walletAddress,i)
         if(!rawMaterial){
         }else{
-            console.log(rawMaterial.nome)
             var _impatto=await this.getImpattoAmbientale(rawMaterial.token)
             if(rawMaterial.amount>0 && rawMaterial.name!=""){
                 rawMaterials.push({
@@ -90,8 +94,6 @@ exports.getListOwnRawMaterials = async (req) => {
 exports.getListOwnProducts= async (req) => {
     var walletAddress = session.getProfile(req).wallet_address
     var limit = await transazioniInstance.methods.getProdottiId().call()
-    console.log("LIMIT VALE")
-    console.log(limit)
     var products = []
     for (var i = 0; i < limit; i++){
         var product = await this.getProdotto(walletAddress,i)
@@ -244,18 +246,19 @@ exports.creaNuovaMateriaPrima=async (req, res)=>{
     
 }
 
-exports.creaNuovoProdotto=async (req, res)=>{
+exports.creaNuovoProdotto= async (req, res)=>{
     const {
         name,
         amount,
         carbfoot
     } = req.body;
+    var values = name.split(",")
     var amountValue = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
-    if ((typeof name == 'string' && name != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+    if ((typeof values[1] == 'string' && values[1] != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transazioniInstance.methods.creaNuovoProdotto(name, amountValue, carbfootValue).send({
+            await transazioniInstance.methods.creaNuovoProdotto(values[1], amountValue, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
@@ -280,7 +283,7 @@ exports.getMateriaPrima = async (wallet, idLotto)=>{
         var response = await transazioniInstance.methods.getMateriaPrimaByAddress(wallet, idLotto).call()
         return response
     }catch(error){
-        console.log("QUIIIIIIIIIIIIIIIIIIIIII " +error)
+        console.log(error)
         return false
     } 
 } 

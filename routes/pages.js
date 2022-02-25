@@ -4,7 +4,6 @@ const router=express.Router()
 const blockchainController=require('../controllers/blockchainController')
 const session=require('../controllers/session')
 
-
 router.get('/',(req,res)=>{
     res.render('home',{
         layout:'index',
@@ -70,6 +69,7 @@ router.get('/newrawmaterial',(req,res)=>{
 })
 
 router.get('/newproduct',(req,res)=>{
+    var productSelection = session.getListProductSelection(req)
     var isLogged=req.session.isLogged;
     var products=session.getListOwnProducts(req)
     if(isLogged){
@@ -78,6 +78,7 @@ router.get('/newproduct',(req,res)=>{
                 success:req.session.success,
                 message:req.session.message,
                 products:products,
+                productSelection:productSelection,
                 isWorker:req.session.isWorker,
                 isLogged:isLogged,
                 error:req.session.error,

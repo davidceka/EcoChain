@@ -29,12 +29,12 @@
             <li><a class="dropdown-item" href="transactions/newrawmaterial">New raw material</a></li>
             {{/if}} 
             {{#if isWorker}}
-            <li><a class="dropdown-item" href="/transactions/newproduct">New product</a></li>
+            <li><a class="dropdown-item" href="/dbdataRouter/newproduct">New product</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/auth/listproducers">Buy raw material</a></li>
+            <li><a class="dropdown-item" href="/dbdataRouter/listproducers">Buy raw material</a></li>
             {{/if}}
             {{#if isCostumer}}
-            <li><a class="dropdown-item" href="/auth/listworkers">Buy product</a></li>
+            <li><a class="dropdown-item" href="/dbdataRouter/listworkers">Buy product</a></li>
             {{/if}}
 
             

@@ -49,6 +49,15 @@ function setListOwnProducts(req, listOwnProducts){
     req.session.listOwnProducts=listOwnProducts
 }
 
+function setListProductSelection(req, listProductSelection){
+    req.session.listProductSelection=listProductSelection
+}
+
+function getListProductSelection(req){
+    return req.session.listProductSelection;
+}
+
+
 function getListOwnProducts(req){
     return req.session.listOwnProducts;
 }
@@ -102,6 +111,8 @@ module.exports={
     getProfile:getProfile,
     setListProducers:setListProducers,
     getListProducers:getListProducers,
+    setListProductSelection:setListProductSelection,
+    getListProductSelection:getListProductSelection,
     setListRawMaterial:setListRawMaterial,
     getListRawMaterial:getListRawMaterial,
     setListOwnRawMaterial:setListOwnRawMaterial,
