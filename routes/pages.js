@@ -72,6 +72,7 @@ router.get('/newproduct',(req,res)=>{
     var productSelection = session.getListProductSelection(req)
     var isLogged=req.session.isLogged;
     var products=session.getListOwnProducts(req)
+    var ownRawMaterials=session.getListOwnRawMaterial(req)
     if(isLogged){
         res.render('newproduct',{
                 layout:'index',
@@ -82,6 +83,7 @@ router.get('/newproduct',(req,res)=>{
                 isWorker:req.session.isWorker,
                 isLogged:isLogged,
                 error:req.session.error,
+                ownRawMaterials:ownRawMaterials
             })
     }
     else{

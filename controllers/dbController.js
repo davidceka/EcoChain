@@ -80,6 +80,7 @@ exports.getAllProducers = async (req, res) => {
       })
       session.setListProductSelection(req, productSelection)
       await blockchainController.getListOwnProducts(req)
+      await blockchainController.getListOwnRawMaterials(req)
       res.redirect('/newproduct')
     })
   } 
