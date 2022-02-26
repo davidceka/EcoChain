@@ -250,15 +250,18 @@ exports.creaNuovoProdotto= async (req, res)=>{
     const {
         name,
         amount,
-        carbfoot
+        carbfoot,
     } = req.body;
     var values = name.split(",")
+    var nomeProdotto=values[1];
+    var quantitaRichiesta=values[0];
     var amountValue = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
+    console.log("nome:"+nomeProdotto+" quantitaRichiesta:"+quantitaRichiesta+" materia prima necessaria:"+amountValue*quantitaRichiesta )
     if ((typeof values[1] == 'string' && values[1] != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transazioniInstance.methods.creaNuovoProdotto(values[1], amountValue, carbfootValue).send({
+            await transazioniInstance.methods.creaNuovoProdotto(values[1], amountValue*quantitaRichiesta, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
