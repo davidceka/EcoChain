@@ -38,8 +38,9 @@
                     </div>
                   </div>
                 </div>
-
+                
                 <div class="col-md-8">
+                  <h1 class="">Prodotti Posseduti</h1>
                   <div class="card mb-3">
                     <div class="card-body">
                       {{#each products}}
@@ -69,7 +70,49 @@
                       {{/each}}
                   </div>
                 </div>
+                
+              <div class="col-md-8">
+                <h1 class="">Materie Prime Possedute</h1>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                        {{#each ownRawMaterials}}
+                            <li>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                <h6 class="mb-0">ID Lotto</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                {{this.idLotto}}
+                                </div>
+                                <div class="col-sm-3">
+                                <h6 class="mb-0">Name</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                {{this.nome}}
+                                </div>
+                                <div class="col-sm-3">
+                                <h6 class="mb-0">Amount</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                {{this.quantita}}
+                                </div>
+                                <div class="col-sm-3">
+                                <h6 class="mb-0">Impatto</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                {{this.impatto}}
+                                </div>
+                            </div>
+                            </li>
+                            <hr>
+                        {{/each}}
+                        </div>
+                    </div>
               </div>
+
+              </div>
+
+            
 
           </div>
         </div>
