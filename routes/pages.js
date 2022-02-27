@@ -28,7 +28,8 @@ router.get('/login',(req,res)=>{
     res.render('login',{
         layout:'index',        
         success:req.session.success,
-        message:req.session.message
+        message:req.session.message,
+        error:req.session.error
     })
     session.clearNotifications(req)
 })
@@ -155,7 +156,8 @@ router.get('/profilo',(req,res)=>{
             ruolo:user.ruolo,
             wallet_address:user.wallet_address,
             isWorker:req.session.isWorker,
-            isProducer:req.session.isProducer
+            isProducer:req.session.isProducer,
+            isCostumer:req.session.isCostumer
         })
     }else{
         session.setError(req,'Devi effettuare il login per accedere a questa pagina.')

@@ -44,7 +44,8 @@ errorLogger.add(
 
 const actionLevels={
     levels:{
-        action:0
+        action:0,
+        error:1
 },
     colors:{
         action:'blue'
@@ -67,6 +68,10 @@ const actionLogger=winston.createLogger({
             filename:'logs/offchain/actions.log',
             level:'action'
         }),
+        new winston.transports.File({
+          filename:'logs/offchain/error.log',
+          level:'error'
+      }),
         new winston.transports.File({
             filename:'logs/offchain/complete.log',
         })

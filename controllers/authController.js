@@ -45,9 +45,11 @@ exports.login = (req, res) => {
         [email],
         async function (error, results) {
           if (error) throw error;
-          //var control = await bcrypt.compareSync(password, results[0].password);
-          var control = true
-          if (control) {
+          let comparison = await bcrypt.compare(
+            password,
+            results[0].password
+          );
+          if (comparison) {
             session.setLogged(req, true);
             user={
               email:results[0].email,
@@ -65,6 +67,8 @@ exports.login = (req, res) => {
             logger.action(user.wallet_address+" logged in successfully.")
             res.redirect("/");
           } else {
+            session.setError(req,"Credenziali errate!")
+            logger.error("Inserite credenziali errate per l'utente:"+email)
             res.redirect("/login");
           }
         }
