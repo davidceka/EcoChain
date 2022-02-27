@@ -7,7 +7,7 @@
                 <div class="card">
                   <div class="card-body">
                       <form action="/transactions/listproducts" method="post">
-                          <label for="selectWA">Choose a workers:</label>
+                          <label for="selectWA">Seleziona un fornitore:</label>
                           <select id="selectWA" name="selectWA">   <!--> size="3"><-->
                               {{#each workers}}
                                   <option value={{this.walletAddress}}>{{this.nome}}&nbsp;{{this.cognome}}&nbsp;, Tipologia:&nbsp;{{this.tipologia}}</option>

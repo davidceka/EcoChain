@@ -3,6 +3,9 @@ const bcrypt = require("bcrypt");
 const blockchainController = require("./blockchainController");
 const session = require("./session");
 const { NULL } = require("mysql/lib/protocol/constants/types");
+const logController=require('./logController')
+
+logger=logController.actionLogger;
 
 function defineConn() {
   var conn = mysql.createConnection({
@@ -36,40 +39,46 @@ async function executeQuery(query, params, callback) {
 exports.login = (req, res) => {
   var user;
   const { email, password } = req.body;
-  executeQuery(
-    "SELECT * FROM users WHERE email = ?",
-    [email],
-    async function (error, results) {
-      if (error) throw error;
-      //var control = await bcrypt.compareSync(password, results[0].password);
-      var control = true
-      if (control) {
-        session.setLogged(req, true);
-        user={
-          email:results[0].email,
-          wallet_address:results[0].wallet_address,
-          nome:results[0].nome,
-          cognome:results[0].cognome,
-          ruolo:results[0].ruolo,
-          tipologia:results[0].tipologia
+  try{
+      executeQuery(
+        "SELECT * FROM users WHERE email = ?",
+        [email],
+        async function (error, results) {
+          if (error) throw error;
+          //var control = await bcrypt.compareSync(password, results[0].password);
+          var control = true
+          if (control) {
+            session.setLogged(req, true);
+            user={
+              email:results[0].email,
+              wallet_address:results[0].wallet_address,
+              nome:results[0].nome,
+              cognome:results[0].cognome,
+              ruolo:results[0].ruolo,
+              tipologia:results[0].tipologia
+            }
+            await blockchainController.unlockAccount(user.wallet_address,"")
+            session.setProfile(req,user)
+            session.setRole(req,user.ruolo)
+            console.log(session.getProfile(req))
+            session.setSuccess(req, "Login effettuato con successo!");
+            logger.action(user.wallet_address+" logged in successfully.")
+            res.redirect("/");
+          } else {
+            res.redirect("/login");
+          }
         }
-        await blockchainController.unlockAccount(user.wallet_address)
-        session.setProfile(req,user)
-        //user=session.getProfile(req)
-        session.setRole(req,user.ruolo)
-        console.log(session.getProfile(req))
-        session.setSuccess(req, "Login effettuato con successo!");
-        res.redirect("/");
-      } else {
-        res.redirect("/login");
-      }
-    }
-  );
+      );
+  }catch(error){
+    console.log(error)
+    logger.action(error)
+  }
 };
 
 
 exports.logout = (req, res) => {
   if (req.session.isLogged == true) {
+    logger.action("User: "+session.getProfile(req).wallet_address+" is logging out.")
     req.session.destroy();
     res.redirect("/");
   } else {
@@ -102,16 +111,18 @@ exports.register = async (req, res) => {
           let hashed = await bcrypt.hash(password, 10);
           var newAccount = await blockchainController.newAccount();
           executeQuery(
-            "INSERT INTO users (email, password, wallet_address, nome, cognome, ruolo, type) VALUES (?, ?, ?, ?, ?, ?, ?)",
-            [email, hashed, newAccount, name, surname, role],
+            "INSERT INTO users (email, password, wallet_address, nome, cognome, ruolo, tipologia) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            [email, hashed, newAccount, name, surname, role, type],
             function (error, results) {
               if (error) throw error;
               req.session.success = true;
               session.setSuccess(req, "Account aggiunto con successo!");
+              logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
               res.redirect("/login");
             }
           ); 
         } else {
+          logger.action("User input credentials already existing.")
           session.setWarning(req, "Account già presente!");
           res.redirect("/register");
         }

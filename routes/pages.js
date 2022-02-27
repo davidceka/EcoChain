@@ -68,10 +68,11 @@ router.get('/newrawmaterial',(req,res)=>{
     session.clearNotifications(req);
 })
 
-router.get('/newproduct',(req,res)=>{
+router.get('/newproduct',async (req,res)=>{
     var productSelection = session.getListProductSelection(req)
     var isLogged=req.session.isLogged;
     var products=session.getListOwnProducts(req)
+    await blockchainController.getListOwnRawMaterials(req)
     var ownRawMaterials=session.getListOwnRawMaterial(req)
     if(isLogged){
         res.render('newproduct',{

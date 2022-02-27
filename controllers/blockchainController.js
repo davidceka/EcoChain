@@ -35,6 +35,7 @@ exports.newAccount=async ()=>{
                 })
             }
         })
+        await this.unlockAccount(account,"")
         blockChainLogger.blockchain("Account "+account+" creato con successo.")
         await carbonFootprintInstance.methods.setApprovalForAll(ADDRESS_T,true).send({
             from:account,
@@ -50,9 +51,8 @@ exports.newAccount=async ()=>{
     //TODO aggiungere codice per log tracciamento nuovo account
 }
 
-exports.unlockAccount=async(account)=>{
-    //un qualche controllo
-    await web3.eth.personal.unlockAccount(account,"", 600)
+exports.unlockAccount=async(account,password)=>{
+    await web3.eth.personal.unlockAccount(account,password, 600)
         .then(console.log('Account unlocked!'));
 }
 
@@ -180,6 +180,7 @@ exports.acquistoMateriaPrima=async (req,res)=>{
                     gasLimit: web3.utils.toHex(5000000)
                 })
                 session.setSuccess(req,"Acquisto eseguito con successo!")
+                blockChainLogger.log("L'utente:"+user_wallet+" ha acquistato con successo il lotto n° "+_lottoScelto+" dal fornitore:"+_walletProduttore)
                 await this.getListOwnRawMaterials(req)
                 session.setListRawMaterial(req, new Array(0))
                 res.redirect('/listrawmaterials')
@@ -204,6 +205,7 @@ exports.acquistoProdotto=async (req,res)=>{
                     gasLimit: web3.utils.toHex(5000000)
                 })
                 session.setSuccess(req,"Acquisto eseguito con successo!")
+                blockChainLogger.log("L'utente:"+user_wallet+" ha acquistato con successo il lotto n° "+_lottoScelto+" dal fornitore:"+_walletProduttore)
                 await this.getListOwnProducts(req)
                 session.setListProducts(req, new Array(0))
                 res.redirect('/listproducts')
