@@ -39,43 +39,54 @@ async function executeQuery(query, params, callback) {
 exports.login = (req, res) => {
   var user;
   const { email, password } = req.body;
-  try{
-      executeQuery(
-        "SELECT * FROM users WHERE email = ?",
-        [email],
-        async function (error, results) {
-          if (error) throw error;
-          let comparison = await bcrypt.compare(
-            password,
-            results[0].password
-          );
-          if (comparison) {
-            session.setLogged(req, true);
-            user={
-              email:results[0].email,
-              wallet_address:results[0].wallet_address,
-              nome:results[0].nome,
-              cognome:results[0].cognome,
-              ruolo:results[0].ruolo,
-              tipologia:results[0].tipologia
+  if ((password =="") || (email=="")){
+    session.setError(req, "Incorrect fields entered");
+    res.redirect("/login");
+  }else{
+      try{
+        executeQuery(
+          "SELECT * FROM users WHERE email = ?",
+          [email],
+          async function (error, results) {
+          if (results.length == 0){
+            session.setError(req,"Wrong credentials!")
+              logger.error("Enter incorrect credentials for the user:"+email)
+              res.redirect("/login");
+          }else{
+            if (error) throw error;
+            let comparison = await bcrypt.compare(
+              password,
+              results[0].password
+            );
+            if (comparison) {
+              session.setLogged(req, true);
+              user={
+                email:results[0].email,
+                wallet_address:results[0].wallet_address,
+                name:results[0].name,
+                surname:results[0].surname,
+                role:results[0].role,
+                type:results[0].type
+              }
+              await blockchainController.unlockAccount(user.wallet_address,"")
+              session.setProfile(req,user)
+              session.setRole(req,user.role)
+              console.log(session.getProfile(req))
+              session.setSuccess(req, "Login successful!");
+              logger.action(user.wallet_address+" logged in successfully.")
+              res.redirect("/");
+            } else {
+              session.setError(req,"Wrong credentials!")
+              logger.error("Enter incorrect credentials for the user:"+email)
+              res.redirect("/login");
             }
-            await blockchainController.unlockAccount(user.wallet_address,"")
-            session.setProfile(req,user)
-            session.setRole(req,user.ruolo)
-            console.log(session.getProfile(req))
-            session.setSuccess(req, "Login effettuato con successo!");
-            logger.action(user.wallet_address+" logged in successfully.")
-            res.redirect("/");
-          } else {
-            session.setError(req,"Credenziali errate!")
-            logger.error("Inserite credenziali errate per l'utente:"+email)
-            res.redirect("/login");
           }
         }
       );
-  }catch(error){
-    console.log(error)
-    logger.action(error)
+    }catch(error){
+      console.log(error)
+      logger.action(error)
+    }
   }
 };
 
@@ -100,34 +111,33 @@ exports.register = async (req, res) => {
     role,
     type
   } = req.body;
-  if (!validPassword(password, confpassword) || (password =="") || (role =="cliente" && type != "")){
-    session.setError(req, "Campi inseriti non corretti");
+  if (!validPassword(password, confpassword) || (password =="") || (role =="costumer" && type != "")){
+    session.setError(req, "Incorrect fields entered");
     res.redirect("/register");
   }
   else{
     executeQuery(
-      "SELECT nome FROM users WHERE email = ?",
+      "SELECT name FROM users WHERE email = ?",
       [email],
       async function (error, results) {
         if (error) throw error;
         if (results.length == 0) {
-          console.log("registro");
           let hashed = await bcrypt.hash(password, 10);
           var newAccount = await blockchainController.newAccount();
           executeQuery(
-            "INSERT INTO users (email, password, wallet_address, nome, cognome, ruolo, tipologia) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO users (email, password, wallet_address, name, surname, role, type) VALUES (?, ?, ?, ?, ?, ?, ?)",
             [email, hashed, newAccount, name, surname, role, type],
             function (error, results) {
               if (error) throw error;
               req.session.success = true;
-              session.setSuccess(req, "Account aggiunto con successo!");
+              session.setSuccess(req, "Account added successfully!");
               logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
               res.redirect("/login");
             }
           ); 
         } else {
           logger.action("User input credentials already existing.")
-          session.setWarning(req, "Account già presente!");
+          session.setWarning(req, "Account already present!");
           res.redirect("/register");
         }
       }

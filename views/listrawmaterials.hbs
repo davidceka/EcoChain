@@ -10,7 +10,7 @@
                             <label for="selectWA">Choose a producer:</label>
                             <select id="selectWA" name="selectWA">   <!--> size="3"><-->
                                 {{#each producers}}
-                                    <option value={{this.walletAddress}}>{{this.nome}}&nbsp;{{this.cognome}}</option>
+                                    <option value={{this.walletAddress}}>{{this.name}}&nbsp;{{this.surname}}</option>
                                 {{/each}}
                             </select> <br><br>
                             <button type="submit">Confirm</button>
@@ -30,12 +30,12 @@
                                                         <select id="_walletProduttore" name="_walletProduttore" hidden="true">
                                                             <option value={{this.owner}}></option>
                                                         </select>
-                                                        <h6 value={{this.idLotto}} class="mb-0">Numero Lotto {{this.idLotto}}</h6>
-                                                        <h6 class="mb-0">Nome: {{this.nome}}</h6>
-                                                        <h6 class="mb-0">Quantita: {{this.quantita}}</h6>
-                                                        <h6 class="mb-0">Impatto Ambientale: {{this.impatto}}</h6>
+                                                        <h6 value={{this.idLotto}} class="mb-0">ID Lotto: {{this.idLotto}}</h6>
+                                                        <h6 class="mb-0">Name: {{this.name}}</h6>
+                                                        <h6 class="mb-0">Amount: {{this.amount}}</h6>
+                                                        <h6 class="mb-0">Carbon Footprint: {{this.carbfoot}}</h6>
                                                         <div class="col-sm-9 text-secondary">
-                                                            <button  type="submit" class="btn btn-info " target="__blank">Compra</a>
+                                                            <button  type="submit" class="btn btn-info " target="__blank">Buy</a>
                                                         </div>
                                                     </div>
                                                 
@@ -59,28 +59,28 @@
                             <li>
                             <div class="row">
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">ID Lotto</h6>
+                                <h6 class="mb-0">ID Lotto:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                 {{this.idLotto}}
                                 </div>
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">Name</h6>
+                                <h6 class="mb-0">Name:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                {{this.nome}}
+                                {{this.name}}
                                 </div>
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">Amount</h6>
+                                <h6 class="mb-0">Amount:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                {{this.quantita}}
+                                {{this.amount}}
                                 </div>
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">Impatto</h6>
+                                <h6 class="mb-0">Carbon Footprint:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                {{this.impatto}}
+                                {{this.carbonfootprint}}
                                 </div>
                             </div>
                             </li>

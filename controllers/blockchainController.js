@@ -19,9 +19,9 @@ web3.eth.handleRevert = true;
 const ADDRESS_CF=process.env.ADDRESS_CF;
 const ADDRESS_T=process.env.ADDRESS_T;
 const carbonFootprintInstance=new web3.eth.Contract(cfABI.abi, ADDRESS_CF)
-const transazioniInstance=new web3.eth.Contract(tABI.abi, ADDRESS_T)
+const transactionsInstance=new web3.eth.Contract(tABI.abi, ADDRESS_T)
 blockChainLogger.tokenLog("Connesso con successo allo smart contract Token.")
-blockChainLogger.transactionLog("Connesso con successo allo smart contract transazioni.")
+blockChainLogger.transactionLog("Connesso con successo allo smart contract transactions.")
 
 
 exports.newAccount=async ()=>{
@@ -31,12 +31,12 @@ exports.newAccount=async ()=>{
                 console.log(err);
                 return res.render('home',{
                     layout:'index',
-                    message:'Transazione non eseguita.'
+                    message:'Transaction not executed.'
                 })
             }
         })
         await this.unlockAccount(account,"")
-        blockChainLogger.blockchain("Account "+account+" creato con successo.")
+        blockChainLogger.blockchain("Account "+account+" created successfully.")
         await carbonFootprintInstance.methods.setApprovalForAll(ADDRESS_T,true).send({
             from:account,
             gasPrice: web3.utils.toHex(0),
@@ -69,20 +69,19 @@ exports.goToNewProduct = async (req, res) => {
 
 exports.getListOwnRawMaterials = async (req) => {
     var walletAddress = session.getProfile(req).wallet_address
-    var limit = await transazioniInstance.methods.getMateriePrimeId().call()
-
+    var limit = await transactionsInstance.methods.getRawMaterialsId().call()
     var rawMaterials = []
     for (var i = 0; i < limit; i++){
-        var rawMaterial = await this.getMateriaPrima(walletAddress,i)
+        var rawMaterial = await this.getRawMaterial(walletAddress,i)
         if(!rawMaterial){
         }else{
-            var _impatto=await this.getImpattoAmbientale(rawMaterial.token)
+            var carbonfootprint=await this.getCarbonFootprint(rawMaterial.token)
             if(rawMaterial.amount>0 && rawMaterial.name!=""){
                 rawMaterials.push({
-                    "idLotto":rawMaterial.id_lottomateria, 
-                    "nome":rawMaterial.nome,
-                    "quantita":rawMaterial.amount,
-                    "impatto":_impatto
+                    "idLotto":rawMaterial.id_raw_material, 
+                    "name":rawMaterial.name,
+                    "amount":rawMaterial.amount,
+                    "carbonfootprint":carbonfootprint
                 })
             } 
         }
@@ -93,19 +92,19 @@ exports.getListOwnRawMaterials = async (req) => {
  
 exports.getListOwnProducts= async (req) => {
     var walletAddress = session.getProfile(req).wallet_address
-    var limit = await transazioniInstance.methods.getProdottiId().call()
+    var limit = await transactionsInstance.methods.getProductsId().call()
     var products = []
     for (var i = 0; i < limit; i++){
-        var product = await this.getProdotto(walletAddress,i)
+        var product = await this.getProduct(walletAddress,i)
         if(!product){
         }else{
-            var _impatto=await this.getImpattoAmbientale(product.token)
+            var carbonfootprint=await this.getCarbonFootprint(product.token)
             if(product.amount>0 && product.name!=""){
                 products.push({
-                    "idLotto":product.id_prodotto, 
-                    "nome":product.nome,
-                    "quantita":product.amount,
-                    "impatto":_impatto
+                    "idLotto":product.id_product, 
+                    "name":product.name,
+                    "amount":product.amount,
+                    "carbonfootprint":carbonfootprint
                 })
             } 
         }
@@ -113,25 +112,24 @@ exports.getListOwnProducts= async (req) => {
     session.setListOwnProducts(req, products)
 }
 
-
 exports.getListRawMaterialsByOwner = async (req, res)=>{
     const{selectWA} = req.body;
-    var limit = await transazioniInstance.methods.getMateriePrimeId().call()
+    var limit = await transactionsInstance.methods.getRawMaterialsId().call()
     //var selectWA = "0x17BE7A41e13e89cc86a4cd445233Fb83351dd506"
     
     var rawMaterials = []
     for (var i = 0; i < limit; i++){
-        var rawMaterial = await this.getMateriaPrima(selectWA,i)
+        var rawMaterial = await this.getRawMaterial(selectWA,i)
         if(!rawMaterial){
         }else{ 
-            var _impatto=await this.getImpattoAmbientale(rawMaterial.token)
+            var carbonfootprint=await this.getCarbonFootprint(rawMaterial.token)
             if(rawMaterial.amount>0 && rawMaterial.name!=""){
                 rawMaterials.push({
-                    "idLotto":rawMaterial.id_lottomateria, 
-                    "nome":rawMaterial.nome,
-                    "quantita":rawMaterial.amount,
+                    "idLotto":rawMaterial.id_raw_material, 
+                    "name":rawMaterial.name,
+                    "amount":rawMaterial.amount,
                     "owner":selectWA,
-                    "impatto":_impatto
+                    "carbonFootprint":carbonfootprint
                 }) 
             } 
         } 
@@ -142,22 +140,22 @@ exports.getListRawMaterialsByOwner = async (req, res)=>{
 
 exports.getListProductsByOwner  = async (req, res) => {
     const{selectWA} = req.body;
-    var limit = await transazioniInstance.methods.getProdottiId().call()
+    var limit = await transactionsInstance.methods.getProductsId().call()
     //var selectWA = "0x17BE7A41e13e89cc86a4cd445233Fb83351dd506"
     
     var products = []
     for (var i = 0; i < limit; i++){
-        var product = await this.getProdotto(selectWA,i)
+        var product = await this.getProduct(selectWA,i)
         if(!product){
         }else{ 
-            var _impatto=await this.getImpattoAmbientale(product.token)
+            var carbonfootprint=await this.getCarbonFootprint(product.token)
             if(product.amount>0 && product.name!=""){
                 products.push({
-                    "idLotto":product.id_prodotto, 
-                    "nome":product.nome,
-                    "quantita":product.amount,
+                    "idLotto":product.id_product, 
+                    "name":product.name,
+                    "amount":product.amount,
                     "owner":selectWA,
-                    "impatto":_impatto
+                    "carbonFootprint":carbonfootprint
                 }) 
             } 
         } 
@@ -166,21 +164,20 @@ exports.getListProductsByOwner  = async (req, res) => {
     res.redirect("/listproducts")
 }
 
-
-exports.acquistoMateriaPrima=async (req,res)=>{
+exports.buyRawMaterial=async (req,res)=>{
     var user_wallet=session.getProfile(req).wallet_address
     const{
         _walletProduttore,
         _lottoScelto,
     }=req.body;
     try{
-        await transazioniInstance.methods.acquistoMateriaPrima(_walletProduttore, user_wallet ,_lottoScelto ).send({
+        await transactionsInstance.methods.buyRawMaterial(_walletProduttore, user_wallet ,_lottoScelto ).send({
                     from: user_wallet, 
                     gasPrice: web3.utils.toHex(0), 
                     gasLimit: web3.utils.toHex(5000000)
                 })
-                session.setSuccess(req,"Acquisto eseguito con successo!")
-                blockChainLogger.transactionLog("L'utente:"+user_wallet+" ha acquistato con successo il lotto n° "+_lottoScelto+" dal fornitore:"+_walletProduttore)
+                session.setSuccess(req,"Purchase completed!")
+                blockChainLogger.transactionLog("User:"+user_wallet+" has successfully purchased the lot n° "+_lottoScelto+" form the supplier:"+_walletProduttore)
                 await this.getListOwnRawMaterials(req)
                 session.setListRawMaterial(req, new Array(0))
                 res.redirect('/listrawmaterials')
@@ -191,7 +188,7 @@ exports.acquistoMateriaPrima=async (req,res)=>{
     }
 }
 
-exports.acquistoProdotto=async (req,res)=>{
+exports.buyProduct=async (req,res)=>{
     var user_wallet=session.getProfile(req).wallet_address
     const{
         _walletProduttore,
@@ -199,13 +196,13 @@ exports.acquistoProdotto=async (req,res)=>{
     }=req.body;
     try{
         console.log("ciao")
-        await transazioniInstance.methods.acquistoProdotto(_walletProduttore, user_wallet,_lottoScelto ).send({
+        await transactionsInstance.methods.buyProduct(_walletProduttore, user_wallet,_lottoScelto ).send({
                     from: user_wallet, 
                     gasPrice: web3.utils.toHex(0), 
                     gasLimit: web3.utils.toHex(5000000)
                 })
-                session.setSuccess(req,"Acquisto eseguito con successo!")
-                blockChainLogger.transactionLog("L'utente:"+user_wallet+" ha acquistato con successo il lotto n° "+_lottoScelto+" dal fornitore:"+_walletProduttore)
+                session.setSuccess(req,"Purchase completed successfully!")
+                blockChainLogger.transactionLog("User:"+user_wallet+" has successfully purchased the lot n° "+_lottoScelto+" form the seller:"+_walletProduttore)
                 await this.getListOwnProducts(req)
                 session.setListProducts(req, new Array(0))
                 res.redirect('/listproducts')
@@ -216,7 +213,7 @@ exports.acquistoProdotto=async (req,res)=>{
     }
 }
 
-exports.creaNuovaMateriaPrima=async (req, res)=>{
+exports.createNewRawMaterial=async (req, res)=>{
     const {
         name,
         amount,
@@ -227,7 +224,7 @@ exports.creaNuovaMateriaPrima=async (req, res)=>{
     if ((typeof name == 'string' && name != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transazioniInstance.methods.creaNuovaMateriaPrima(name, amountValue, carbfootValue).send({
+            await transactionsInstance.methods.createNewRawMaterial(name, amountValue, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
@@ -245,25 +242,24 @@ exports.creaNuovaMateriaPrima=async (req, res)=>{
     } 
     //typeof == 'number'
     res.redirect("/newrawmaterial");
-    
 }
 
-exports.creaNuovoProdotto= async (req, res)=>{
+exports.createNewProduct= async (req, res)=>{
     const {
         name,
         amount,
         carbfoot,
     } = req.body;
     var values = name.split(",")
-    var nomeProdotto=values[1];
-    var quantitaRichiesta=values[0];
+    var productName=values[1];
+    var requiredAmount=values[0];
     var amountValue = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
-    console.log("nome:"+nomeProdotto+" quantitaRichiesta:"+quantitaRichiesta+" materia prima necessaria:"+amountValue*quantitaRichiesta )
+    console.log("name:"+productName+" required amount:"+requiredAmount+" required material raw:"+amountValue*requiredAmount )
     if ((typeof values[1] == 'string' && values[1] != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transazioniInstance.methods.creaNuovoProdotto(values[1], amountValue*quantitaRichiesta, carbfootValue).send({
+            await transactionsInstance.methods.createNewProduct(values[1], amountValue*requiredAmount, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
@@ -283,9 +279,9 @@ exports.creaNuovoProdotto= async (req, res)=>{
     
 }
 
-exports.getMateriaPrima = async (wallet, idLotto)=>{
+exports.getRawMaterial = async (wallet, idLotto)=>{
     try{
-        var response = await transazioniInstance.methods.getMateriaPrimaByAddress(wallet, idLotto).call()
+        var response = await transactionsInstance.methods.getRawMaterialByAddress(wallet, idLotto).call()
         return response
     }catch(error){
         console.log(error)
@@ -293,9 +289,9 @@ exports.getMateriaPrima = async (wallet, idLotto)=>{
     } 
 } 
 
-exports.getImpattoAmbientale=async(token_id)=>{
+exports.getCarbonFootprint=async(token_id)=>{
     try{
-        var response=await carbonFootprintInstance.methods.getImpattoAmbientale(token_id).call()
+        var response=await carbonFootprintInstance.methods.getCarbonFootprint(token_id).call()
         return response;
 
     }catch(error){
@@ -305,9 +301,9 @@ exports.getImpattoAmbientale=async(token_id)=>{
     }
 }
 
-exports.getProdotto = async(wallet, idLotto)=>{
+exports.getProduct = async(wallet, idLotto)=>{
     try{
-        var response=await transazioniInstance.methods.getProdottoByAddress(wallet, idLotto).call()
+        var response=await transactionsInstance.methods.getProductByAddress(wallet, idLotto).call()
         return response 
     }catch(error){
         console.log(error)
@@ -323,7 +319,7 @@ EVENT LISTENERS
 
 */
 
-var materiaprima_creata = transazioniInstance.events.materiaPrimaCreata({},
+var materiaprima_creata = transactionsInstance.events.materiaPrimaCreata({},
     (error, eventObj) => {
       if (error) {
         blockChainLogger.error(error)
@@ -336,11 +332,11 @@ var materiaprima_creata = transazioniInstance.events.materiaPrimaCreata({},
           " \t| LOTTOID: " +
           eventObj.returnValues._idLotto +
           " NOME: " +
-          eventObj.returnValues.nome +
+          eventObj.returnValues.name +
           " QUANTITA': " +
           eventObj.returnValues._amount+
           " IMPATTO AMBIENTALE: "+
-          eventObj.returnValues._impatto
+          eventObj.returnValues.carbonfootprint
         );
       }
     }

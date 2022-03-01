@@ -90,13 +90,13 @@ function setLogged(req,value){
     }
 }
 function setRole(req, value){
-    if(value=="produttore"){
+    if(value=="producer"){
         req.session.isProducer = true
     }
-    if(value=="lavoratore"){
+    if(value=="worker"){
         req.session.isWorker = true
     }
-    if(value=="cliente"){
+    if(value=="costumer"){
         req.session.isCostumer = true
     }
 }

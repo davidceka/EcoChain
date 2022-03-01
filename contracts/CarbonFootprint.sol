@@ -12,25 +12,25 @@ contract CarbonFootprint is ERC721URIStorage, Ownable {
 
     Counters.Counter private _tokenIdCounter;
     
-    mapping(uint256=>uint256) impattoAmbientale;
+    mapping(uint256=>uint256) carbonFootprint;
 
 
     constructor() ERC721("CarbonFootprint", "CFP") {
     }
 //la funzione seguente crea un nuovo NFT e aggiorna il contatore NFT
-    function safeMint(address to,uint256 _impattoAmbientale) public returns (uint256){
+    function safeMint(address to,uint256 _carbonFootprint) public returns (uint256){
         uint256 tokenId = _tokenIdCounter.current();
         
         _safeMint(to, tokenId);
-        impattoAmbientale[tokenId]=_impattoAmbientale;
+        carbonFootprint[tokenId]=_carbonFootprint;
 
         _tokenIdCounter.increment();
 
         return tokenId;
     }
-    function getImpattoAmbientale(uint256 _tokenId) view public returns (uint256){
+    function getCarbonFootprint(uint256 _tokenId) view public returns (uint256){
         require(_exists(_tokenId));
-        return impattoAmbientale[_tokenId];
+        return carbonFootprint[_tokenId];
     }
     
     //chiedere se va bene solo il salvataggio dell'URI semplice (singola stringa) oppure si necessita di creare un JSON

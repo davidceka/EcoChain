@@ -12,8 +12,8 @@ contract Transazione {
     uint256 materiePrimeId;*/
 
     //possibile errore quando si vendono i prodotti/materie
-    uint256 prodottiId;
-    uint256 materiePrimeId;
+    uint256 productsId;
+    uint256 rawMaterialsId;
 
     constructor (address _tokenContractAddress){
         tokenContractAddress=_tokenContractAddress;
@@ -26,130 +26,130 @@ contract Transazione {
     event lottoTerminato(uint256 _idLotto);
     event quantitaSufficiente(bool status);
 
-    function incrementMaterie() internal{
-           materiePrimeId++;
+    function incrementRawMaterials() internal{
+           rawMaterialsId++;
     }
-    function incrementProdotti() internal{
-        prodottiId++;
-    }
-
-    function getMateriePrimeId() view public returns(uint256){
-        return materiePrimeId;
+    function incrementProducts() internal{
+        productsId++;
     }
 
-    function getProdottiId() view public returns(uint256){
-        return prodottiId;
+    function getRawMaterialsId() view public returns(uint256){
+        return rawMaterialsId;
     }
 
-    struct MateriaPrima{
-        uint256 id_lottomateria;
-        string nome;
+    function getProductsId() view public returns(uint256){
+        return productsId;
+    }
+
+    struct RawMaterial{
+        uint256 id_raw_material;
+        string name;
         uint256 token;  
         uint256 amount;  
         bool not_available;
     }
 
 
-    struct Prodotti{
-        uint256 id_prodotto;
-        string nome;
+    struct Product{
+        uint256 id_product;
+        string name;
         uint256 token;
         uint256 amount;
         bool not_available;
     }
 
-    mapping(address=>mapping(uint256=>Prodotti)) prodotti;
-    mapping(address=> mapping(uint256=>MateriaPrima)) materia_prima;
+    mapping(address=>mapping(uint256=>Product)) products;
+    mapping(address=> mapping(uint256=>RawMaterial)) raw_materials;
 
-    function creaNuovaMateriaPrima(string memory _nome,uint256 _amount, uint256 _impattoAmbientale) public{
-        uint256 tokenId=tokenContract.safeMint(msg.sender,_impattoAmbientale);
-        materia_prima[msg.sender][materiePrimeId]=MateriaPrima({
-            id_lottomateria:materiePrimeId,
-            nome:_nome,
+    function createNewRawMaterial(string memory _name,uint256 _amount, uint256 _carbonFootprint) public{
+        uint256 tokenId=tokenContract.safeMint(msg.sender,_carbonFootprint);
+        raw_materials[msg.sender][rawMaterialsId]=RawMaterial({
+            id_raw_material:rawMaterialsId,
+            name:_name,
             token:tokenId,
             amount:_amount,
             not_available:false
         });
-        emit materiaPrimaCreata(materiePrimeId,_nome,_amount,_impattoAmbientale);
-        incrementMaterie();
+        emit materiaPrimaCreata(rawMaterialsId,_name,_amount,_carbonFootprint);
+        incrementRawMaterials();
         
     }
-    function creaNuovoProdotto(string memory _nome,uint _quantitaRichiesta,uint256 _impattoAmbientale) public {
-        uint256 quantitaRimanente=_quantitaRichiesta;
-        uint256 quantitaDisponibile=0;
+    function createNewProduct(string memory _name,uint _requiredAmount,uint256 _carbonFootprint) public {
+        uint256 remainingAmount=_requiredAmount;
+        uint256 availableAmount=0;
         uint256 i=0;
-        while(quantitaDisponibile<=_quantitaRichiesta&&i<materiePrimeId)
+        while(availableAmount<=_requiredAmount&&i<rawMaterialsId)
         {
-            if(!materia_prima[msg.sender][i].not_available){
-                quantitaDisponibile+=materia_prima[msg.sender][i].amount;
+            if(!raw_materials[msg.sender][i].not_available){
+                availableAmount+=raw_materials[msg.sender][i].amount;
             }
             i++;
         }
         //emit la quantità è sufficiente, la transazione procede
         emit quantitaSufficiente(true);
-        require(quantitaDisponibile>=_quantitaRichiesta,"Quantita di materia prima non sufficiente.");
+        require(availableAmount>=_requiredAmount,"Quantita di materia prima non sufficiente.");
         //giustificare il for
 
         i=0;
-        while(quantitaRimanente>0&&i<materiePrimeId) //verificare da togliere il materiePrimeId
+        while(remainingAmount>0&&i<rawMaterialsId) //verificare da togliere il materiePrimeId
         {
-            if(materia_prima[msg.sender][i].amount>quantitaRimanente){
+            if(raw_materials[msg.sender][i].amount>remainingAmount){
 
-                materia_prima[msg.sender][i].amount-=quantitaRimanente;
-                quantitaRimanente=0;
-                if(materia_prima[msg.sender][i].amount==0){
+                raw_materials[msg.sender][i].amount-=remainingAmount;
+                remainingAmount=0;
+                if(raw_materials[msg.sender][i].amount==0){
                     //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
                     emit lottoTerminato(i);
                 }
             }
             else{
-                quantitaRimanente-=materia_prima[msg.sender][i].amount;
-                materia_prima[msg.sender][i].amount=0;
-                materia_prima[msg.sender][i].not_available=true;
+                remainingAmount-=raw_materials[msg.sender][i].amount;
+                raw_materials[msg.sender][i].amount=0;
+                raw_materials[msg.sender][i].not_available=true;
                 //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
                 emit lottoTerminato(i);
             }
             i++;
         }
         // da aggiungere: ricavare l'impatto dal vecchio token e sommarlo al nuovo
-        uint256 tokenId=tokenContract.safeMint(msg.sender,_impattoAmbientale);
-        prodotti[msg.sender][prodottiId]=Prodotti({
-            id_prodotto:prodottiId,
-            nome:_nome,
+        uint256 tokenId=tokenContract.safeMint(msg.sender,_carbonFootprint);
+        products[msg.sender][productsId]=Product({
+            id_product:productsId,
+            name:_name,
             token:tokenId,
-            amount:_quantitaRichiesta,
+            amount:_requiredAmount,
             not_available:false
         });
-        emit prodottoCreato(prodottiId,_nome,_quantitaRichiesta,_impattoAmbientale);
-        incrementProdotti();
+        emit prodottoCreato(productsId,_name,_requiredAmount,_carbonFootprint);
+        incrementProducts();
     }
 
-    function acquistoMateriaPrima(address seller, address buyer,uint256 _idLotto) public {
-        materia_prima[buyer][_idLotto]=materia_prima[seller][_idLotto];
-        tokenContract.safeTransferFrom(seller,buyer,materia_prima[buyer][_idLotto].token);
-        delete materia_prima[seller][_idLotto];
+    function buyRawMaterial(address seller, address buyer,uint256 _idLotto) public {
+        raw_materials[buyer][_idLotto]=raw_materials[seller][_idLotto];
+        tokenContract.safeTransferFrom(seller,buyer,raw_materials[buyer][_idLotto].token);
+        delete raw_materials[seller][_idLotto];
     }
 
-    function acquistoProdotto(address seller, address buyer,uint256 _idLotto) public {
-        prodotti[buyer][_idLotto]=prodotti[seller][_idLotto];
-        tokenContract.safeTransferFrom(seller,buyer,prodotti[buyer][_idLotto].token);
-        delete prodotti[seller][_idLotto];
+    function buyProduct(address seller, address buyer,uint256 _idLotto) public {
+        products[buyer][_idLotto]=products[seller][_idLotto];
+        tokenContract.safeTransferFrom(seller,buyer,products[buyer][_idLotto].token);
+        delete products[seller][_idLotto];
     }
 
-    function getMateriaPrima(uint _idLotto) view public returns (MateriaPrima memory){
-        require(_idLotto<=materiePrimeId,"Il lotto con ID richiesto non esiste.");
-        return materia_prima[msg.sender][_idLotto];
+    function getRawMaterial(uint _idLotto) view public returns (RawMaterial memory){
+        require(_idLotto<=rawMaterialsId,"Il lotto con ID richiesto non esiste.");
+        return raw_materials[msg.sender][_idLotto];
     }
-    function getProdotto(uint _idLotto) view public returns (Prodotti memory){
-        require(_idLotto<=prodottiId,"Il lotto con ID richiesto non esiste.");
-        return prodotti[msg.sender][_idLotto];
+    function getProduct(uint _idLotto) view public returns (Product memory){
+        require(_idLotto<=productsId,"Il lotto con ID richiesto non esiste.");
+        return products[msg.sender][_idLotto];
     }
-    function getProdottoByAddress(address _address,uint256 _idLotto) view public returns (Prodotti memory){
-        require(_idLotto<=prodottiId,"Il lotto con ID richiesto non esiste.");
-        return prodotti[_address][_idLotto];
+    function getProductByAddress(address _address,uint256 _idLotto) view public returns (Product memory){
+        require(_idLotto<=productsId,"Il lotto con ID richiesto non esiste.");
+        return products[_address][_idLotto];
     }   
-    function getMateriaPrimaByAddress(address _address,uint256 _idLotto) view public returns (MateriaPrima memory){
-        require(_idLotto<=materiePrimeId,"Il lotto con ID richiesto non esiste.");
-        return materia_prima[_address][_idLotto];
+    function getRawMaterialByAddress(address _address,uint256 _idLotto) view public returns (RawMaterial memory){
+        require(_idLotto<=rawMaterialsId,"Il lotto con ID richiesto non esiste.");
+        return raw_materials[_address][_idLotto];
     }   
 }

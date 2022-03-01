@@ -168,7 +168,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "getImpattoAmbientale",
+				"name": "getCarbonFootprint",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -264,7 +264,7 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_impattoAmbientale",
+						"name": "_carbonFootprint",
 						"type": "uint256"
 					}
 				],
@@ -625,11 +625,11 @@
 			]
 		},
 		"contracts/CarbonFootprint.sol": {
-			"keccak256": "0x01a6ef3dc201f5adca7fb36d823b8ef4920604325b983e1261d038710ac2df92",
+			"keccak256": "0x7c602bd39c0f9c6f645807a7732229c63782d52ce1d400d23ed4a475fff37f00",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://60ca8339cf360169ed0512ba38b3abe5f5fc53115db6255f986ef38e78f70059",
-				"dweb:/ipfs/QmcE5gXjrWLfB8b1UVepLfq6VNHqWeRoa7XDVWSHJ56f1K"
+				"bzz-raw://be84bf7dc3a36e7865d00ece0c473759b70f1dbe1f2a2409ee7e0efc3d0d7a74",
+				"dweb:/ipfs/QmSz4c1iqw7ZMT2PACctmoBzkJZruuHm8RWg3kCvUydGQj"
 			]
 		}
 	},

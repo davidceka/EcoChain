@@ -7,10 +7,10 @@
                 <div class="card">
                   <div class="card-body">
                       <form action="/transactions/listproducts" method="post">
-                          <label for="selectWA">Seleziona un fornitore:</label>
+                          <label for="selectWA">Select a Producer:</label>
                           <select id="selectWA" name="selectWA">   <!--> size="3"><-->
                               {{#each workers}}
-                                  <option value={{this.walletAddress}}>{{this.nome}}&nbsp;{{this.cognome}}&nbsp;, Tipologia:&nbsp;{{this.tipologia}}</option>
+                                  <option value={{this.walletAddress}}>{{this.name}}&nbsp;{{this.surname}}&nbsp;, Tipologia:&nbsp;{{this.type}}</option>
                               {{/each}}
                           </select> <br><br>
                           <button type="submit">Confirm</button>
@@ -30,12 +30,12 @@
                                                       <select id="_walletProduttore" name="_walletProduttore" hidden="true">
                                                           <option value={{this.owner}}></option>
                                                       </select>
-                                                      <h6 value={{this.idLotto}} class="mb-0">Numero Lotto: {{this.idLotto}}</h6>
-                                                      <h6 class="mb-0">Nome: {{this.nome}}</h6>
-                                                      <h6 class="mb-0">Quantita: {{this.quantita}}</h6>
-                                                      <h6 class="mb-0">Impatto: {{this.impatto}}</h6>
+                                                      <h6 value={{this.idLotto}} class="mb-0">Id Lotto: {{this.idLotto}}</h6>
+                                                      <h6 class="mb-0">Name: {{this.name}}</h6>
+                                                      <h6 class="mb-0">Amount: {{this.amount}}</h6>
+                                                      <h6 class="mb-0">Carbon Footprint: {{this.carbonfootprint}}</h6>
                                                       <div class="col-sm-9 text-secondary">
-                                                          <button  type="submit" class="btn btn-info " target="__blank">Compra</a>
+                                                          <button type="submit" class="btn btn-info " target="__blank">Compra</a>
                                                       </div>
                                                   </div>
                                               
@@ -68,19 +68,19 @@
                               <h6 class="mb-0">Name</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                              {{this.nome}}
+                              {{this.name}}
                               </div>
                               <div class="col-sm-3">
                               <h6 class="mb-0">Amount</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                              {{this.quantita}}
+                              {{this.amount}}
                               </div>
                               <div class="col-sm-3">
-                              <h6 class="mb-0">Impatto</h6>
+                              <h6 class="mb-0">Carbon Footprint</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
-                              {{this.impatto}}
+                              {{this.carbonfootprint}}
                               </div>
                           </div>
                           </li>

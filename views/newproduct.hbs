@@ -24,7 +24,7 @@
                         <label for="name">Choose a product:</label>
                         <select id="name" name="name"> 
                             {{#each productSelection}}
-                                <option value="{{this.quantitaRichiesta}},'{{this.nome}}'">{{this.nome}}, materie prime necessarie: {{this.quantitaRichiesta}}</option>
+                                <option value="{{this.required_amount}},'{{this.name_product}}'">{{this.name_product}}, required raw materials: {{this.required_amount}}</option>
                             {{/each}}
                         </select> <br><br>
                         <label for="amount">Amount:</label><br>
@@ -40,7 +40,7 @@
                 </div>
                 
                 <div class="col-md-8">
-                  <h1 class="">Prodotti Posseduti</h1>
+                  <h1 class="">Own Products</h1>
                   <div class="card mb-3">
                     <div class="card-body">
                       {{#each products}}
@@ -56,13 +56,19 @@
                               <h6 class="mb-0">Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                              {{this.nome}}
+                              {{this.name}}
                             </div>
                             <div class="col-sm-3">
                               <h6 class="mb-0">Amount</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                              {{this.quantita}}
+                              {{this.amount}}
+                            </div>
+                            <div class="col-sm-3">
+                              <h6 class="mb-0">Carbon Footprint</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                              {{this.carbonfootprint}}
                             </div>
                           </div>
                         </li>
@@ -72,7 +78,7 @@
                 </div>
                 
               <div class="col-md-8">
-                <h1 class="">Materie Prime Possedute</h1>
+                <h1 class="">Own Raw Materials</h1>
                     <div class="card mb-3">
                         <div class="card-body">
                         {{#each ownRawMaterials}}
@@ -88,19 +94,19 @@
                                 <h6 class="mb-0">Name</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                {{this.nome}}
+                                {{this.name}}
                                 </div>
                                 <div class="col-sm-3">
                                 <h6 class="mb-0">Amount</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                {{this.quantita}}
+                                {{this.amount}}
                                 </div>
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">Impatto</h6>
+                                <h6 class="mb-0">Carboon Footprint</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                {{this.impatto}}
+                                {{this.carbonfootprint}}
                                 </div>
                             </div>
                             </li>
