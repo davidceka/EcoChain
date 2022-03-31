@@ -20,19 +20,19 @@
                   <div class="card">
                     <div class="card-body">
                       <form action="/transactions/addproduct" method="post">
-                        <legend>Register new product:</legend>
-                        <label for="name">Choose a product:</label>
+                        <legend>Registra un nuovo prodotto:</legend>
+                        <label for="name">Scegli un prodotto:</label>
                         <select id="name" name="name"> 
                             {{#each productSelection}}
-                                <option value="{{this.required_amount}},'{{this.name_product}}'">{{this.name_product}}, required raw materials: {{this.required_amount}}</option>
+                                <option value="{{this.required_amount}},'{{this.product_name}}'">{{this.product_name}},Materie prime necessarie: {{this.required_amount}}</option>
                             {{/each}}
                         </select> <br><br>
-                        <label for="amount">Amount:</label><br>
+                        <label for="amount">Quantità:</label><br>
                         <input type="number" id="amount" name="amount" min="0" max="100"><br>
                         <label for="carbfoot">Carboon Footprint:</label><br>
                         <input type="number" id="carbfoot" name="carbfoot" min="0" max="100"><br>
                         <div class="text-center text-lg-start mt-4 pt-2">
-                            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Create</button>
+                            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Crea</button>
                         </div>
                     </form>
                     </div>
@@ -40,7 +40,7 @@
                 </div>
                 
                 <div class="col-md-8">
-                  <h1 class="">Own Products</h1>
+                  <h3>Lista dei prodotti posseduti</h3>
                   <div class="card mb-3">
                     <div class="card-body">
                       {{#each products}}
@@ -53,13 +53,13 @@
                               {{this.idLotto}}
                             </div>
                             <div class="col-sm-3">
-                              <h6 class="mb-0">Name</h6>
+                              <h6 class="mb-0">Nome</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                               {{this.name}}
                             </div>
                             <div class="col-sm-3">
-                              <h6 class="mb-0">Amount</h6>
+                              <h6 class="mb-0">Quantità</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                               {{this.amount}}
@@ -78,7 +78,7 @@
                 </div>
                 
               <div class="col-md-8">
-                <h1 class="">Own Raw Materials</h1>
+                <h3>Lista delle materie prime possedute</h3>
                     <div class="card mb-3">
                         <div class="card-body">
                         {{#each ownRawMaterials}}
@@ -91,13 +91,13 @@
                                 {{this.idLotto}}
                                 </div>
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">Name</h6>
+                                <h6 class="mb-0">Nome</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                 {{this.name}}
                                 </div>
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">Amount</h6>
+                                <h6 class="mb-0">Quantità</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                 {{this.amount}}

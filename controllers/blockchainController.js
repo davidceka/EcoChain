@@ -129,7 +129,7 @@ exports.getListRawMaterialsByOwner = async (req, res)=>{
                     "name":rawMaterial.name,
                     "amount":rawMaterial.amount,
                     "owner":selectWA,
-                    "carbonFootprint":carbonfootprint
+                    "carbonfootprint":carbonfootprint
                 }) 
             } 
         } 
@@ -155,7 +155,7 @@ exports.getListProductsByOwner  = async (req, res) => {
                     "name":product.name,
                     "amount":product.amount,
                     "owner":selectWA,
-                    "carbonFootprint":carbonfootprint
+                    "carbonfootprint":carbonfootprint
                 }) 
             } 
         } 
@@ -252,14 +252,13 @@ exports.createNewProduct= async (req, res)=>{
     } = req.body;
     var values = name.split(",")
     var productName=values[1];
-    var requiredAmount=values[0];
-    var amountValue = parseInt(amount)
+    var requiredRawMaterialAmount=values[0];
+    var requiredProductAmount = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
-    console.log("name:"+productName+" required amount:"+requiredAmount+" required material raw:"+amountValue*requiredAmount )
-    if ((typeof values[1] == 'string' && values[1] != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+    if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transactionsInstance.methods.createNewProduct(values[1], amountValue*requiredAmount, carbfootValue).send({
+            await transactionsInstance.methods.createNewProduct(productName, requiredProductAmount, requiredRawMaterialAmount, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
@@ -319,7 +318,7 @@ EVENT LISTENERS
 
 */
 
-var materiaprima_creata = transactionsInstance.events.materiaPrimaCreata({},
+var eventMateriaPrimaCreata = transactionsInstance.events.materiaPrimaCreata({},
     (error, eventObj) => {
       if (error) {
         blockChainLogger.error(error)
@@ -332,11 +331,53 @@ var materiaprima_creata = transactionsInstance.events.materiaPrimaCreata({},
           " \t| LOTTOID: " +
           eventObj.returnValues._idLotto +
           " NOME: " +
-          eventObj.returnValues.name +
+          eventObj.returnValues._nome +
           " QUANTITA': " +
-          eventObj.returnValues._amount+
+          eventObj.returnValues._quantita+
           " IMPATTO AMBIENTALE: "+
-          eventObj.returnValues.carbonfootprint
+          eventObj.returnValues._impatto
+        );
+      }
+    }
+  );
+
+  var eventProdottoCreato = transactionsInstance.events.prodottoCreato({},
+    (error, eventObj) => {
+      if (error) {
+        blockChainLogger.error(error)
+      }
+      if (eventObj) {
+        console.log(eventObj.returnValues)
+        blockChainLogger.transactionLog(
+          "PRODOTTO CREATO: " +
+          eventObj.event +
+          " \t| LOTTOID: " +
+          eventObj.returnValues._idLotto +
+          " NOME: " +
+          eventObj.returnValues._nome +
+          " QUANTITA': " +
+          eventObj.returnValues._quantita+
+          " IMPATTO AMBIENTALE: "+
+          eventObj.returnValues._impatto
+        );
+      }
+    }
+  );
+
+  var eventLottoTerminato = transactionsInstance.events.lottoTerminato({},
+    (error, eventObj) => {
+      if (error) {
+        blockChainLogger.error(error)
+      }
+      if (eventObj) {
+        console.log(eventObj.returnValues)
+        blockChainLogger.transactionLog(
+          "LOTTO TERMINATO: " +
+          eventObj.event +
+          " \t| LOTTOID: " +
+          eventObj.returnValues._idLotto +
+          " NOME: " +
+          eventObj.returnValues._nome 
         );
       }
     }

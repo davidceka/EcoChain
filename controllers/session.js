@@ -86,18 +86,18 @@ function setLogged(req,value){
     if(!value){
         req.session.isProducer = false
         req.session.isWorker = false
-        req.session.isCostumer = false
+        req.session.isCustomer = false
     }
 }
 function setRole(req, value){
-    if(value=="producer"){
+    if(value=="Producer"){
         req.session.isProducer = true
     }
-    if(value=="worker"){
+    if(value=="Worker"){
         req.session.isWorker = true
     }
-    if(value=="costumer"){
-        req.session.isCostumer = true
+    if(value=="Customer"){
+        req.session.isCustomer = true
     }
 }
 module.exports={

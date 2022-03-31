@@ -20,15 +20,15 @@
                   <div class="card">
                     <div class="card-body">
                       <form action="/transactions/addrawmaterial" method="post">
-                        <legend>Register new raw material:</legend>
-                        <label for="name">Name:</label><br>
+                        <legend>Registra una nuova materia prima:</legend>
+                        <label for="name">Nome:</label><br>
                         <input type="text" id="name" name="name" placeholder="Enter Name"><br>
-                        <label for="amount">Amount:</label><br>
+                        <label for="amount">Quantità:</label><br>
                         <input type="number" id="amount" name="amount" min="0" max="100"><br>
                         <label for="carboonfootprint">Carboon Footprint:</label><br>
                         <input type="number" id="carbfoot" name="carbfoot" min="0" max="100"><br>
                         <div class="text-center text-lg-start mt-4 pt-2">
-                            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Create</button>
+                            <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Crea</button>
                         </div>
                     </form>
                     </div>
@@ -36,9 +36,10 @@
                 </div>
 
                 <div class="col-md-8">
+                  <h3>Lista delle materie prime possedute</h3>
                   <div class="card mb-3">
                     <div class="card-body">
-                      {{#each rawMaterials}}
+                      {{#each ownRawMaterials}}
                         <li>
                           <div class="row">
                             <div class="col-sm-3">
@@ -48,13 +49,13 @@
                               {{this.idLotto}}
                             </div>
                             <div class="col-sm-3">
-                              <h6 class="mb-0">Name:</h6>
+                              <h6 class="mb-0">Nome:</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                               {{this.name}}
                             </div>
                             <div class="col-sm-3">
-                              <h6 class="mb-0">Amount:</h6>
+                              <h6 class="mb-0">Quantità:</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                               {{this.amount}}
@@ -63,7 +64,7 @@
                               <h6 class="mb-0">Carbon Footprint:</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                              {{this.carboonfootprint}}
+                              {{this.carbonfootprint}}
                             </div>
                           </div>
                         </li>

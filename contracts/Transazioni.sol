@@ -8,10 +8,7 @@ contract Transazione {
     address tokenContractAddress;
     CarbonFootprint tokenContract;
 
-    /*uint256 prodottiId;
-    uint256 materiePrimeId;*/
 
-    //possibile errore quando si vendono i prodotti/materie
     uint256 productsId;
     uint256 rawMaterialsId;
 
@@ -21,9 +18,9 @@ contract Transazione {
     }
 
     //emit ed eventi da aggiungere
-    event materiaPrimaCreata(uint256 _idLotto,string nome,uint256 _amount,uint256 _impatto);
-    event prodottoCreato(uint256 _idLotto,string nome,uint256 _amount,uint256 _impatto);
-    event lottoTerminato(uint256 _idLotto);
+    event materiaPrimaCreata(uint256 _idLotto,string nome,uint256 _quantita,uint256 _impatto);
+    event prodottoCreato(uint256 _idLotto,string _nome,uint256 _quantita,uint256 _impatto);
+    event lottoTerminato(uint256 _idLotto,string _nome);
     event quantitaSufficiente(bool status);
 
     function incrementRawMaterials() internal{
@@ -74,11 +71,11 @@ contract Transazione {
         incrementRawMaterials();
         
     }
-    function createNewProduct(string memory _name,uint _requiredAmount,uint256 _carbonFootprint) public {
-        uint256 remainingAmount=_requiredAmount;
+    function createNewProduct(string memory _name,uint256 _requiredProductAmount,uint256 _requiredRawMaterials,uint256 _carbonFootprint) public {
+        uint256 remainingAmount=_requiredRawMaterials;
         uint256 availableAmount=0;
         uint256 i=0;
-        while(availableAmount<=_requiredAmount&&i<rawMaterialsId)
+        while(availableAmount<=_requiredRawMaterials&&i<rawMaterialsId)
         {
             if(!raw_materials[msg.sender][i].not_available){
                 availableAmount+=raw_materials[msg.sender][i].amount;
@@ -87,7 +84,7 @@ contract Transazione {
         }
         //emit la quantità è sufficiente, la transazione procede
         emit quantitaSufficiente(true);
-        require(availableAmount>=_requiredAmount,"Quantita di materia prima non sufficiente.");
+        require(availableAmount>=_requiredRawMaterials,"Quantita di materia prima non sufficiente.");
         //giustificare il for
 
         i=0;
@@ -98,16 +95,14 @@ contract Transazione {
                 raw_materials[msg.sender][i].amount-=remainingAmount;
                 remainingAmount=0;
                 if(raw_materials[msg.sender][i].amount==0){
-                    //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
-                    emit lottoTerminato(i);
+                    emit lottoTerminato(i,raw_materials[msg.sender][i].name);
                 }
             }
             else{
                 remainingAmount-=raw_materials[msg.sender][i].amount;
                 raw_materials[msg.sender][i].amount=0;
                 raw_materials[msg.sender][i].not_available=true;
-                //emit lottoTerminato(string(abi.encodePacked("Il lotto numero ",Strings.toString(i)," e' terminato.")));
-                emit lottoTerminato(i);
+                emit lottoTerminato(i,raw_materials[msg.sender][i].name);
             }
             i++;
         }
@@ -117,10 +112,10 @@ contract Transazione {
             id_product:productsId,
             name:_name,
             token:tokenId,
-            amount:_requiredAmount,
+            amount:_requiredProductAmount,
             not_available:false
         });
-        emit prodottoCreato(productsId,_name,_requiredAmount,_carbonFootprint);
+        emit prodottoCreato(productsId,_name,_requiredProductAmount,_carbonFootprint);
         incrementProducts();
     }
 

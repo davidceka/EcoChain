@@ -7,13 +7,13 @@
                 <div class="card">
                   <div class="card-body">
                       <form action="/transactions/listproducts" method="post">
-                          <label for="selectWA">Select a Producer:</label>
+                          <label for="selectWA">Seleziona un produttore:</label>
                           <select id="selectWA" name="selectWA">   <!--> size="3"><-->
                               {{#each workers}}
                                   <option value={{this.walletAddress}}>{{this.name}}&nbsp;{{this.surname}}&nbsp;, Tipologia:&nbsp;{{this.type}}</option>
                               {{/each}}
                           </select> <br><br>
-                          <button type="submit">Confirm</button>
+                          <button type="submit">Conferma</button>
                       </form>
 
                       <ul data-role="listview">
@@ -31,8 +31,8 @@
                                                           <option value={{this.owner}}></option>
                                                       </select>
                                                       <h6 value={{this.idLotto}} class="mb-0">Id Lotto: {{this.idLotto}}</h6>
-                                                      <h6 class="mb-0">Name: {{this.name}}</h6>
-                                                      <h6 class="mb-0">Amount: {{this.amount}}</h6>
+                                                      <h6 class="mb-0">Nome: {{this.name}}</h6>
+                                                      <h6 class="mb-0">Quantità: {{this.amount}}</h6>
                                                       <h6 class="mb-0">Carbon Footprint: {{this.carbonfootprint}}</h6>
                                                       <div class="col-sm-9 text-secondary">
                                                           <button type="submit" class="btn btn-info " target="__blank">Compra</a>
@@ -53,6 +53,7 @@
               </div>
 
               <div class="col-md-8">
+                  <h3>Lista dei prodotti posseduti</h3>
                   <div class="card mb-3">
                       <div class="card-body">
                       {{#each ownProducts}}
@@ -65,13 +66,13 @@
                               {{this.idLotto}}
                               </div>
                               <div class="col-sm-3">
-                              <h6 class="mb-0">Name</h6>
+                              <h6 class="mb-0">Nome</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
                               {{this.name}}
                               </div>
                               <div class="col-sm-3">
-                              <h6 class="mb-0">Amount</h6>
+                              <h6 class="mb-0">Quantità</h6>
                               </div>
                               <div class="col-sm-9 text-secondary">
                               {{this.amount}}

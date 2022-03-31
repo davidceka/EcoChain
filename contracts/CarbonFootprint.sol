@@ -32,6 +32,4 @@ contract CarbonFootprint is ERC721URIStorage, Ownable {
         require(_exists(_tokenId));
         return carbonFootprint[_tokenId];
     }
-    
-    //chiedere se va bene solo il salvataggio dell'URI semplice (singola stringa) oppure si necessita di creare un JSON
 }

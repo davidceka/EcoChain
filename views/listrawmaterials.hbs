@@ -33,7 +33,7 @@
                                                         <h6 value={{this.idLotto}} class="mb-0">ID Lotto: {{this.idLotto}}</h6>
                                                         <h6 class="mb-0">Name: {{this.name}}</h6>
                                                         <h6 class="mb-0">Amount: {{this.amount}}</h6>
-                                                        <h6 class="mb-0">Carbon Footprint: {{this.carbfoot}}</h6>
+                                                        <h6 class="mb-0">Carbon Footprint: {{this.carbonfootprint}}</h6>
                                                         <div class="col-sm-9 text-secondary">
                                                             <button  type="submit" class="btn btn-info " target="__blank">Buy</a>
                                                         </div>
@@ -53,6 +53,7 @@
                 </div>
 
                 <div class="col-md-8">
+                    <h3>Lista delle materie prime possedute</h3>
                     <div class="card mb-3">
                         <div class="card-body">
                         {{#each ownRawMaterials}}
@@ -65,7 +66,7 @@
                                 {{this.idLotto}}
                                 </div>
                                 <div class="col-sm-3">
-                                <h6 class="mb-0">Name:</h6>
+                                <h6 class="mb-0">Nome:</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                 {{this.name}}

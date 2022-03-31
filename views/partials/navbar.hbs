@@ -26,15 +26,15 @@
           
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             {{#if isProducer}}
-            <li><a class="dropdown-item" href="transactions/newrawmaterial">New raw material</a></li>
+            <li><a class="dropdown-item" href="transactions/newrawmaterial">Nuova Materia Prima</a></li>
             {{/if}} 
             {{#if isWorker}}
-            <li><a class="dropdown-item" href="/dbdataRouter/newproduct">New product</a></li>
+            <li><a class="dropdown-item" href="/dbdataRouter/newproduct">Nuovo Prodotto</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/dbdataRouter/listproducers">Buy raw material</a></li>
+            <li><a class="dropdown-item" href="/dbdataRouter/listproducers">Compra Materia Prima</a></li>
             {{/if}}
-            {{#if isCostumer}}
-            <li><a class="dropdown-item" href="/dbdataRouter/listworkers">Buy product</a></li>
+            {{#if isCustomer}}
+            <li><a class="dropdown-item" href="/dbdataRouter/listworkers">Compra Prodotto</a></li>
             {{/if}}
 
             
@@ -53,11 +53,7 @@
         </li>
         {{/if}}
       </ul>
-      <!--
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>-->
+      
     </div>
   </div>
 </nav>

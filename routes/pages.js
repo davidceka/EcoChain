@@ -10,7 +10,7 @@ router.get('/',(req,res)=>{
         isLogged:req.session.isLogged,
         isWorker:req.session.isWorker,
         isProducer:req.session.isProducer,
-        isCostumer:req.session.isCostumer,
+        isCustomer:req.session.isCustomer,
         success:req.session.success,
         error:req.session.error,
         message:req.session.message
@@ -48,11 +48,11 @@ router.get('/register',(req,res)=>{
 
 router.get('/newrawmaterial',(req,res)=>{
     var isLogged=req.session.isLogged;
-    var rawMaterials=session.getListOwnRawMaterial(req)
+    var ownRawMaterials=session.getListOwnRawMaterial(req)
     if(isLogged){
         res.render('newrawmaterial',{
             layout:'index',
-            rawMaterials:rawMaterials,
+            ownRawMaterials:ownRawMaterials,
             error:req.session.error,
             success:req.session.success,
             message:req.session.message,
@@ -72,10 +72,11 @@ router.get('/newrawmaterial',(req,res)=>{
 router.get('/newproduct',async (req,res)=>{
     var productSelection = session.getListProductSelection(req)
     var isLogged=req.session.isLogged;
-    var products=session.getListOwnProducts(req)
-    await blockchainController.getListOwnRawMaterials(req)
-    var ownRawMaterials=session.getListOwnRawMaterial(req)
+    
     if(isLogged){
+        var products=session.getListOwnProducts(req)
+        await blockchainController.getListOwnRawMaterials(req)
+        var ownRawMaterials=session.getListOwnRawMaterial(req)
         res.render('newproduct',{
                 layout:'index',
                 success:req.session.success,
@@ -101,6 +102,7 @@ router.get('/listrawmaterials',(req,res)=>{
     var isLogged=req.session.isLogged;
     var producers = session.getListProducers(req)
     var ownRawMaterials = session.getListOwnRawMaterial(req)
+    console.log(ownRawMaterials)
     var rawMaterials = session.getListRawMaterial(req)
     if(isLogged){
         res.render('listrawmaterials',{
@@ -151,13 +153,13 @@ router.get('/profilo',(req,res)=>{
             layout:'index',
             isLogged:req.session.isLogged,
             email:user.email,
-            nome:user.nome,
-            cognome:user.cognome,
+            name:user.name,
+            surname:user.surname,
             ruolo:user.ruolo,
             wallet_address:user.wallet_address,
             isWorker:req.session.isWorker,
             isProducer:req.session.isProducer,
-            isCostumer:req.session.isCostumer
+            isCustomer:req.session.isCustomer
         })
     }else{
         session.setError(req,'Devi effettuare il login per accedere a questa pagina.')

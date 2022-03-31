@@ -3,7 +3,8 @@ const bcrypt = require("bcrypt");
 const blockchainController = require("./blockchainController");
 const session = require("./session");
 const { NULL } = require("mysql/lib/protocol/constants/types");
-const logController=require('./logController')
+const logController=require('./logController');
+const { query } = require("express");
 
 logger=logController.actionLogger;
 
@@ -102,6 +103,7 @@ exports.logout = (req, res) => {
 };
 
 exports.register = async (req, res) => {
+  var query;
   const {
     name,
     surname,
@@ -111,8 +113,13 @@ exports.register = async (req, res) => {
     role,
     type
   } = req.body;
-  if (!validPassword(password, confpassword) || (password =="") || (role =="costumer" && type != "")){
-    session.setError(req, "Incorrect fields entered");
+  if (!validPassword(password, confpassword) || (password =="")){
+    session.setError(req, "Password vuota o non combaciante.");
+    res.redirect("/register");
+  }
+  else if(role =="Customer" && type != "")
+  {
+    session.setError(req, "Il cliente non necessità di una categoria. Lascia il campo 'Tipologia' vuoto");
     res.redirect("/register");
   }
   else{
@@ -124,8 +131,9 @@ exports.register = async (req, res) => {
         if (results.length == 0) {
           let hashed = await bcrypt.hash(password, 10);
           var newAccount = await blockchainController.newAccount();
+          if(role=="Customer"){
           executeQuery(
-            "INSERT INTO users (email, password, wallet_address, name, surname, role, type) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO users (email, password, wallet_address, name, surname, role) VALUES (?, ?, ?, ?, ?, ?)",
             [email, hashed, newAccount, name, surname, role, type],
             function (error, results) {
               if (error) throw error;
@@ -134,7 +142,20 @@ exports.register = async (req, res) => {
               logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
               res.redirect("/login");
             }
-          ); 
+          )} 
+          else {
+            executeQuery(
+              "INSERT INTO users (email, password, wallet_address, name, surname, role, type) VALUES (?, ?, ?, ?, ?, ?, ?)",
+              [email, hashed, newAccount, name, surname, role, type],
+              function (error, results) {
+                if (error) throw error;
+                req.session.success = true;
+                session.setSuccess(req, "Account added successfully!");
+                logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
+                res.redirect("/login");
+              }
+            )            
+          }
         } else {
           logger.action("User input credentials already existing.")
           session.setWarning(req, "Account already present!");

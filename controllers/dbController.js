@@ -67,15 +67,16 @@ async function (error, results) {
 
 exports.getAllProductsByType = async (req, res) => {
 var type = session.getProfile(req).type
+console.log(type)
 executeQuery(
-"SELECT name_product, required_amount FROM products_type WHERE type = ?",
+"SELECT product_name, required_amount FROM products_type WHERE type = ?",
 [type],
 async function (error, results) {
   var productSelection = []
   if (error) throw error;
   results.forEach(function (item){
     productSelection.push({
-      name_product:item.name_product,
+      product_name:item.product_name,
       required_amount:item.required_amount
     })
   })
