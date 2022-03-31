@@ -195,7 +195,6 @@ exports.buyProduct=async (req,res)=>{
         _lottoScelto,
     }=req.body;
     try{
-        console.log("ciao")
         await transactionsInstance.methods.buyProduct(_walletProduttore, user_wallet,_lottoScelto ).send({
                     from: user_wallet, 
                     gasPrice: web3.utils.toHex(0), 
@@ -237,7 +236,6 @@ exports.createNewRawMaterial=async (req, res)=>{
             session.setError(req, "Unknown Error");
         }  
     }else {
-        console.log("NOT OK")
         session.setError(req, "Check input fields");
     } 
     //typeof == 'number'
@@ -271,7 +269,6 @@ exports.createNewProduct= async (req, res)=>{
             session.setError(req, error.reason);
         }  
     }else {
-        console.log("NOT OK")
         session.setError(req, "Check input fields");
     } 
     res.redirect("/newproduct");
