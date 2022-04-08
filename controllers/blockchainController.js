@@ -256,7 +256,7 @@ exports.createNewProduct= async (req, res)=>{
     if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transactionsInstance.methods.createNewProduct(productName, requiredProductAmount, requiredRawMaterialAmount, carbfootValue).send({
+            await transactionsInstance.methods.createNewProduct(productName, requiredProductAmount, requiredRawMaterialAmount*requiredProductAmount, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
