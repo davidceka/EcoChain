@@ -138,7 +138,7 @@ exports.register = async (req, res) => {
             function (error, results) {
               if (error) throw error;
               req.session.success = true;
-              session.setSuccess(req, "Account added successfully!");
+              session.setSuccess(req, "Account aggiunto con Successo!");
               logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
               res.redirect("/login");
             }
@@ -150,7 +150,7 @@ exports.register = async (req, res) => {
               function (error, results) {
                 if (error) throw error;
                 req.session.success = true;
-                session.setSuccess(req, "Account added successfully!");
+                session.setSuccess(req, "Account aggiunto con Successo!");
                 logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
                 res.redirect("/login");
               }
@@ -158,7 +158,7 @@ exports.register = async (req, res) => {
           }
         } else {
           logger.action("User input credentials already existing.")
-          session.setWarning(req, "Account already present!");
+          session.setWarning(req, "Account già esistente!");
           res.redirect("/register");
         }
       }

@@ -233,10 +233,10 @@ exports.createNewRawMaterial=async (req, res)=>{
 
         } catch (error) {
             console.log(error);
-            session.setError(req, "Unknown Error");
+            session.setError(req, "Errore Sconosciuto");
         }  
     }else {
-        session.setError(req, "Check input fields");
+        session.setError(req, "Controlla i Campi.");
     } 
     //typeof == 'number'
     res.redirect("/newrawmaterial");
@@ -269,7 +269,7 @@ exports.createNewProduct= async (req, res)=>{
             session.setError(req, error.reason);
         }  
     }else {
-        session.setError(req, "Check input fields");
+        session.setError(req, "Controlla i Campi.");
     } 
     res.redirect("/newproduct");
     
