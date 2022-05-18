@@ -56,6 +56,7 @@ router.get('/newrawmaterial',(req,res)=>{
             error:req.session.error,
             success:req.session.success,
             message:req.session.message,
+            type:session.getProfile(req).type,
             isProducer:req.session.isProducer,
             isLogged:isLogged
         })

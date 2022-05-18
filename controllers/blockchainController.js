@@ -214,16 +214,16 @@ exports.buyProduct=async (req,res)=>{
 
 exports.createNewRawMaterial=async (req, res)=>{
     const {
-        name,
         amount,
         carbfoot
     } = req.body;
     var amountValue = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
-    if ((typeof name == 'string' && name != "")&&(amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+    var name=session.getProfile(req).type;
+    if ((amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transactionsInstance.methods.createNewRawMaterial(name, amountValue, carbfootValue).send({
+            prova=await transactionsInstance.methods.createNewRawMaterial(name, amountValue, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
@@ -253,14 +253,16 @@ exports.createNewProduct= async (req, res)=>{
     var requiredRawMaterialAmount=values[0];
     var requiredProductAmount = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
+    var prova;
     if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
-            await transactionsInstance.methods.createNewProduct(productName, requiredProductAmount, requiredRawMaterialAmount*requiredProductAmount, carbfootValue).send({
+            prova=await transactionsInstance.methods.createNewProduct(productName, requiredProductAmount, requiredRawMaterialAmount*requiredProductAmount, carbfootValue).send({
                 from: user.wallet_address, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
             })
+            console.log(prova.lottoTerminato[0])
             session.setSuccess(req, "New product added to blockchain");
             await this.getListOwnProducts(req)
              

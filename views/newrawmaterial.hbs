@@ -21,8 +21,8 @@
                     <div class="card-body">
                       <form action="/transactions/addrawmaterial" method="post">
                         <legend>Registra una nuova materia prima:</legend>
-                        <label for="name">Nome:</label><br>
-                        <input type="text" id="name" name="name" placeholder="Enter Name"><br>
+                        <label for="name">Tipologia Materia Prima:</label><br>
+                        <input readonly type="text" id="name" name="name" placeholder={{this.type}}><br>
                         <label for="amount">Quantità:</label><br>
                         <input type="number" id="amount" name="amount" min="0" max="100"><br>
                         <label for="carboonfootprint">Carboon Footprint:</label><br>

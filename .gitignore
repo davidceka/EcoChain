@@ -2,3 +2,4 @@ node_modules/
 network/
 .deps/
 logs/
+contracts/artifacts/build-info

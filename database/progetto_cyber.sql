@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2022 at 12:28 PM
+-- Generation Time: May 18, 2022 at 12:41 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -38,15 +38,12 @@ CREATE TABLE `products_type` (
 --
 
 INSERT INTO `products_type` (`product_name`, `required_amount`, `type`) VALUES
-('Prodotto1a', '10', 'Tipologia1'),
-('Prodotto1b', '8', 'Tipologia2'),
-('Prodotto1c', '11', 'Tipologia3'),
-('Prodotto2a', '4', 'Tipologia1'),
-('Prodotto2b', '8', 'Tipologia2'),
-('Prodotto2c', '11', 'Tipologia3'),
-('Prodotto3a', '5', 'Tipologia1'),
-('Prodotto3b', '6', 'Tipologia2'),
-('Prodotto3c', '7', 'Tipologia3');
+('Burro', '10', 'Caseari'),
+('Cotolette', '8', 'Carne'),
+('Panna', '8', 'Caseari'),
+('Prosciutto', '5', 'Carne'),
+('Salsicce', '4', 'Carne'),
+('Sottilette', '8', 'Caseari');
 
 -- --------------------------------------------------------
 
@@ -62,17 +59,9 @@ CREATE TABLE `users` (
   `name` varchar(45) NOT NULL,
   `surname` varchar(45) NOT NULL,
   `role` enum('Producer','Worker','Customer') NOT NULL,
-  `type` enum('Tipologia1','Tipologia2','Tipologia3') DEFAULT NULL
+  `type` enum('Carne','Caseari') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id_user`, `email`, `password`, `wallet_address`, `name`, `surname`, `role`, `type`) VALUES
-(19, 'produttore1@produttore.it', '$2b$10$BAZXz3mzjIDVDdoLCtyn1O.kh7zd9ueQhSlcPv1SRrTLOc3PXejcG', '0x583A6Df0BBC209674D7c6F2445de755b2bD35302', 'Produttore1', 'Produttore1', 'Producer', 'Tipologia1'),
-(20, 'lavoratore1@lavoratore.it', '$2b$10$Wh6fQ34HjLBL7TvLW1e2l.cwVD7j471UG8gTdVKzG.doWdwKDkye.', '0xe87E22B8C1173679C78d234A3929B65D7926C55C', 'Lavoratore1', 'Lavoratore1', 'Worker', 'Tipologia1'),
-(21, 'cliente1@cliente.it', '$2b$10$pxWjNcJAqnosWVMqT6UDyuB1n8ywh19ouYv61YiXxn15O7ATPwqme', '0xe2d8fEE5381e4d44a2d80d9244E09685E1F82a73', 'Cliente1', 'Cliente1', 'Customer', NULL);
 
 --
 -- Indexes for dumped tables
@@ -100,7 +89,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

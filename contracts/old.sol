@@ -53,7 +53,6 @@ contract Transazione {
         uint256 token;
         uint256 amount;
         bool not_available;
-        
     }
 
     mapping(address=>mapping(uint256=>Product)) products;
@@ -76,48 +75,39 @@ contract Transazione {
         uint256 remainingAmount=_requiredRawMaterials;
         uint256 availableAmount=0;
         uint256 i=0;
-        uint256 carbonFootprintDaMateriaPrima=0;
-        for(i=0;i<=rawMaterialsId;i++){
-            if(availableAmount<=_requiredRawMaterials){
-                
-                if(!raw_materials[msg.sender][i].not_available){
-                    availableAmount+=raw_materials[msg.sender][i].amount;
-                }
+        while(availableAmount<=_requiredRawMaterials&&i<rawMaterialsId)
+        {
+            if(!raw_materials[msg.sender][i].not_available){
+                availableAmount+=raw_materials[msg.sender][i].amount;
             }
-            else{
-                break;
-            }
+            i++;
         }
         //emit la quantità è sufficiente, la transazione procede
         emit quantitaSufficiente(true);
         require(availableAmount>=_requiredRawMaterials,"Quantita di materia prima non sufficiente.");
         //giustificare il for
 
+        i=0;
+        while(remainingAmount>0&&i<rawMaterialsId) //verificare da togliere il materiePrimeId
+        {
+            if(raw_materials[msg.sender][i].amount>remainingAmount){
 
-        for(i=0;i<rawMaterialsId;i++){
-            if(remainingAmount>0){
-                carbonFootprintDaMateriaPrima+=tokenContract.getCarbonFootprint(raw_materials[msg.sender][i].token);
-                if(raw_materials[msg.sender][i].amount>remainingAmount){
-                    raw_materials[msg.sender][i].amount-=remainingAmount;
-                    remainingAmount=0;
-                        if(raw_materials[msg.sender][i].amount==0){
-                            emit lottoTerminato(i,raw_materials[msg.sender][i].name);
-                        }
-                    
-                }
-                else{
-                    remainingAmount-=raw_materials[msg.sender][i].amount;
-                    raw_materials[msg.sender][i].amount=0;
-                    raw_materials[msg.sender][i].not_available=true;
+                raw_materials[msg.sender][i].amount-=remainingAmount;
+                remainingAmount=0;
+                if(raw_materials[msg.sender][i].amount==0){
                     emit lottoTerminato(i,raw_materials[msg.sender][i].name);
                 }
             }
             else{
-                break;
+                remainingAmount-=raw_materials[msg.sender][i].amount;
+                raw_materials[msg.sender][i].amount=0;
+                raw_materials[msg.sender][i].not_available=true;
+                emit lottoTerminato(i,raw_materials[msg.sender][i].name);
             }
+            i++;
         }
         // da aggiungere: ricavare l'impatto dal vecchio token e sommarlo al nuovo
-        uint256 tokenId=tokenContract.safeMint(msg.sender,_carbonFootprint+carbonFootprintDaMateriaPrima);
+        uint256 tokenId=tokenContract.safeMint(msg.sender,_carbonFootprint);
         products[msg.sender][productsId]=Product({
             id_product:productsId,
             name:_name,
@@ -125,7 +115,7 @@ contract Transazione {
             amount:_requiredProductAmount,
             not_available:false
         });
-        emit prodottoCreato(productsId,_name,_requiredProductAmount,_carbonFootprint+carbonFootprintDaMateriaPrima);
+        emit prodottoCreato(productsId,_name,_requiredProductAmount,_carbonFootprint);
         incrementProducts();
     }
 

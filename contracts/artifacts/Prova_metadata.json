@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getRis",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/prova.sol": "Prova"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/prova.sol": {
+			"keccak256": "0x9cf9d7252a46d5479abab8ebffdd304a7176f082faa012043b3b4efb9aaee4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aacbe37e0b3b172c68dabe96f76147bf020592c20b0b5e846502ab0895227ec7",
+				"dweb:/ipfs/QmZtMLRvH3jydS5duF2LmZGZSfGD7StfsiYKHR2Hz2zrDZ"
+			]
+		}
+	},
+	"version": 1
+}
