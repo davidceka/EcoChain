@@ -12,6 +12,7 @@ contract Transazione {
     uint256 productsId;
     uint256 rawMaterialsId;
 
+
     constructor (address _tokenContractAddress){
         tokenContractAddress=_tokenContractAddress;
         tokenContract=CarbonFootprint(tokenContractAddress);
@@ -44,6 +45,7 @@ contract Transazione {
         uint256 token;  
         uint256 amount;  
         bool not_available;
+        uint256 percentualeRimanente;
     }
 
 
@@ -53,6 +55,7 @@ contract Transazione {
         uint256 token;
         uint256 amount;
         bool not_available;
+        uint256 [20]usedRawMaterials;
         
     }
 
@@ -66,7 +69,8 @@ contract Transazione {
             name:_name,
             token:tokenId,
             amount:_amount,
-            not_available:false
+            not_available:false,
+            percentualeRimanente:100
         });
         emit materiaPrimaCreata(rawMaterialsId,_name,_amount,_carbonFootprint);
         incrementRawMaterials();
@@ -76,6 +80,9 @@ contract Transazione {
         uint256 remainingAmount=_requiredRawMaterials;
         uint256 availableAmount=0;
         uint256 i=0;
+        uint256[20] memory app ;
+        uint256 cont=0;
+        uint256 percentuale=0;
         uint256 carbonFootprintDaMateriaPrima=0;
         for(i=0;i<=rawMaterialsId;i++){
             if(availableAmount<=_requiredRawMaterials){
@@ -96,20 +103,31 @@ contract Transazione {
 
         for(i=0;i<rawMaterialsId;i++){
             if(remainingAmount>0){
-                carbonFootprintDaMateriaPrima+=tokenContract.getCarbonFootprint(raw_materials[msg.sender][i].token);
-                if(raw_materials[msg.sender][i].amount>remainingAmount){
-                    raw_materials[msg.sender][i].amount-=remainingAmount;
-                    remainingAmount=0;
-                        if(raw_materials[msg.sender][i].amount==0){
-                            emit lottoTerminato(i,raw_materials[msg.sender][i].name);
-                        }
-                    
-                }
-                else{
-                    remainingAmount-=raw_materials[msg.sender][i].amount;
-                    raw_materials[msg.sender][i].amount=0;
-                    raw_materials[msg.sender][i].not_available=true;
-                    emit lottoTerminato(i,raw_materials[msg.sender][i].name);
+                uint256 impattoLotto=tokenContract.getCarbonFootprint(raw_materials[msg.sender][i].token);
+                
+                if(!raw_materials[msg.sender][i].not_available){
+                    if(raw_materials[msg.sender][i].amount>remainingAmount){
+                        percentuale=remainingAmount*100/raw_materials[msg.sender][i].amount;
+                        carbonFootprintDaMateriaPrima+=impattoLotto*percentuale/100;
+                        raw_materials[msg.sender][i].percentualeRimanente-=percentuale;
+                        app[cont]=i;
+                        cont++;
+                        raw_materials[msg.sender][i].amount-=remainingAmount;
+                        remainingAmount=0;                        
+                            if(raw_materials[msg.sender][i].amount==0){
+                                emit lottoTerminato(i,raw_materials[msg.sender][i].name);
+                            }
+                        
+                    }
+                    else{
+                        carbonFootprintDaMateriaPrima+=impattoLotto*raw_materials[msg.sender][i].percentualeRimanente/100;
+                        app[cont]=i;
+                        cont++;
+                        remainingAmount-=raw_materials[msg.sender][i].amount;
+                        raw_materials[msg.sender][i].amount=0;
+                        raw_materials[msg.sender][i].not_available=true;
+                        emit lottoTerminato(i,raw_materials[msg.sender][i].name);
+                    }
                 }
             }
             else{
@@ -123,6 +141,7 @@ contract Transazione {
             name:_name,
             token:tokenId,
             amount:_requiredProductAmount,
+            usedRawMaterials:app,
             not_available:false
         });
         emit prodottoCreato(productsId,_name,_requiredProductAmount,_carbonFootprint+carbonFootprintDaMateriaPrima);
