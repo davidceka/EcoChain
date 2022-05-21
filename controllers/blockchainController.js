@@ -5,6 +5,7 @@ const tABI=require('../contracts/artifacts/Transazione.json')
 const session = require("./session");
 const logController=require('./logController');
 const { raw } = require('mysql');
+const encrypter=require('./crypt');
 
 
 const blockChainLogger=logController.blockchainLogger;
@@ -52,7 +53,7 @@ exports.newAccount=async ()=>{
 }
 
 exports.unlockAccount=async(account,password)=>{
-    await web3.eth.personal.unlockAccount(account,password, 600)
+        await web3.eth.personal.unlockAccount(account,password, 600)
         .then(console.log('Account unlocked!'));
 }
 
@@ -68,7 +69,7 @@ exports.goToNewProduct = async (req, res) => {
 }*/
 
 exports.getListOwnRawMaterials = async (req) => {
-    var walletAddress = session.getProfile(req).wallet_address
+    var walletAddress = await encrypter.decrypt(session.getProfile(req).wallet_address.toString())
     var limit = await transactionsInstance.methods.getRawMaterialsId().call()
     var rawMaterials = []
     for (var i = 0; i < limit; i++){
@@ -92,10 +93,11 @@ exports.getListOwnRawMaterials = async (req) => {
  
 exports.getListOwnProducts= async (req) => {
     var walletAddress = session.getProfile(req).wallet_address
+    var decryptedAddress=await encrypter.decrypt(walletAddress.toString())
     var limit = await transactionsInstance.methods.getProductsId().call()
     var products = []
     for (var i = 0; i < limit; i++){
-        var product = await this.getProduct(walletAddress,i)
+        var product = await this.getProduct(decryptedAddress,i)
         if(!product){
         }else{
             var carbonfootprint=await this.getCarbonFootprint(product.token)
@@ -132,12 +134,13 @@ exports.getListOwnProducts= async (req) => {
 
 exports.getListRawMaterialsByOwner = async (req, res)=>{
     const{selectWA} = req.body;
+    var decryptedAddress=encrypter.decrypt(selectWA.toString())
     var limit = await transactionsInstance.methods.getRawMaterialsId().call()
     //var selectWA = "0x17BE7A41e13e89cc86a4cd445233Fb83351dd506"
     
     var rawMaterials = []
     for (var i = 0; i < limit; i++){
-        var rawMaterial = await this.getRawMaterial(selectWA,i)
+        var rawMaterial = await this.getRawMaterial(decryptedAddress,i)
         if(!rawMaterial){
         }else{ 
             var carbonfootprint=await this.getCarbonFootprint(rawMaterial.token)
@@ -159,11 +162,11 @@ exports.getListRawMaterialsByOwner = async (req, res)=>{
 exports.getListProductsByOwner  = async (req, res) => {
     const{selectWA} = req.body;
     var limit = await transactionsInstance.methods.getProductsId().call()
-    //var selectWA = "0x17BE7A41e13e89cc86a4cd445233Fb83351dd506"
+    var decryptedAddress=await encrypter.decrypt(selectWA.toString())
     
     var products = []
     for (var i = 0; i < limit; i++){
-        var product = await this.getProduct(selectWA,i)
+        var product = await this.getProduct(decryptedAddress,i)
         if(!product){
         }else{ 
             var carbonfootprint=await this.getCarbonFootprint(product.token)
@@ -184,18 +187,21 @@ exports.getListProductsByOwner  = async (req, res) => {
 
 exports.buyRawMaterial=async (req,res)=>{
     var user_wallet=session.getProfile(req).wallet_address
+    var decryptedBuyerAddress=await encrypter.decrypt(user_wallet.toString())
+    console.log("CIAO "+decryptedBuyerAddress)
     const{
         _walletProduttore,
         _lottoScelto,
     }=req.body;
+    var decrypterSellerAddress=await encrypter.decrypt(_walletProduttore.toString())
     try{
-        await transactionsInstance.methods.buyRawMaterial(_walletProduttore, user_wallet ,_lottoScelto ).send({
-                    from: user_wallet, 
+        await transactionsInstance.methods.buyRawMaterial(decrypterSellerAddress, decryptedBuyerAddress ,_lottoScelto ).send({
+                    from: decryptedBuyerAddress, 
                     gasPrice: web3.utils.toHex(0), 
                     gasLimit: web3.utils.toHex(5000000)
                 })
                 session.setSuccess(req,"Purchase completed!")
-                blockChainLogger.transactionLog("User:"+user_wallet+" has successfully purchased the lot n° "+_lottoScelto+" form the supplier:"+_walletProduttore)
+                blockChainLogger.transactionLog("User:"+decryptedBuyerAddress+" has successfully purchased the lot n° "+_lottoScelto+" form the supplier:"+decrypterSellerAddress)
                 await this.getListOwnRawMaterials(req)
                 session.setListRawMaterial(req, new Array(0))
                 res.redirect('/listrawmaterials')
@@ -208,13 +214,16 @@ exports.buyRawMaterial=async (req,res)=>{
 
 exports.buyProduct=async (req,res)=>{
     var user_wallet=session.getProfile(req).wallet_address
+    var decryptedBuyerAddress=await encrypter.decrypt(user_wallet.toString())
+    console.log("CIAO "+decryptedBuyerAddress)
     const{
         _walletProduttore,
         _lottoScelto,
     }=req.body;
+    var decrypterSellerAddress=await encrypter.decrypt(_walletProduttore.toString())
     try{
-        await transactionsInstance.methods.buyProduct(_walletProduttore, user_wallet,_lottoScelto ).send({
-                    from: user_wallet, 
+        await transactionsInstance.methods.buyProduct(decrypterSellerAddress, decryptedBuyerAddress,_lottoScelto ).send({
+                    from: decryptedBuyerAddress, 
                     gasPrice: web3.utils.toHex(0), 
                     gasLimit: web3.utils.toHex(5000000)
                 })
@@ -241,8 +250,9 @@ exports.createNewRawMaterial=async (req, res)=>{
     if ((amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
+            var decryptedAddress=await encrypter.decrypt(user.wallet_address.toString())
             await transactionsInstance.methods.createNewRawMaterial(name, amountValue, carbfootValue).send({
-                from: user.wallet_address, 
+                from: decryptedAddress, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
             })
@@ -274,8 +284,9 @@ exports.createNewProduct= async (req, res)=>{
     if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<100)){ 
         try{
             var user = session.getProfile(req)
+            var decryptedAddress=await encrypter.decrypt(user.wallet_address.toString())
             await transactionsInstance.methods.createNewProduct(productName, requiredProductAmount, requiredRawMaterialAmount*requiredProductAmount, carbfootValue).send({
-                from: user.wallet_address, 
+                from: decryptedAddress, 
                 gasPrice: web3.utils.toHex(0), 
                 gasLimit: web3.utils.toHex(5000000)
             })

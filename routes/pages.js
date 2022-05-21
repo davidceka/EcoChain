@@ -3,6 +3,7 @@ const { raw } = require('mysql');
 const router=express.Router()
 const blockchainController=require('../controllers/blockchainController')
 const session=require('../controllers/session')
+const encrypter=require('../controllers/crypt')
 
 router.get('/',(req,res)=>{
     res.render('home',{
@@ -150,6 +151,7 @@ router.get('/listproducts',(req,res)=>{
 router.get('/profilo',(req,res)=>{
     if(req.session.isLogged){
         user=session.getProfile(req)
+        decryptedAddress= encrypter.decrypt(user.wallet_address.toString());
         res.render('profilo',{
             layout:'index',
             isLogged:req.session.isLogged,
@@ -157,7 +159,7 @@ router.get('/profilo',(req,res)=>{
             name:user.name,
             surname:user.surname,
             ruolo:user.ruolo,
-            wallet_address:user.wallet_address,
+            wallet_address: decryptedAddress,
             isWorker:req.session.isWorker,
             isProducer:req.session.isProducer,
             isCustomer:req.session.isCustomer

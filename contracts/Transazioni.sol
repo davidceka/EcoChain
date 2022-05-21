@@ -110,8 +110,6 @@ contract Transazione {
                         percentuale=remainingAmount*100/raw_materials[msg.sender][i].amount;
                         carbonFootprintDaMateriaPrima+=impattoLotto*percentuale/100;
                         raw_materials[msg.sender][i].percentualeRimanente-=percentuale;
-                        app[cont]=i;
-                        cont++;
                         raw_materials[msg.sender][i].amount-=remainingAmount;
                         remainingAmount=0;                        
                             if(raw_materials[msg.sender][i].amount==0){
@@ -121,13 +119,14 @@ contract Transazione {
                     }
                     else{
                         carbonFootprintDaMateriaPrima+=impattoLotto*raw_materials[msg.sender][i].percentualeRimanente/100;
-                        app[cont]=i;
-                        cont++;
+                        
                         remainingAmount-=raw_materials[msg.sender][i].amount;
                         raw_materials[msg.sender][i].amount=0;
                         raw_materials[msg.sender][i].not_available=true;
                         emit lottoTerminato(i,raw_materials[msg.sender][i].name);
                     }
+                    app[cont]=i;
+                    cont++;
                 }
             }
             else{

@@ -5,6 +5,7 @@ const session = require("./session");
 const { NULL } = require("mysql/lib/protocol/constants/types");
 const logController=require('./logController');
 const { query } = require("express");
+const encrypter=require('./crypt')
 
 logger=logController.actionLogger;
 
@@ -63,13 +64,13 @@ exports.login = (req, res) => {
               session.setLogged(req, true);
               user={
                 email:results[0].email,
-                wallet_address:results[0].wallet_address,
+                wallet_address: results[0].wallet_address,
                 name:results[0].name,
                 surname:results[0].surname,
                 role:results[0].role,
                 type:results[0].type
               }
-              await blockchainController.unlockAccount(user.wallet_address,"")
+              await blockchainController.unlockAccount(await encrypter.decrypt(user.wallet_address.toString()),"")
               session.setProfile(req,user)
               session.setRole(req,user.role)
               console.log(session.getProfile(req))
@@ -131,10 +132,13 @@ exports.register = async (req, res) => {
         if (results.length == 0) {
           let hashed = await bcrypt.hash(password, 10);
           var newAccount = await blockchainController.newAccount();
+          var encryptedAddress = await encrypter.encrypt(newAccount)
+          console.log("indirizzo originale:"+newAccount)
+          console.log("prova crittazione:"+encryptedAddress.toString())
           if(role=="Customer"){
           executeQuery(
             "INSERT INTO users (email, password, wallet_address, name, surname, role) VALUES (?, ?, ?, ?, ?, ?)",
-            [email, hashed, newAccount, name, surname, role, type],
+            [email, hashed, encryptedAddress.toString(), name, surname, role, type],
             function (error, results) {
               if (error) throw error;
               req.session.success = true;
@@ -146,12 +150,13 @@ exports.register = async (req, res) => {
           else {
             executeQuery(
               "INSERT INTO users (email, password, wallet_address, name, surname, role, type) VALUES (?, ?, ?, ?, ?, ?, ?)",
-              [email, hashed, newAccount, name, surname, role, type],
+              [email, hashed, encryptedAddress.toString(), name, surname, role, type],
               function (error, results) {
                 if (error) throw error;
                 req.session.success = true;
                 session.setSuccess(req, "Account aggiunto con Successo!");
                 logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
+                console.log("prova decrittazione"+encrypter.decrypt(encryptedAddress))
                 res.redirect("/login");
               }
             )            

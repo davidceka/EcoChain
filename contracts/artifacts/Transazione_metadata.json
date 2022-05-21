@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.10+commit.fc410830"
+		"version": "0.8.14+commit.80d49f37"
 	},
 	"language": "Solidity",
 	"output": {
@@ -596,11 +596,11 @@
 			]
 		},
 		"contracts/Transazioni.sol": {
-			"keccak256": "0xa5a3b266a9a9618e13b85c98b41f58d854be1a8c0124620a97203ed25cbf22cf",
+			"keccak256": "0x8c18a2ba9a153482d377f78f4835d3d6dd36c47540771e576f4e9e290fd0bc45",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://945b0c8c4b141f21931e93d4dcb8ddf805b3ed12e3b02218c9723174037e2432",
-				"dweb:/ipfs/QmRXq7SD592F8Eq2sgZBMBEH3nMLmuWZfHFHjCGbVEuGLD"
+				"bzz-raw://e510db51ab0ca95e39ab3e7d9e6cdfaaef55f032c1794334781cfd869131e710",
+				"dweb:/ipfs/QmaQTX5wrbfQt1eHH45uoipfLuod1MnTuA6CQ6Kog1LpcN"
 			]
 		}
 	},
