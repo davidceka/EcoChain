@@ -99,12 +99,30 @@ exports.getListOwnProducts= async (req) => {
         if(!product){
         }else{
             var carbonfootprint=await this.getCarbonFootprint(product.token)
+            var usedRawMaterials = []
+            var j = 0
+            /*var flag=true
+            while(flag){
+                if((product.usedRawMaterials[j]==0 && j!=0) || j==20){
+                    flag = false
+                }else{                
+                    usedRawMaterials.push(product.usedRawMaterials[j])
+                    j++
+                }
+            }*/
+            for(var j=0;j<20;j++){
+                if(product.usedRawMaterials[j]==0 && j!=0)
+                    break;
+                else
+                    usedRawMaterials.push(product.usedRawMaterials[j])
+            }
             if(product.amount>0 && product.name!=""){
                 products.push({
                     "idLotto":product.id_product, 
                     "name":product.name,
                     "amount":product.amount,
-                    "carbonfootprint":carbonfootprint
+                    "carbonfootprint":carbonfootprint,
+                    "usedRawMaterials":usedRawMaterials
                 })
             } 
         }
