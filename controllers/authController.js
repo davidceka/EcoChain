@@ -39,8 +39,22 @@ async function executeQuery(query, params, callback) {
 }
 
 exports.login = (req, res) => {
+  /*
+  var regularExpression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$/;
+
+  if(!regularExpression.test(password))
+  {
+    return res.render("register", {
+      message: "La password non rispetta i requisiti di sicurezza minimi!"
+    })
+  }; */
+  
+  var time = Date.now();
   var user;
-  const { email, password } = req.body;
+  const { email, password,tentativo } = req.body;
+
+  numTentativo=Number(tentativo);
+
   if ((password =="") || (email=="")){
     session.setError(req, "Incorrect fields entered");
     res.redirect("/login");
@@ -52,9 +66,18 @@ exports.login = (req, res) => {
           async function (error, results) {
           if (results.length == 0){
             session.setError(req,"Wrong credentials!")
-              logger.error("Enter incorrect credentials for the user:"+email)
+              logger.error(req,"Enter incorrect credentials for the user:"+email)
               res.redirect("/login");
+              return
           }else{
+            if(results[0].locked_date>time - 600 * 1000)
+            {
+              console.log("prova")
+              session.setError(req,"Account Temporaneamente bloccato, puoi riprovare tra:"+String(-Math.trunc(((time-600*1000)-results[0].locked_date)/1000/60))+" minuti.")
+              console.log(req.session.error)
+              res.redirect("/login")
+              return
+            }
             if (error) throw error;
             let comparison = await bcrypt.compare(
               password,
@@ -80,7 +103,34 @@ exports.login = (req, res) => {
             } else {
               session.setError(req,"Wrong credentials!")
               logger.error("Enter incorrect credentials for the user:"+email)
-              res.redirect("/login");
+              console.log(results[0].login_attempts)
+              if(results[0].login_attempts>4)
+              {
+                console.log(time)
+                executeQuery(
+                  "UPDATE users SET locked_date = ?,login_attempts = 0 WHERE email = ?",
+                   [time,email],
+                   function (error, results, fields) {
+                    if (error) {
+                      logger.error(error.message);
+                    }
+                  }
+                )
+                session.setError(req,"Account Bloccato per 10 minuti.")
+                res.redirect("/login")
+              }
+              else{
+                executeQuery(
+                  "UPDATE users SET login_attempts = ? WHERE email = ?",
+                  [results[0].login_attempts+1,email],
+                  function (error, results, fields) {
+                    if (error) {
+                      logger.error(error.message);
+                    }
+                  }
+                )
+                res.redirect("/login");
+              }
             }
           }
         }
