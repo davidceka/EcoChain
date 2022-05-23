@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ./network/5-nodes-raft-tessera-bash;
+cd ./network/3-nodes-istanbul-tessera-bash;
 echo "### Fermo la blockchain: EcoChain... ###"
 bash stop.sh;
 cd ../../
