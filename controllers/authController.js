@@ -56,7 +56,7 @@ exports.login = (req, res) => {
           [email],
           async function (error, results) {
           if (results.length == 0){
-            session.setError(req,"Wrong credentials!")
+            session.setError(req,"Credenziali Errate!")
               logger.error(req,"Enter incorrect credentials for the user:"+email)
               res.redirect("/login");
               return
@@ -101,7 +101,7 @@ exports.login = (req, res) => {
               )
               res.redirect("/");
             } else {
-              session.setError(req,"Wrong credentials!")
+              session.setError(req,"Credenziali Errate!")
               logger.error("Enter incorrect credentials for the user:"+email)
               console.log(results[0].login_attempts)
               if(results[0].login_attempts>4)
