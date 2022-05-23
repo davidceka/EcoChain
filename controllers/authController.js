@@ -40,14 +40,6 @@ async function executeQuery(query, params, callback) {
 
 exports.login = (req, res) => {
   
-  var regularExpression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$/;
-
-  if(!regularExpression.test(password))
-  {
-    session.setError(req,"La password non rispetta i requisiti di sicurezza minimi!")
-    return res.redirect("/register")
-  };
-  
   var time = Date.now();
   var user;
   const { email, password,tentativo } = req.body;
@@ -162,7 +154,8 @@ exports.logout = (req, res) => {
 };
 
 exports.register = async (req, res) => {
-  var query;
+  
+    
   const {
     name,
     surname,
@@ -172,6 +165,13 @@ exports.register = async (req, res) => {
     role,
     type
   } = req.body;
+  var regularExpression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$/;
+
+  if(!regularExpression.test(password))
+  {
+    session.setError(req,"La password non rispetta i requisiti di sicurezza minimi!")
+    return res.redirect("/register")
+  };
   if (!validPassword(password, confpassword) || (password =="")){
     session.setError(req, "Password vuota o non combaciante.");
     res.redirect("/register");
