@@ -39,7 +39,7 @@ async function executeQuery(query, params, callback) {
 }
 
 exports.login = (req, res) => {
-  /*
+  
   var regularExpression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$/;
 
   if(!regularExpression.test(password))
@@ -47,7 +47,7 @@ exports.login = (req, res) => {
     return res.render("register", {
       message: "La password non rispetta i requisiti di sicurezza minimi!"
     })
-  }; */
+  };
   
   var time = Date.now();
   var user;
