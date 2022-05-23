@@ -64,14 +64,6 @@ CREATE TABLE `users` (
   `locked_date` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id_user`, `email`, `password`, `wallet_address`, `name`, `surname`, `role`, `type`, `login_attempts`, `locked_date`) VALUES
-(54, 'produttore1@produttore.it', '$2b$10$9VLhbEkkHQPhMZn6uOF6J.hq5ZvHumwb4HKuSnTXSBsl.F8vrUKkC', 'U2FsdGVkX1/cV5R0jV0ZaBP6h5NtuN+osvT4aDF4CsWg5hnoU+cWs4n689ACScBFKDTp3vx3xyI29Q==', 'Produttore1', 'Produttore1', 'Producer', 'Carne', 2, 1653336054888),
-(55, 'lavoratore1@lavoratore.it', '$2b$10$ukAG2EuMd0DN.cn5q.3/LOYlqJ7wlWssHuHWEwa9OidPUgldsL9nS', 'U2FsdGVkX1+yBVPTUf403hD5/kW3GCG0MGgSNRBVW3kc4/ua+FN94586lI0HP1T360uu62vz3ugidw==', 'Lavoratore1', 'Lavoratore1', 'Worker', 'Carne', 0, 1653336300624),
-(56, 'cliente1@cliente.it', '$2b$10$0hu4TtFZmpFXXyNW3cr7mOfXn1JU05cOqLKOjnY3up5N1SfuGsiRK', 'U2FsdGVkX1/s4sFxBtNrlkza3Wdy1HAtwj4JAm6mTLCj0TwOhnULbotpHELHcJlV4cCm2rEg8QcfVQ==', 'Cliente1', 'Cliente1', 'Customer', NULL, 0, 0);
 
 --
 -- Indexes for dumped tables
