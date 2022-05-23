@@ -99,6 +99,15 @@ exports.login = (req, res) => {
               console.log(session.getProfile(req))
               session.setSuccess(req, "Login successful!");
               logger.action(user.wallet_address+" logged in successfully.")
+              executeQuery(
+                "UPDATE users SET locked_date = 0,login_attempts = 0 WHERE email = ?",
+                 [time,email],
+                 function (error, results, fields) {
+                  if (error) {
+                    logger.error(error.message);
+                  }
+                }
+              )
               res.redirect("/");
             } else {
               session.setError(req,"Wrong credentials!")
