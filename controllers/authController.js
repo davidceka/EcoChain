@@ -44,9 +44,8 @@ exports.login = (req, res) => {
 
   if(!regularExpression.test(password))
   {
-    return res.render("/register", {
-      message: "La password non rispetta i requisiti di sicurezza minimi!"
-    })
+    session.setError(req,"La password non rispetta i requisiti di sicurezza minimi!")
+    return res.redirect("/register")
   };
   
   var time = Date.now();
