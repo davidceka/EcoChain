@@ -44,7 +44,7 @@ exports.login = (req, res) => {
 
   if(!regularExpression.test(password))
   {
-    return res.render("register", {
+    return res.render("/register", {
       message: "La password non rispetta i requisiti di sicurezza minimi!"
     })
   };
