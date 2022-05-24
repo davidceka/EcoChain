@@ -99,7 +99,7 @@ contract Transazione {
         emit quantitaSufficiente(true);
         require(availableAmount>=_requiredRawMaterials,"Quantita di materia prima non sufficiente.");
         //giustificare il for
-
+        uint256 prova;
 
         for(i=0;i<rawMaterialsId;i++){
             if(remainingAmount>0){
@@ -108,8 +108,9 @@ contract Transazione {
                 if((!raw_materials[msg.sender][i].not_available)&&raw_materials[msg.sender][i].amount>0){
                     if(raw_materials[msg.sender][i].amount>remainingAmount){
 
-                        percentuale=remainingAmount*100/raw_materials[msg.sender][i].amount;
-                        carbonFootprintDaMateriaPrima+=impattoLotto*percentuale/100;
+                        percentuale=(remainingAmount*raw_materials[msg.sender][i].percentualeRimanente)/raw_materials[msg.sender][i].amount;
+                        carbonFootprintDaMateriaPrima+=(impattoLotto*percentuale)/100;
+                        prova=raw_materials[msg.sender][i].percentualeRimanente;
                         raw_materials[msg.sender][i].percentualeRimanente-=percentuale;
 
                         raw_materials[msg.sender][i].amount-=remainingAmount;
