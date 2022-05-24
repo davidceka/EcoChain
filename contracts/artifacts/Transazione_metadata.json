@@ -596,11 +596,11 @@
 			]
 		},
 		"contracts/Transazioni.sol": {
-			"keccak256": "0x8c18a2ba9a153482d377f78f4835d3d6dd36c47540771e576f4e9e290fd0bc45",
+			"keccak256": "0xeb1019dcb704b072a9fa5030a2045022db40cb1453387d0d29b9ed30f18d850c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e510db51ab0ca95e39ab3e7d9e6cdfaaef55f032c1794334781cfd869131e710",
-				"dweb:/ipfs/QmaQTX5wrbfQt1eHH45uoipfLuod1MnTuA6CQ6Kog1LpcN"
+				"bzz-raw://14af8255dc2f376a98fa383babd6f26c2cdcaa5e7fbcf903ec081b920ee08c15",
+				"dweb:/ipfs/QmTUuMj92NUQB5ajRLa1LGsjf5AHfE3rowUwF47WWNkrhh"
 			]
 		}
 	},

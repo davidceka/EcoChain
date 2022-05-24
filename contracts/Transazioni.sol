@@ -105,11 +105,13 @@ contract Transazione {
             if(remainingAmount>0){
                 uint256 impattoLotto=tokenContract.getCarbonFootprint(raw_materials[msg.sender][i].token);
                 
-                if(!raw_materials[msg.sender][i].not_available){
+                if((!raw_materials[msg.sender][i].not_available)&&raw_materials[msg.sender][i].amount>0){
                     if(raw_materials[msg.sender][i].amount>remainingAmount){
+
                         percentuale=remainingAmount*100/raw_materials[msg.sender][i].amount;
                         carbonFootprintDaMateriaPrima+=impattoLotto*percentuale/100;
                         raw_materials[msg.sender][i].percentualeRimanente-=percentuale;
+
                         raw_materials[msg.sender][i].amount-=remainingAmount;
                         remainingAmount=0;                        
                             if(raw_materials[msg.sender][i].amount==0){
