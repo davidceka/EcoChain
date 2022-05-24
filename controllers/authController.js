@@ -19,6 +19,10 @@ function defineConn() {
   return conn;
 }
 
+
+var conn=defineConn();
+
+
 async function hashPassword(password) {
   let hashed = await bcrypt.hash(password, 10);
   return hashed;
@@ -34,7 +38,6 @@ function validPassword(pass1, pass2) {
 }
 
 async function executeQuery(query, params, callback) {
-  conn = defineConn();
   conn.query(query, params, callback);
 }
 
