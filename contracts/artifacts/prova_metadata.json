@@ -1,52 +1,20 @@
 {
 	"compiler": {
-		"version": "0.8.11+commit.d7f03943"
+		"version": "0.8.13+commit.abaa5c0e"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "aggiungi",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "elimina",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get",
+				"name": "getRis",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					}
-				],
-				"name": "trasferisci",
-				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -64,7 +32,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/prova.sol": "prova"
+			"contracts/prova.sol": "Prova"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -79,11 +47,11 @@
 	},
 	"sources": {
 		"contracts/prova.sol": {
-			"keccak256": "0x557ad1abb01607fb16ed211ba2d01fa284bc7233129004aadbe393cfcc97e73f",
+			"keccak256": "0x9cf9d7252a46d5479abab8ebffdd304a7176f082faa012043b3b4efb9aaee4b2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://68243929b0a5e583012ffdc988e4a753d2c573aa11653f14ca9d295add2250bc",
-				"dweb:/ipfs/QmcL16zSRPVjQXbemmDyfZ1i4yXZCN99kEDS1nHaTKFFgN"
+				"bzz-raw://aacbe37e0b3b172c68dabe96f76147bf020592c20b0b5e846502ab0895227ec7",
+				"dweb:/ipfs/QmZtMLRvH3jydS5duF2LmZGZSfGD7StfsiYKHR2Hz2zrDZ"
 			]
 		}
 	},
