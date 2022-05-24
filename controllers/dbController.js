@@ -5,18 +5,19 @@ const blockchainController = require("./blockchainController");
 const session = require("./session");
 
 function defineConn() {
-var conn = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
-return conn;
+  var conn = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  });
+  return conn;
 }
 
+var conn = defineConn();
+
 async function executeQuery(query, params, callback) {
-conn = defineConn();
-conn.query(query, params, callback);
+  conn.query(query, params, callback);
 }
 
 exports.getAllProducers = async (req, res) => {
