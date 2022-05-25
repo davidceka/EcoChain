@@ -34,6 +34,7 @@
                                                       <h6 class="mb-0">Nome: {{this.name}}</h6>
                                                       <h6 class="mb-0">Quantità: {{this.amount}}</h6>
                                                       <h6 class="mb-0">Carbon Footprint: {{this.carbonfootprint}}</h6>
+                                                      <h6 class="mb-0">ID Lotti Materie Prime Utilizzate: {{this.usedRawMaterials}}</h6>
                                                       <div class="col-sm-9 text-secondary">
                                                           <button type="submit" class="btn btn-info " target="__blank">Compra</a>
                                                       </div>
@@ -83,6 +84,12 @@
                               <div class="col-sm-9 text-secondary">
                               {{this.carbonfootprint}}
                               </div>
+                              <div class="col-sm-3">
+                              <h6 class="mb-0">ID Lotti Materie Prime Utilizzate</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                            {{this.usedRawMaterials}}
+                            </div>
                           </div>
                           </li>
                           <hr>

@@ -30,7 +30,7 @@
                         <label for="amount">Quantità:</label><br>
                         <input type="number" id="amount" name="amount" min="0" max="100"><br>
                         <label for="carbfoot">Carboon Footprint:</label><br>
-                        <input type="number" id="carbfoot" name="carbfoot" min="0" max="100"><br>
+                        <input type="number" id="carbfoot" name="carbfoot" min="0" max="1000"><br>
                         <div class="text-center text-lg-start mt-4 pt-2">
                             <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Crea</button>
                         </div>
@@ -65,7 +65,7 @@
                               {{this.amount}}
                             </div>
                             <div class="col-sm-3">
-                              <h6 class="mb-0">Lotti Materie Prime Utilizzate</h6>
+                              <h6 class="mb-0">ID Lotti Materie Prime Utilizzate</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                               {{this.usedRawMaterials}}

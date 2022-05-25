@@ -184,6 +184,16 @@ exports.register = async (req, res) => {
     session.setError(req, "Il cliente non necessità di una categoria. Lascia il campo 'Tipologia' vuoto");
     res.redirect("/register");
   }
+  else if(role !="Customer" && type == "")
+  {
+    session.setError(req, "É necessario specificare una categoria.");
+    res.redirect("/register");
+  }
+  else if(name=="" || surname == "" || email == "")
+  {
+    session.setError(req, "Inserire tutte le informazioni necessarie.");
+    res.redirect("/register");
+  }
   else{
     executeQuery(
       "SELECT name FROM users WHERE email = ?",

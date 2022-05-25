@@ -170,13 +170,22 @@ exports.getListProductsByOwner  = async (req, res) => {
         if(!product){
         }else{ 
             var carbonfootprint=await this.getCarbonFootprint(product.token)
+            var usedRawMaterials = []
+            var j = 0
+            for(var j=0;j<20;j++){
+                if(product.usedRawMaterials[j]==0 && j!=0)
+                    break;
+                else
+                    usedRawMaterials.push(product.usedRawMaterials[j])
+            }
             if(product.amount>0 && product.name!=""){
                 products.push({
                     "idLotto":product.id_product, 
                     "name":product.name,
                     "amount":product.amount,
                     "owner":selectWA,
-                    "carbonfootprint":carbonfootprint
+                    "carbonfootprint":carbonfootprint,
+                    "usedRawMaterials":usedRawMaterials
                 }) 
             } 
         } 
@@ -247,7 +256,7 @@ exports.createNewRawMaterial=async (req, res)=>{
     var amountValue = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
     var name=session.getProfile(req).type;
-    if ((amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+    if ((amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<1000)){ 
         try{
             var user = session.getProfile(req)
             var decryptedAddress=await encrypter.decrypt(user.wallet_address.toString())
@@ -281,7 +290,7 @@ exports.createNewProduct= async (req, res)=>{
     var requiredRawMaterialAmount=values[0];
     var requiredProductAmount = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
-    if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+    if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<1000)){ 
         try{
             var user = session.getProfile(req)
             var decryptedAddress=await encrypter.decrypt(user.wallet_address.toString())
