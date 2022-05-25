@@ -97,10 +97,10 @@ actionLogger.add(
 
   const blockChainLevels = {
     levels: {
-      error: 0,
-      blockchain: 1,
-      tokenLog: 2,
-      transactionLog: 3,
+      error: 3,
+      blockchain: 0,
+      tokenLog: 1,
+      transactionLog: 2,
     },
     colors: {
       error: "red",
