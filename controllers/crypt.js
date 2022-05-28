@@ -5,7 +5,6 @@ const secret=process.env.SECRET;
 exports.encrypt=(toEncryptString)=>{
 
     try{
-    console.log("segreto passato:"+secret)
     var hash=cryptojs.Rabbit.encrypt(toEncryptString,secret)
     return hash
     }

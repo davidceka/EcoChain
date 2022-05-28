@@ -81,9 +81,7 @@ exports.login = (req, res) => {
           }else{
             if(results[0].locked_date>time - 600 * 1000)
             {
-              console.log("prova")
               session.setError(req,"Account Temporaneamente bloccato, puoi riprovare tra:"+String(-Math.trunc(((time-600*1000)-results[0].locked_date)/1000/60))+" minuti.")
-              console.log(req.session.error)
               res.redirect("/login")
               return
             }
@@ -105,7 +103,7 @@ exports.login = (req, res) => {
               await blockchainController.unlockAccount(await encrypter.decrypt(user.wallet_address.toString()),"")
               session.setProfile(req,user)
               session.setRole(req,user.role)
-              console.log(session.getProfile(req))
+              /*console.log(session.getProfile(req))*/
               session.setSuccess(req, "Login successful!");
               logger.action(user.wallet_address+" logged in successfully.")
               executeQuery(
@@ -124,7 +122,6 @@ exports.login = (req, res) => {
               console.log(results[0].login_attempts)
               if(results[0].login_attempts>4)
               {
-                console.log(time)
                 executeQuery(
                   "UPDATE users SET locked_date = ?,login_attempts = 0 WHERE email = ?",
                    [time,email],
@@ -232,8 +229,8 @@ exports.register = async (req, res) => {
           let hashed = await bcrypt.hash(password, 10);
           var newAccount = await blockchainController.newAccount();
           var encryptedAddress = await encrypter.encrypt(newAccount)
-          console.log("indirizzo originale:"+newAccount)
-          console.log("prova crittazione:"+encryptedAddress.toString())
+          /*console.log("indirizzo originale:"+newAccount)
+          console.log("prova crittazione:"+encryptedAddress.toString())*/
           if(role=="Customer"){
           executeQuery(
             "INSERT INTO users (email, password, wallet_address, name, surname, role) VALUES (?, ?, ?, ?, ?, ?)",
@@ -255,7 +252,7 @@ exports.register = async (req, res) => {
                 req.session.success = true;
                 session.setSuccess(req, "Account aggiunto con Successo!");
                 logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
-                console.log("prova decrittazione"+encrypter.decrypt(encryptedAddress))
+                /*console.log("prova decrittazione"+encrypter.decrypt(encryptedAddress))*/
                 res.redirect("/login");
               }
             )            
