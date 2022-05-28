@@ -9,6 +9,13 @@ const encrypter=require('./crypt')
 
 logger=logController.actionLogger;
 
+
+/*
+*
+*Setup della connessione al DB
+*
+*
+*/
 function defineConn() {
   var conn = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -41,6 +48,14 @@ async function executeQuery(query, params, callback) {
   conn.query(query, params, callback);
 }
 
+
+/*
+*   Funzione di login
+*   Effettua check dei campi, e cerca eventuali riscontri di credenziali nel DB
+*   In caso si fallisca il login più di 5 volte, il sistema darà un timeout all'account di 10 minuti
+*
+*
+*/
 exports.login = (req, res) => {
   
   var time = Date.now();
@@ -145,6 +160,11 @@ exports.login = (req, res) => {
   }
 };
 
+/*
+*
+* Funzione di logout, distrugge la sessione
+*
+*/
 
 exports.logout = (req, res) => {
   if (req.session.isLogged == true) {
@@ -155,7 +175,15 @@ exports.logout = (req, res) => {
     res.redirect("/");
   }
 };
-
+/*
+*
+*
+* Funzione di registrazione
+* Effettua un controllo dei dati inseriti ed, eventualmente, genera un errore
+*
+*
+*
+*/
 exports.register = async (req, res) => {
   
     

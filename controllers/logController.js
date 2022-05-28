@@ -1,46 +1,6 @@
 const winston=require('winston')
 
-const errorLevels={
-    levels:{
-        error:0,
-},
-    colors:{
-        error:'red',
-    }
-}
 
-winston.addColors(errorLevels.colors)
-
-const errorLogger=winston.createLogger({
-    level:'error',
-    levels:errorLevels.levels,
-    format:winston.format.combine(
-        winston.format.timestamp({
-            format:'DD-MM-YYYY HH:mm:ss'
-        }),
-        winston.format.align(),
-        winston.format.printf((info)=>{
-            return `[${info.timestamp}] [${info.level}]: ${info.message}`;
-        })
-    ),
-    transports:[
-        new winston.transports.File({
-            filename:'logs/offchain/error.log',
-            level:'error'
-        }),
-        new winston.transports.File({
-            filename:'logs/offchain/complete.log',
-        })
-    ],
-    exitOnError: false,
-})
-errorLogger.add(
-    new winston.transports.File({
-      filename: "logs/offchain/json.log",
-      level: "error",
-      format: winston.format.json(),
-    })
-  );
 
 const actionLevels={
     levels:{
@@ -88,11 +48,11 @@ actionLogger.add(
 
 
 
-  // BLOCKCHAIN LOGGER
-  // BLOCKCHAIN LOGGER
-  // BLOCKCHAIN LOGGER
-  // BLOCKCHAIN LOGGER
-  // BLOCKCHAIN LOGGER
+/*
+*
+* Blockchain Logger
+*
+*/
 
 
   const blockChainLevels = {
@@ -154,7 +114,6 @@ actionLogger.add(
 
 
   module.exports={
-      errorLogger:errorLogger,
       actionLogger:actionLogger,
       blockchainLogger:blockchainLogger
   }
