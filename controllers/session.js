@@ -1,3 +1,9 @@
+/*
+*   Lista di getter e setter per le variabili di sessione
+*
+*
+*/
+
 function getProfile(req){
     return req.session.user;
 }

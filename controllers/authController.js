@@ -9,6 +9,13 @@ const encrypter=require('./crypt')
 
 logger=logController.actionLogger;
 
+
+/*
+*
+*Setup della connessione al DB
+*
+*
+*/
 function defineConn() {
   var conn = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -41,6 +48,14 @@ async function executeQuery(query, params, callback) {
   conn.query(query, params, callback);
 }
 
+
+/*
+*   Funzione di login
+*   Effettua check dei campi, e cerca eventuali riscontri di credenziali nel DB
+*   In caso si fallisca il login più di 5 volte, il sistema darà un timeout all'account di 10 minuti
+*
+*
+*/
 exports.login = (req, res) => {
   
   var time = Date.now();
@@ -66,9 +81,7 @@ exports.login = (req, res) => {
           }else{
             if(results[0].locked_date>time - 600 * 1000)
             {
-              console.log("prova")
               session.setError(req,"Account Temporaneamente bloccato, puoi riprovare tra:"+String(-Math.trunc(((time-600*1000)-results[0].locked_date)/1000/60))+" minuti.")
-              console.log(req.session.error)
               res.redirect("/login")
               return
             }
@@ -90,7 +103,7 @@ exports.login = (req, res) => {
               await blockchainController.unlockAccount(await encrypter.decrypt(user.wallet_address.toString()),"")
               session.setProfile(req,user)
               session.setRole(req,user.role)
-              console.log(session.getProfile(req))
+              /*console.log(session.getProfile(req))*/
               session.setSuccess(req, "Login successful!");
               logger.action(user.wallet_address+" logged in successfully.")
               executeQuery(
@@ -109,7 +122,6 @@ exports.login = (req, res) => {
               console.log(results[0].login_attempts)
               if(results[0].login_attempts>4)
               {
-                console.log(time)
                 executeQuery(
                   "UPDATE users SET locked_date = ?,login_attempts = 0 WHERE email = ?",
                    [time,email],
@@ -145,6 +157,11 @@ exports.login = (req, res) => {
   }
 };
 
+/*
+*
+* Funzione di logout, distrugge la sessione
+*
+*/
 
 exports.logout = (req, res) => {
   if (req.session.isLogged == true) {
@@ -155,7 +172,15 @@ exports.logout = (req, res) => {
     res.redirect("/");
   }
 };
-
+/*
+*
+*
+* Funzione di registrazione
+* Effettua un controllo dei dati inseriti ed, eventualmente, genera un errore
+*
+*
+*
+*/
 exports.register = async (req, res) => {
   
     
@@ -184,6 +209,16 @@ exports.register = async (req, res) => {
     session.setError(req, "Il cliente non necessità di una categoria. Lascia il campo 'Tipologia' vuoto");
     res.redirect("/register");
   }
+  else if(role !="Customer" && type == "")
+  {
+    session.setError(req, "É necessario specificare una categoria.");
+    res.redirect("/register");
+  }
+  else if(name=="" || surname == "" || email == "")
+  {
+    session.setError(req, "Inserire tutte le informazioni necessarie.");
+    res.redirect("/register");
+  }
   else{
     executeQuery(
       "SELECT name FROM users WHERE email = ?",
@@ -194,8 +229,8 @@ exports.register = async (req, res) => {
           let hashed = await bcrypt.hash(password, 10);
           var newAccount = await blockchainController.newAccount();
           var encryptedAddress = await encrypter.encrypt(newAccount)
-          console.log("indirizzo originale:"+newAccount)
-          console.log("prova crittazione:"+encryptedAddress.toString())
+          /*console.log("indirizzo originale:"+newAccount)
+          console.log("prova crittazione:"+encryptedAddress.toString())*/
           if(role=="Customer"){
           executeQuery(
             "INSERT INTO users (email, password, wallet_address, name, surname, role) VALUES (?, ?, ?, ?, ?, ?)",
@@ -217,7 +252,7 @@ exports.register = async (req, res) => {
                 req.session.success = true;
                 session.setSuccess(req, "Account aggiunto con Successo!");
                 logger.action(newAccount+" Successfully registered. "+"Account type:"+role+" | Type of products:"+type)
-                console.log("prova decrittazione"+encrypter.decrypt(encryptedAddress))
+                /*console.log("prova decrittazione"+encrypter.decrypt(encryptedAddress))*/
                 res.redirect("/login");
               }
             )            

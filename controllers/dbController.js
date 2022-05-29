@@ -68,7 +68,7 @@ async function (error, results) {
 
 exports.getAllProductsByType = async (req, res) => {
 var type = session.getProfile(req).type
-console.log(type)
+/*console.log(type)*/
 executeQuery(
 "SELECT product_name, required_amount FROM products_type WHERE type = ?",
 [type],

@@ -170,13 +170,22 @@ exports.getListProductsByOwner  = async (req, res) => {
         if(!product){
         }else{ 
             var carbonfootprint=await this.getCarbonFootprint(product.token)
+            var usedRawMaterials = []
+            var j = 0
+            for(var j=0;j<20;j++){
+                if(product.usedRawMaterials[j]==0 && j!=0)
+                    break;
+                else
+                    usedRawMaterials.push(product.usedRawMaterials[j])
+            }
             if(product.amount>0 && product.name!=""){
                 products.push({
                     "idLotto":product.id_product, 
                     "name":product.name,
                     "amount":product.amount,
                     "owner":selectWA,
-                    "carbonfootprint":carbonfootprint
+                    "carbonfootprint":carbonfootprint,
+                    "usedRawMaterials":usedRawMaterials
                 }) 
             } 
         } 
@@ -185,10 +194,16 @@ exports.getListProductsByOwner  = async (req, res) => {
     res.redirect("/listproducts")
 }
 
+/*
+*   Acquisto di una nuova materia prima
+*   Si richiama la funzione nel contratto relativa all'acquisto della materia prima
+*
+*
+*/
+
 exports.buyRawMaterial=async (req,res)=>{
     var user_wallet=session.getProfile(req).wallet_address
     var decryptedBuyerAddress=await encrypter.decrypt(user_wallet.toString())
-    console.log("CIAO "+decryptedBuyerAddress)
     const{
         _walletProduttore,
         _lottoScelto,
@@ -212,10 +227,17 @@ exports.buyRawMaterial=async (req,res)=>{
     }
 }
 
+
+/*
+*   Acquisto di un nuovo prodotto
+*   Si richiama la funzione nel contratto relativa all'acquisto di un nuovo prodotto
+*
+*
+*/
+
 exports.buyProduct=async (req,res)=>{
     var user_wallet=session.getProfile(req).wallet_address
     var decryptedBuyerAddress=await encrypter.decrypt(user_wallet.toString())
-    console.log("CIAO "+decryptedBuyerAddress)
     const{
         _walletProduttore,
         _lottoScelto,
@@ -239,6 +261,11 @@ exports.buyProduct=async (req,res)=>{
     }
 }
 
+/*
+*   Creazione di una nuova materia prima
+*   Si richiama la funzione nel contratto relativa alla creazione della materia prima
+*
+*/
 exports.createNewRawMaterial=async (req, res)=>{
     const {
         amount,
@@ -247,7 +274,7 @@ exports.createNewRawMaterial=async (req, res)=>{
     var amountValue = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
     var name=session.getProfile(req).type;
-    if ((amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+    if ((amountValue>0 && amountValue<100)&&(carbfootValue>0 && carbfootValue<1000)){ 
         try{
             var user = session.getProfile(req)
             var decryptedAddress=await encrypter.decrypt(user.wallet_address.toString())
@@ -270,6 +297,13 @@ exports.createNewRawMaterial=async (req, res)=>{
     res.redirect("/newrawmaterial");
 }
 
+/*
+*   Creazione di un nuovo prodotto
+*   Si richiama la funzione nel contratto relativa alla creazione del nuovo lotto di prodotti
+*   Si passano il numero di prodotti richiesti, ed il numero di materie prime necessarie per la creazione dei suddetti prodotti
+*
+*/
+
 exports.createNewProduct= async (req, res)=>{
     const {
         name,
@@ -281,7 +315,7 @@ exports.createNewProduct= async (req, res)=>{
     var requiredRawMaterialAmount=values[0];
     var requiredProductAmount = parseInt(amount)
     var carbfootValue = parseInt(carbfoot)
-    if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<100)){ 
+    if ((typeof values[1] == 'string' && values[1] != "")&&(requiredProductAmount>0 && requiredProductAmount<100)&&(carbfootValue>0 && carbfootValue<1000)){ 
         try{
             var user = session.getProfile(req)
             var decryptedAddress=await encrypter.decrypt(user.wallet_address.toString())
@@ -303,7 +337,10 @@ exports.createNewProduct= async (req, res)=>{
     res.redirect("/newproduct");
     
 }
-
+/*
+*   Funzione per la ricerca di un lotto di materie prime a partire dal lottoID e dal wallet
+*
+*/
 exports.getRawMaterial = async (wallet, idLotto)=>{
     try{
         var response = await transactionsInstance.methods.getRawMaterialByAddress(wallet, idLotto).call()
@@ -314,6 +351,11 @@ exports.getRawMaterial = async (wallet, idLotto)=>{
     } 
 } 
 
+
+/*
+*   Funzione per la ricerca di un carbon footprint value a partire dal tokenID
+*
+*/
 exports.getCarbonFootprint=async(token_id)=>{
     try{
         var response=await carbonFootprintInstance.methods.getCarbonFootprint(token_id).call()
@@ -326,6 +368,11 @@ exports.getCarbonFootprint=async(token_id)=>{
     }
 }
 
+
+/*
+*   Funzione per la ricerca di un lotto di prodotti a partire dal lottoID e dal wallet
+*
+*/
 exports.getProduct = async(wallet, idLotto)=>{
     try{
         var response=await transactionsInstance.methods.getProductByAddress(wallet, idLotto).call()
@@ -340,6 +387,7 @@ exports.getProduct = async(wallet, idLotto)=>{
 
 EVENT LISTENERS
 
+Intercettazione e log degli eventi che la blockchain emette
 
 
 */
