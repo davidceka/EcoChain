@@ -136,6 +136,7 @@ router.get('/listproducts',(req,res)=>{
             isLogged:isLogged,
             workers:workers,
             products:products,
+            isCustomer:req.session.isCustomer,
             ownProducts:ownProducts
         })
     }

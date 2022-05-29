@@ -18,7 +18,6 @@ contract Transazione {
         tokenContract=CarbonFootprint(tokenContractAddress);
     }
 
-    //emit ed eventi da aggiungere
     event materiaPrimaCreata(uint256 _idLotto,string nome,uint256 _quantita,uint256 _impatto);
     event prodottoCreato(uint256 _idLotto,string _nome,uint256 _quantita,uint256 _impatto);
     event lottoTerminato(uint256 _idLotto,string _nome);
@@ -98,8 +97,6 @@ contract Transazione {
         //emit la quantità è sufficiente, la transazione procede
         emit quantitaSufficiente(true);
         require(availableAmount>=_requiredRawMaterials,"Quantita di materia prima non sufficiente.");
-        //giustificare il for
-        uint256 prova;
 
         for(i=0;i<rawMaterialsId;i++){
             if(remainingAmount>0){
@@ -110,7 +107,6 @@ contract Transazione {
 
                         percentuale=(remainingAmount*raw_materials[msg.sender][i].percentualeRimanente)/raw_materials[msg.sender][i].amount;
                         carbonFootprintDaMateriaPrima+=(impattoLotto*percentuale)/100;
-                        prova=raw_materials[msg.sender][i].percentualeRimanente;
                         raw_materials[msg.sender][i].percentualeRimanente-=percentuale;
 
                         raw_materials[msg.sender][i].amount-=remainingAmount;
